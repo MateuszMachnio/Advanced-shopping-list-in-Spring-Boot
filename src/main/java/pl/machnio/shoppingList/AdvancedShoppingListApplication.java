@@ -15,13 +15,4 @@ public class AdvancedShoppingListApplication {
         SpringApplication.run(AdvancedShoppingListApplication.class, args);
     }
 
-    @Bean
-    public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
-
-    @Bean
-    public AuthenticationTrustResolver getAuthenticationTrustResolver() {
-        return new AuthenticationTrustResolverImpl();
-    }
 }
