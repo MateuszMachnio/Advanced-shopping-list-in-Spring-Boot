@@ -149,6 +149,7 @@ public class LoggedUserRecipeController {
     @PostMapping("/editing-ingredient")
     public String editIngredient(@Valid @ModelAttribute("ingredientWithQuantity") IngredientWithQuantity ingredientWithQuantity, BindingResult result, @ModelAttribute("setId") long setId, @ModelAttribute("recipeId") long recipeId, Model model) {
         if (result.hasErrors()) {
+            model.addAttribute("ingredientName", ingredientWithQuantity.getIngredient().getName());
             return "/logged-user/recipe/editIngredientWithQuantity";
         }
         ingredientWithQuantityService.updateIngredientWithQuantity(ingredientWithQuantity);
