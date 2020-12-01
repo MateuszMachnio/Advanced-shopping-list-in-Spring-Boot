@@ -1,11 +1,13 @@
 package pl.machnio.shoppingList.service;
 
+import org.springframework.stereotype.Service;
 import pl.machnio.shoppingList.entity.DayOfTheWeek;
 import pl.machnio.shoppingList.repository.DayOfTheWeekRepository;
 
 import javax.persistence.EntityNotFoundException;
 import java.util.List;
 
+@Service
 public class DayOfTheWeekServiceImpl implements DayOfTheWeekService {
 
     private final DayOfTheWeekRepository dayOfTheWeekRepository;

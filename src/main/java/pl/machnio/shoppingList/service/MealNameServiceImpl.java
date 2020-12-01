@@ -1,11 +1,13 @@
 package pl.machnio.shoppingList.service;
 
+import org.springframework.stereotype.Service;
 import pl.machnio.shoppingList.entity.MealName;
 import pl.machnio.shoppingList.repository.MealNameRepository;
 
 import javax.persistence.EntityNotFoundException;
 import java.util.List;
 
+@Service
 public class MealNameServiceImpl implements MealNameService {
 
     private final MealNameRepository mealNameRepository;
