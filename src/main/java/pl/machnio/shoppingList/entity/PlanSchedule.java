@@ -2,6 +2,7 @@ package pl.machnio.shoppingList.entity;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -14,22 +15,22 @@ public class PlanSchedule {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotEmpty
+    @NotNull
     @ManyToOne
     @JoinColumn(name = "recipe_id")
     private Recipe recipe;
 
-    @NotEmpty
+    @NotNull
     @ManyToOne
     @JoinColumn(name = "meal_id")
     private MealName mealName;
 
-    @NotEmpty
+    @NotNull
     @ManyToOne
     @JoinColumn(name = "day_id")
     private DayOfTheWeek dayOfTheWeek;
 
-    @NotEmpty
+    @NotNull
     @ManyToOne
     @JoinColumn(name = "plan_id")
     private Plan plan;
