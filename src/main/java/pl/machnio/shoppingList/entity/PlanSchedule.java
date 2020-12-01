@@ -15,24 +15,24 @@ public class PlanSchedule {
     private Long id;
 
     @NotEmpty
-    @ManyToMany
-    @JoinTable(name = "schedule_recipes", joinColumns = @JoinColumn(name = "schedule_id"), inverseJoinColumns = @JoinColumn(name = "recipe_id"))
-    private Set<Recipe> recipes = new HashSet<>();
+    @ManyToOne
+    @JoinColumn(name = "recipe_id")
+    private Recipe recipe;
 
     @NotEmpty
-    @ManyToMany
-    @JoinTable(name = "schedule_meals", joinColumns = @JoinColumn(name = "schedule_id"), inverseJoinColumns = @JoinColumn(name = "meal_id"))
-    private Set<MealName> meals = new HashSet<>();
+    @ManyToOne
+    @JoinColumn(name = "meal_id")
+    private MealName mealName;
 
     @NotEmpty
-    @ManyToMany
-    @JoinTable(name = "schedule_days", joinColumns = @JoinColumn(name = "schedule_id"), inverseJoinColumns = @JoinColumn(name = "day_id"))
-    private Set<DayOfTheWeek> days = new HashSet<>();
+    @ManyToOne
+    @JoinColumn(name = "day_id")
+    private DayOfTheWeek dayOfTheWeek;
 
     @NotEmpty
-    @ManyToMany
-    @JoinTable(name = "schedule_plans", joinColumns = @JoinColumn(name = "schedule_id"), inverseJoinColumns = @JoinColumn(name = "plan_id"))
-    private Set<Plan> plans = new HashSet<>();
+    @ManyToOne
+    @JoinColumn(name = "plan_id")
+    private Plan plan;
 
     public Long getId() {
         return id;
@@ -42,36 +42,36 @@ public class PlanSchedule {
         this.id = id;
     }
 
-    public Set<Recipe> getRecipes() {
-        return recipes;
+    public Recipe getRecipe() {
+        return recipe;
     }
 
-    public void setRecipes(Set<Recipe> recipes) {
-        this.recipes = recipes;
+    public void setRecipe(Recipe recipe) {
+        this.recipe = recipe;
     }
 
-    public Set<MealName> getMeals() {
-        return meals;
+    public MealName getMealName() {
+        return mealName;
     }
 
-    public void setMeals(Set<MealName> meals) {
-        this.meals = meals;
+    public void setMealName(MealName mealName) {
+        this.mealName = mealName;
     }
 
-    public Set<DayOfTheWeek> getDays() {
-        return days;
+    public DayOfTheWeek getDayOfTheWeek() {
+        return dayOfTheWeek;
     }
 
-    public void setDays(Set<DayOfTheWeek> days) {
-        this.days = days;
+    public void setDayOfTheWeek(DayOfTheWeek dayOfTheWeek) {
+        this.dayOfTheWeek = dayOfTheWeek;
     }
 
-    public Set<Plan> getPlans() {
-        return plans;
+    public Plan getPlan() {
+        return plan;
     }
 
-    public void setPlans(Set<Plan> plans) {
-        this.plans = plans;
+    public void setPlan(Plan plan) {
+        this.plan = plan;
     }
 
     @Override
@@ -91,6 +91,10 @@ public class PlanSchedule {
     public String toString() {
         return "PlanSchedule{" +
                 "id=" + id +
+                ", recipe=" + recipe +
+                ", mealName=" + mealName +
+                ", dayOfTheWeek=" + dayOfTheWeek +
+                ", plan=" + plan +
                 '}';
     }
 }
