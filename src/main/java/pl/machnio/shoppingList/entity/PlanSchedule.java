@@ -8,8 +8,8 @@ import java.util.Objects;
 import java.util.Set;
 
 @Entity
-@Table(name = "plan_schedule")
-public class PlanSchedule {
+@Table(name = "plan_schedules")
+public class PlanSchedule implements Comparable<PlanSchedule>{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -97,5 +97,10 @@ public class PlanSchedule {
                 ", dayOfTheWeek=" + dayOfTheWeek +
                 ", plan=" + plan +
                 '}';
+    }
+
+    @Override
+    public int compareTo(PlanSchedule planSchedule) {
+        return this.getMealName().getId().compareTo(planSchedule.getMealName().getId());
     }
 }
