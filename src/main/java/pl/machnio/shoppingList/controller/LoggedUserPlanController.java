@@ -3,10 +3,7 @@ package pl.machnio.shoppingList.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import pl.machnio.shoppingList.entity.*;
 import pl.machnio.shoppingList.service.*;
 
@@ -70,18 +67,26 @@ public class LoggedUserPlanController {
     }
 
     @PostMapping("/add-recipe")
-    public String addRecipeToPlan(@Valid PlanSchedule planSchedule, BindingResult result) {
+    public String addRecipeToPlan(@Valid PlanSchedule planSchedule, BindingResult result, Model model) {
         if (result.hasErrors()) {
             return "/logged-user/plan/addRecipeToPlan";
         }
         planScheduleService.savePlanSchedule(planSchedule);
-        return "redirect:list";
+        model.addAttribute("planSchedule", new PlanSchedule());
+        model.addAttribute("planId", planSchedule.getPlan().getId());
+        return "/logged-user/plan/addRecipeToPlan";
     }
 
     @GetMapping("/list")
     public String showPlans(Model model) {
         model.addAttribute("plans", userService.getCurrentUserWithPlans().getPlans());
         return "/logged-user/plan/list";
+    }
+
+    @GetMapping("/details/{id}")
+    public String planDetails(@PathVariable long id, Model model) {
+        model.addAttribute("planSchedule", planScheduleService.findPlanSchedulesByPlanId(id));
+        return "/logged-user/plan/details";
     }
 
 }

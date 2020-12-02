@@ -31,7 +31,7 @@
                             <td>${plan.name}</td>
                             <td>${plan.description}</td>
                             <td>
-                                <button type="button"><a href="/logged-user/plan/edit/${plan.id}">edytuj</a></button>
+                                <button type="button"><a href="/logged-user/plan/details/${plan.id}">szczegóły</a></button>
                                 <button type="button"><a href="/logged-user/plan/delete/${plan.id}">usuń</a></button>
                             </td>
                         </tr>
