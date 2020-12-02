@@ -5,7 +5,7 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "day_of_the_week")
-public class DayOfTheWeek {
+public class DayOfTheWeek implements Comparable<DayOfTheWeek>{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -50,5 +50,10 @@ public class DayOfTheWeek {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(DayOfTheWeek dayOfTheWeek) {
+        return this.getId().compareTo(dayOfTheWeek.getId());
     }
 }
