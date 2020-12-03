@@ -95,7 +95,20 @@ public class LoggedUserPlanController {
         return "redirect:details/" + planSchedule.getPlan().getId();
     }
 
+    @GetMapping("/delete/{id}")
+    public String deletePlan(@PathVariable long id, Model model) {
+        model.addAttribute("plan", planService.findById(id));
+        model.addAttribute("planSchedule", planScheduleService.findPlanSchedulesByPlanId(id));
+        return "/logged-user/plan/delete";
+    }
 
+    @PostMapping("/delete")
+    public String deletingPlan(Plan plan) {
+        User currentUserWithPlans = userService.getCurrentUserWithPlans();
+        currentUserWithPlans.removePlan(plan);
+        userService.updateUser(currentUserWithPlans);
+        return "redirect:list";
+    }
 
 
 

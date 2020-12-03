@@ -62,6 +62,7 @@
                     <input type="submit" value="Usuń przepis">
                     <%--                    <form:button><a href="<c:url value="/logged_user/dashboard"/>">Gotowe</a></form:button>--%>
                 </form:form>
+                <button type="button"><a href="<c:url value="/logged-user/recipe/list"/>">Anuluj</a></button>
             </div>
         </div>
         <!-- koniec środka zawartości -->

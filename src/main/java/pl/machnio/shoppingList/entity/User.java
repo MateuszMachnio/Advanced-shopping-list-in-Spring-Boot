@@ -64,6 +64,10 @@ public class User {
         recipes.remove(recipe);
     }
 
+    public void removePlan(Plan plan) {
+        plans.remove(plan);
+    }
+
     public LocalDateTime getCreated() {
         return created;
     }
