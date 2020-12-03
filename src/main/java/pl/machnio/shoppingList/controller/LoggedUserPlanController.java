@@ -61,20 +61,7 @@ public class LoggedUserPlanController {
         User currentUser = userService.getCurrentUserWithPlans();
         currentUser.addPlan(savedPlan);
         userService.updateUser(currentUser);
-        model.addAttribute("planSchedule", new PlanSchedule());
-        model.addAttribute("planId", savedPlan.getId());
-        return "/logged-user/plan/addRecipeToPlan";
-    }
-
-    @PostMapping("/add-recipe")
-    public String addRecipeToPlan(@Valid PlanSchedule planSchedule, BindingResult result, Model model) {
-        if (result.hasErrors()) {
-            return "/logged-user/plan/addRecipeToPlan";
-        }
-        planScheduleService.savePlanSchedule(planSchedule);
-        model.addAttribute("planSchedule", new PlanSchedule());
-        model.addAttribute("planId", planSchedule.getPlan().getId());
-        return "/logged-user/plan/addRecipeToPlan";
+        return "redirect:list";
     }
 
     @GetMapping("/list")
@@ -85,8 +72,30 @@ public class LoggedUserPlanController {
 
     @GetMapping("/details/{id}")
     public String planDetails(@PathVariable long id, Model model) {
+        model.addAttribute("plan", planService.findById(id));
         model.addAttribute("planSchedule", planScheduleService.findPlanSchedulesByPlanId(id));
         return "/logged-user/plan/details";
     }
+
+    @GetMapping("/add-recipe/{planId}/{dayId}")
+    public String addRecipeToPlan(@PathVariable long planId, @PathVariable long dayId, Model model) {
+        model.addAttribute("planSchedule", new PlanSchedule());
+        model.addAttribute("planId", planId);
+        model.addAttribute("dayId", dayId);
+        return "/logged-user/plan/addRecipeToPlan";
+    }
+
+    @PostMapping("/add-recipe")
+    public String addingRecipeToPlan(@Valid PlanSchedule planSchedule, BindingResult result, Model model) {
+        if (result.hasErrors()) {
+            return "/logged-user/plan/addRecipeToPlan";
+        }
+        planScheduleService.savePlanSchedule(planSchedule);
+        return "redirect:details/" + planSchedule.getPlan().getId();
+    }
+
+
+
+
 
 }

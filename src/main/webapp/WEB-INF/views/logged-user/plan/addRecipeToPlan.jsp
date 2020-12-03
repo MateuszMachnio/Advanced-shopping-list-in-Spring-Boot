@@ -23,17 +23,6 @@
                 <form:form modelAttribute="planSchedule" method="post" action="/logged-user/plan/add-recipe">
                     <table>
                         <tr>
-                            <td><form:label path="dayOfTheWeek">Dzień tygodnia: </form:label></td>
-                            <td>
-                                <form:select path="dayOfTheWeek">
-                                    <form:option value="0" label="--select day--"/>
-                                    <form:options items="${daysOfTheWeek}" itemLabel="name" itemValue="id" />
-                                </form:select>
-                            </td>
-                            <td><form:errors path="dayOfTheWeek" cssClass="error"/></td>
-                        </tr>
-
-                        <tr>
                             <td><form:label path="mealName">Nazwa posiłku: </form:label></td>
                             <td>
                                 <form:select path="mealName">
@@ -54,6 +43,7 @@
                             </td>
                             <td><form:errors path="recipe" cssClass="error"/></td>
                         </tr>
+                        <form:hidden path="dayOfTheWeek" value="${dayId}"/>
                         <form:hidden path="plan" value="${planId}"/>
                     </table>
                     <br />

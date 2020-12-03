@@ -20,12 +20,17 @@
             <div id="text" style="text-align: center">
                 <h1>Szczegóły planu</h1>
 
+                <p>Nazwa planu: ${plan.name}</p>
+                <p>Opis planu: ${plan.description}</p>
+
+                <button type="button"><a href="<c:url value="/logged-user/plan/list"/>">Powrót</a></button>
+
                 <c:forEach items="${planSchedule.keySet()}" var="day">
                     <table>
                         <tr>
                             <th>${day.name}</th>
                             <th></th>
-                            <th></th>
+                            <th><button type="button"><a href="<c:url value="/logged-user/plan/add-recipe/${plan.id}/${day.id}"/>">Dodaj przepis</a></button></th>
                         </tr>
                         <c:forEach items="${planSchedule.get(day)}" var="schedule">
                             <tr>
