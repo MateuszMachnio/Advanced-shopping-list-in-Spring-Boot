@@ -37,7 +37,7 @@
                                 <td>${schedule.mealName.name}</td>
                                 <td>${schedule.recipe.name}</td>
                                 <td>
-                                    <button type="button"><a href="<c:url value="/logged-user/plan/add-recipe/${plan.id}/${day.id}"/>">szczegóły</a></button>
+                                    <button type="button"><a href="<c:url value="/logged-user/recipe/details/${schedule.recipe.id}?planId=${plan.id}"/>">szczegóły</a></button>
                                     <button type="button"><a href="<c:url value="/logged-user/plan/add-recipe/${plan.id}/${day.id}"/>">usuń</a></button>
                                 </td>
                             </tr>

@@ -191,4 +191,13 @@ public class LoggedUserRecipeController {
         return "logged-user/recipe/editSetOfIngredients";
     }
 
+    @GetMapping("/details/{recipeId}")
+    public String recipeDetails(@PathVariable long recipeId, @RequestParam(required = false) Long planId, Model model) {
+        Recipe recipe = recipeService.findById(recipeId);
+        model.addAttribute("recipe", recipe);
+        model.addAttribute("planId", planId);
+        model.addAttribute("setOfIngredients", setOfIngredientsWithQuantitiesService.findByIdWithSetOfIngredientsWithQuantity(recipe.getSetOfIngredientsWithQuantities().getId()));
+        return "logged-user/recipe/details";
+    }
+
 }

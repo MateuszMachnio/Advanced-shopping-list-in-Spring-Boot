@@ -33,6 +33,7 @@
                         <td>${recipe.description}</td>
                         <td>${recipe.preparationTime} min</td>
                         <td>
+                            <button type="button"><a href="/logged-user/recipe/details/${recipe.id}">szczegóły</a></button>
                             <button type="button"><a href="/logged-user/recipe/edit/${recipe.id}">edytuj</a></button>
                             <button type="button"><a href="/logged-user/recipe/delete/${recipe.id}">usuń</a></button>
                         </td>
