@@ -200,3 +200,27 @@ INSERT INTO shopping_list.meal_names (meal_name) VALUES ('II śniadanie');
 INSERT INTO shopping_list.meal_names (meal_name) VALUES ('obiad');
 INSERT INTO shopping_list.meal_names (meal_name) VALUES ('podwieczorek');
 INSERT INTO shopping_list.meal_names (meal_name) VALUES ('kolacja');
+
+
+
+
+INSERT INTO shopping_list.ingredients_with_quantities (id, quantity, ingredient_id, set_of_ingr_with_quant_id) VALUES (1, 23, 159, 1);
+INSERT INTO shopping_list.ingredients_with_quantities (id, quantity, ingredient_id, set_of_ingr_with_quant_id) VALUES (2, 60, 17, 1);
+INSERT INTO shopping_list.ingredients_with_quantities (id, quantity, ingredient_id, set_of_ingr_with_quant_id) VALUES (3, 50, 90, 2);
+INSERT INTO shopping_list.ingredients_with_quantities (id, quantity, ingredient_id, set_of_ingr_with_quant_id) VALUES (4, 100, 41, 2);
+INSERT INTO shopping_list.ingredients_with_quantities (id, quantity, ingredient_id, set_of_ingr_with_quant_id) VALUES (5, 50, 87, 3);
+INSERT INTO shopping_list.ingredients_with_quantities (id, quantity, ingredient_id, set_of_ingr_with_quant_id) VALUES (6, 100, 143, 3);
+
+INSERT INTO shopping_list.recipes (id, created_on, description, name, number_of_servings, preparation, preparation_time, updated_on, set_of_ingr_with_quant_id) VALUES (1, '2020-12-03 10:32:26.420925', 'opis 1', 'przepis 1', 1, 'jakieś przygotowanie', 30, null, 1);
+INSERT INTO shopping_list.recipes (id, created_on, description, name, number_of_servings, preparation, preparation_time, updated_on, set_of_ingr_with_quant_id) VALUES (2, '2020-12-03 10:33:04.243881', 'opis 2', 'przepis 2', 5, 'jakieś', 40, null, 2);
+INSERT INTO shopping_list.recipes (id, created_on, description, name, number_of_servings, preparation, preparation_time, updated_on, set_of_ingr_with_quant_id) VALUES (3, '2020-12-03 10:33:46.001128', 'opis 3', 'przepis 3', 3, 'przygotuj to sam', 50, null, 3);
+
+INSERT INTO shopping_list.set_of_ingredients_with_quantities (id) VALUES (1);
+INSERT INTO shopping_list.set_of_ingredients_with_quantities (id) VALUES (2);
+INSERT INTO shopping_list.set_of_ingredients_with_quantities (id) VALUES (3);
+
+INSERT INTO shopping_list.user_recipes (user_id, recipe_id) VALUES (1, 1);
+INSERT INTO shopping_list.user_recipes (user_id, recipe_id) VALUES (1, 2);
+INSERT INTO shopping_list.user_recipes (user_id, recipe_id) VALUES (1, 3);
+
+INSERT INTO shopping_list.users (id, created_on, email, first_name, last_name, password, role, updated_on) VALUES (1, '2020-12-03 10:31:32.113075', 'machniom93@gmail.com', 'Mateusz', 'Machnio', '$2a$10$hqTF64smXPXPX5mNEG2/o.9vv4tgk8Guce3HWO3BW0F194lSiTZ4a', 'USER', null);
