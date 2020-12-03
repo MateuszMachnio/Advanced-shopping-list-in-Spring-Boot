@@ -10,4 +10,6 @@ import java.util.List;
 public interface PlanScheduleRepository extends JpaRepository<PlanSchedule, Long> {
 
     List<PlanSchedule> findByPlanIdAndDayOfTheWeek(Long plan_id, DayOfTheWeek dayOfTheWeek);
+
+    List<PlanSchedule> findByPlanIdAndDayOfTheWeekId(Long plan_id, Long dayOfTheWeek_id);
 }

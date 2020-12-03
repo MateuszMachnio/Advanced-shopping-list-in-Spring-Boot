@@ -2,8 +2,10 @@ package pl.machnio.shoppingList.service;
 
 import org.springframework.stereotype.Service;
 import pl.machnio.shoppingList.entity.DayOfTheWeek;
+import pl.machnio.shoppingList.entity.MealName;
 import pl.machnio.shoppingList.entity.PlanSchedule;
 import pl.machnio.shoppingList.repository.DayOfTheWeekRepository;
+import pl.machnio.shoppingList.repository.MealNameRepository;
 import pl.machnio.shoppingList.repository.PlanScheduleRepository;
 
 import javax.persistence.EntityNotFoundException;
@@ -15,10 +17,12 @@ public class PlanScheduleServiceImpl implements PlanScheduleService {
 
     private final PlanScheduleRepository planScheduleRepository;
     private final DayOfTheWeekRepository dayOfTheWeekRepository;
+    private final MealNameRepository mealNameRepository;
 
-    public PlanScheduleServiceImpl(PlanScheduleRepository planScheduleRepository, DayOfTheWeekRepository dayOfTheWeekRepository) {
+    public PlanScheduleServiceImpl(PlanScheduleRepository planScheduleRepository, DayOfTheWeekRepository dayOfTheWeekRepository, MealNameRepository mealNameRepository) {
         this.planScheduleRepository = planScheduleRepository;
         this.dayOfTheWeekRepository = dayOfTheWeekRepository;
+        this.mealNameRepository = mealNameRepository;
     }
 
     @Override
@@ -56,5 +60,16 @@ public class PlanScheduleServiceImpl implements PlanScheduleService {
             planScheduleMap.put(dayOfTheWeek, plans);
         }
         return planScheduleMap;
+    }
+
+    @Override
+    public List<MealName> findMealsOfTheDayThatLeft(long plan_id, long dayOfTheWeek_id) {
+        List<MealName> allMeals = mealNameRepository.findAll();
+        List<PlanSchedule> plans = planScheduleRepository.findByPlanIdAndDayOfTheWeekId(plan_id, dayOfTheWeek_id);
+        Set<MealName> savedMeals = plans.stream()
+                .map(PlanSchedule::getMealName)
+                .collect(Collectors.toSet());
+        allMeals.removeAll(savedMeals);
+        return allMeals;
     }
 }

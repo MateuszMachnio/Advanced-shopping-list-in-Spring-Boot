@@ -80,6 +80,7 @@ public class LoggedUserPlanController {
     @GetMapping("/add-recipe/{planId}/{dayId}")
     public String addRecipeToPlan(@PathVariable long planId, @PathVariable long dayId, Model model) {
         model.addAttribute("planSchedule", new PlanSchedule());
+        model.addAttribute("mealNames", planScheduleService.findMealsOfTheDayThatLeft(planId, dayId));
         model.addAttribute("planId", planId);
         model.addAttribute("dayId", dayId);
         return "/logged-user/plan/addRecipeToPlan";
