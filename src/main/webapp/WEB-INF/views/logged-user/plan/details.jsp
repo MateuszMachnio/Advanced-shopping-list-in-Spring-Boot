@@ -30,14 +30,15 @@
                         <tr>
                             <th>${day.name}</th>
                             <th></th>
-                            <th><button type="button"><a href="<c:url value="/logged-user/plan/add-recipe/${plan.id}/${day.id}"/>">Dodaj przepis</a></button></th>
+                            <th><c:if test="${planSchedule.get(day).size() < 5}"><button type="button"><a href="<c:url value="/logged-user/plan/add-recipe/${plan.id}/${day.id}"/>">Dodaj przepis</a></button></c:if></th>
                         </tr>
                         <c:forEach items="${planSchedule.get(day)}" var="schedule">
                             <tr>
                                 <td>${schedule.mealName.name}</td>
                                 <td>${schedule.recipe.name}</td>
                                 <td>
-                                    <button type="button"><a href="">Szczegóły</a></button>
+                                    <button type="button"><a href="<c:url value="/logged-user/plan/add-recipe/${plan.id}/${day.id}"/>">szczegóły</a></button>
+                                    <button type="button"><a href="<c:url value="/logged-user/plan/add-recipe/${plan.id}/${day.id}"/>">usuń</a></button>
                                 </td>
                             </tr>
                         </c:forEach>
