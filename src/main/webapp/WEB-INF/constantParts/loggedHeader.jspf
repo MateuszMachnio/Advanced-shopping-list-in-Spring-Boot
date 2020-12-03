@@ -3,7 +3,7 @@
 <header>
     <div id="topOfContainer">
         <div id="main-logo" style="left: 150px">
-            <a href="/" id="logo" style="margin-top: 15px">Zaplanuj <span>Jedzonko</span></a>
+            <a href="<c:url value="/logged-user/dashboard"/>" id="logo" style="margin-top: 15px">Zaplanuj <span>Jedzonko</span></a>
         </div>
         <div id="contactBox">
             <table>
