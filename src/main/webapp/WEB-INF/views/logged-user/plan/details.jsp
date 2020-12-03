@@ -38,7 +38,7 @@
                                 <td>${schedule.recipe.name}</td>
                                 <td>
                                     <button type="button"><a href="<c:url value="/logged-user/recipe/details/${schedule.recipe.id}?planId=${plan.id}"/>">szczegóły</a></button>
-                                    <button type="button"><a href="<c:url value="/logged-user/plan/add-recipe/${plan.id}/${day.id}"/>">usuń</a></button>
+                                    <button type="button"><a href="<c:url value="/logged-user/plan/remove-schedule/${plan.id}/${schedule.id}"/>">usuń</a></button>
                                 </td>
                             </tr>
                         </c:forEach>

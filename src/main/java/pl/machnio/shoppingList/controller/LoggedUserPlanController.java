@@ -110,6 +110,10 @@ public class LoggedUserPlanController {
         return "redirect:list";
     }
 
-
+    @GetMapping("/remove-schedule/{planId}/{scheduleId}")
+    public String removeScheduleFromPlan(@PathVariable long planId, @PathVariable long scheduleId, Model model) {
+        planScheduleService.deletePlanSchedule(scheduleId);
+        return "redirect:/logged-user/plan/details/" + planId;
+    }
 
 }
