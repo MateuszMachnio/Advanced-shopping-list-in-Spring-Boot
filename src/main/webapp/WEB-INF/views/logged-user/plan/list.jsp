@@ -20,6 +20,8 @@
             <div id="text" style="text-align: center">
                 <h1>Lista planów</h1>
 
+                <button type="button"><a href="<c:url value="/logged-user/plan/add"/>">dodaj nowy plan</a></button>
+
                 <c:forEach items="${plans}" var="plan">
                     <table>
                         <tr>

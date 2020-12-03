@@ -20,6 +20,8 @@
             <div id="text" style="text-align: center">
                 <h1>Lista przepisów</h1>
 
+                <button type="button"><a href="<c:url value="/logged-user/recipe/create-set-of-ingredients"/>">dodaj nowy przepis</a></button>
+
                 <c:forEach items="${recipeList}" var="recipe">
                 <table>
                     <tr>

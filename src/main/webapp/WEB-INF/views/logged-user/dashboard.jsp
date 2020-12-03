@@ -19,6 +19,16 @@
                 <div id="text">
                     <h1>Strona Główna</h1>
 
+                    <p>Witam w najlepszej aplikacji stworzonej w celu zarządzania i organizacji planu żywieniowego!</p>
+                    <p>Aplikacja pozwala na:
+                        <ul>
+                            <li>stworzenie własnego przepisu;</li>
+                            <li>korzystanie z przepisów innych użytkowników;</li>
+                            <li>ułożenie własnych tygodniowych planów żywieniowych;</li>
+                            <li>stworzenie w prosty sposób listy zakupów potrzebnej do zrealizowania danego planu żywieniowego.</li>
+                        </ul>
+                    </p>
+                    <p>*Jeśli na liści produktów (przy tworzeniu własnego przepisu) nie znajdziesz szukanego produktu, proszę zgłoś problem wysyłając do mnie maila.</p>
                 </div>
             </div>
             <!-- koniec środka zawartości -->
