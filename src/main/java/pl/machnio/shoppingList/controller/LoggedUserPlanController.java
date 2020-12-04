@@ -1,13 +1,20 @@
 package pl.machnio.shoppingList.controller;
 
+import org.springframework.jdbc.JdbcUpdateAffectedIncorrectNumberOfRowsException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import pl.machnio.shoppingList.entity.*;
+import pl.machnio.shoppingList.pdf.IngredientsWithQuantitiesPDFExporter;
 import pl.machnio.shoppingList.service.*;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
+import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -114,6 +121,29 @@ public class LoggedUserPlanController {
     public String removeScheduleFromPlan(@PathVariable long planId, @PathVariable long scheduleId, Model model) {
         planScheduleService.deletePlanSchedule(scheduleId);
         return "redirect:/logged-user/plan/details/" + planId;
+    }
+
+    @GetMapping("/shopping-list")
+    public void createList() {
+
+    }
+
+    @GetMapping("/shopping-list/export")
+    public void exportToPDF(HttpServletResponse response) throws IOException {
+        response.setContentType("application/pdf; charset=UTF-8");
+//        response.setCharacterEncoding("UTF-8");
+        DateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss");
+        String currentDateTime = dateFormatter.format(new Date());
+
+        String headerKey = "Content-Disposition";
+        String headerValue = "attachment; filename=shopping_list_" + currentDateTime + ".pdf";
+
+        response.setHeader(headerKey, headerValue);
+
+        //pobieramy dane
+        IngredientsWithQuantitiesPDFExporter exporter = new IngredientsWithQuantitiesPDFExporter(planScheduleService.shoppingListIngredients(1));
+        exporter.export(response);
+
     }
 
 }
