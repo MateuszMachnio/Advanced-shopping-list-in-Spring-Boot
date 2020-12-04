@@ -23,6 +23,7 @@
                 <p>Nazwa planu: ${plan.name}</p>
                 <p>Opis planu: ${plan.description}</p>
 
+                <button type="button"><a href="<c:url value="/logged-user/plan/shopping-list/export"/>">Stwórz listę zakupów dla tego planu</a></button>
                 <button type="button"><a href="<c:url value="/logged-user/plan/list"/>">Powrót</a></button>
 
                 <c:forEach items="${planSchedule.keySet()}" var="day">
