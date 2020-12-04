@@ -6,6 +6,7 @@ import pl.machnio.shoppingList.entity.PlanSchedule;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public interface PlanScheduleService {
 
@@ -22,4 +23,6 @@ public interface PlanScheduleService {
     public Map<DayOfTheWeek, List<PlanSchedule>> findPlanSchedulesByPlanId(long plan_id);
 
     public List<MealName> findMealsOfTheDayThatLeft(long plan_id, long dayOfTheWeek_id);
+
+    public Map<String, Integer> shoppingListIngredients(long plan_id);
 }
