@@ -23,6 +23,7 @@
                 <button type="button"><a href="<c:url value="/logged-user/plan/details/${planId}"/>">anuluj</a></button>
 
                 <p>Teraz możesz dostosować listę zakupów. Jeśli masz jakieś produkty w domu, usuń produkt z listy lub edytuj jego ilość.</p>
+                <p>Jeśli lista będzie gotowa wystarczy nacisnąć przycisk "Gotowe!" w celu pobrania listy zakupów.</p>
 
                     <table>
                         <tr>
@@ -42,7 +43,7 @@
                     </c:forEach>
                     </table>
 
-                <button type="button"><a href="/logged-user/plan/shopping-list/export/${shoppingList.id}">Zatwierdź</a></button>
+                <button type="button"><a href="/logged-user/plan/shopping-list/export/${shoppingList.id}">Gotowe!</a></button>
 
             </div>
         </div>
