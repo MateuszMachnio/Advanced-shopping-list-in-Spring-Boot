@@ -3,12 +3,13 @@ package pl.machnio.shoppingList.service;
 import pl.machnio.shoppingList.entity.shoppingListCreating.ShoppingList;
 
 import java.util.List;
+import java.util.Map;
 
 public interface ShoppingListService {
 
     ShoppingList findById(long id);
 
-    ShoppingList saveShoppingList(ShoppingList shoppingList);
+    public ShoppingList saveShoppingList(Map<String, Integer> shoppingList);
 
     void updateShoppingList(ShoppingList shoppingList);
 

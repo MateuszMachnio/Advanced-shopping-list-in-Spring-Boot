@@ -1,17 +1,24 @@
 package pl.machnio.shoppingList.service;
 
+import pl.machnio.shoppingList.entity.IngredientWithQuantity;
 import pl.machnio.shoppingList.entity.shoppingListCreating.ShoppingList;
+import pl.machnio.shoppingList.repository.IngredientWithQuantityRepository;
 import pl.machnio.shoppingList.repository.ShoppingListRepository;
 
 import javax.persistence.EntityNotFoundException;
 import java.util.List;
+import java.util.Map;
 
 public class ShoppingListServiceImpl implements ShoppingListService {
 
     private final ShoppingListRepository shoppingListRepository;
+    private final IngredientWithQuantityRepository ingredientWithQuantityRepository;
+    private final IngredientService ingredientService;
 
-    public ShoppingListServiceImpl(ShoppingListRepository shoppingListRepository) {
+    public ShoppingListServiceImpl(ShoppingListRepository shoppingListRepository, IngredientWithQuantityRepository ingredientWithQuantityRepository, IngredientService ingredientService) {
         this.shoppingListRepository = shoppingListRepository;
+        this.ingredientWithQuantityRepository = ingredientWithQuantityRepository;
+        this.ingredientService = ingredientService;
     }
 
     @Override
@@ -20,8 +27,14 @@ public class ShoppingListServiceImpl implements ShoppingListService {
     }
 
     @Override
-    public ShoppingList saveShoppingList(ShoppingList shoppingList) {
-        return shoppingListRepository.save(shoppingList);
+    public ShoppingList saveShoppingList(Map<String, Integer> shoppingList) {
+        ShoppingList properShoppingList = new ShoppingList();
+        shoppingList.forEach((s, integer) -> {
+            IngredientWithQuantity ingredientWithQuantity = new IngredientWithQuantity(ingredientService.findByName(s), integer);
+            IngredientWithQuantity savedIWQ = ingredientWithQuantityRepository.save(ingredientWithQuantity);
+            properShoppingList.addIngredientWithQuantity(savedIWQ);
+        });
+        return shoppingListRepository.save(properShoppingList);
     }
 
     @Override

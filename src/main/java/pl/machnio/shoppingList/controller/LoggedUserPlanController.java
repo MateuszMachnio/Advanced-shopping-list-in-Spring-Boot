@@ -1,11 +1,11 @@
 package pl.machnio.shoppingList.controller;
 
-import org.springframework.jdbc.JdbcUpdateAffectedIncorrectNumberOfRowsException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import pl.machnio.shoppingList.entity.*;
+import pl.machnio.shoppingList.entity.shoppingListCreating.ShoppingList;
 import pl.machnio.shoppingList.pdf.IngredientsWithQuantitiesPDFExporter;
 import pl.machnio.shoppingList.service.*;
 
@@ -28,15 +28,18 @@ public class LoggedUserPlanController {
     private final MealNameService mealNameService;
     private final DayOfTheWeekService dayOfTheWeekService;
     private final PlanScheduleService planScheduleService;
-    private Map<String, Integer> shoppingList;
+    private final ShoppingListService shoppingListService;
+    private final IngredientWithQuantityService ingredientWithQuantityService;
 
-    public LoggedUserPlanController(PlanService planService, UserService userService, RecipeService recipeService, MealNameService mealNameService, DayOfTheWeekService dayOfTheWeekService, PlanScheduleService planScheduleService) {
+    public LoggedUserPlanController(PlanService planService, UserService userService, RecipeService recipeService, MealNameService mealNameService, DayOfTheWeekService dayOfTheWeekService, PlanScheduleService planScheduleService, ShoppingListService shoppingListService, IngredientWithQuantityService ingredientWithQuantityService) {
         this.planService = planService;
         this.userService = userService;
         this.recipeService = recipeService;
         this.mealNameService = mealNameService;
         this.dayOfTheWeekService = dayOfTheWeekService;
         this.planScheduleService = planScheduleService;
+        this.shoppingListService = shoppingListService;
+        this.ingredientWithQuantityService = ingredientWithQuantityService;
     }
 
     @ModelAttribute("recipes")
@@ -126,23 +129,40 @@ public class LoggedUserPlanController {
     }
 
     @GetMapping("/shopping-list/{planId}")
-    public String createList(@PathVariable long planId, Model model) {
-        this.shoppingList = planScheduleService.shoppingListIngredients(1);
-        model.addAttribute("shoppingList", );
+    public String createList(@PathVariable long planId, @RequestParam(required = false) Long shoppingListId, Model model) {
+        if (shoppingListId == null) {
+            Map<String, Integer> shoppingList = planScheduleService.shoppingListIngredients(planId);
+            ShoppingList savedShoppingList = shoppingListService.saveShoppingList(shoppingList);
+            model.addAttribute("shoppingList", savedShoppingList);
+        } else {
+            model.addAttribute("shoppingList", shoppingListService.findByIdWithSetOfIngredientsWithQuantities(shoppingListId));
+        }
         model.addAttribute("planId", planId);
-        return "/logged-user/plan/creatingShoppingList";
+
+        return "logged-user/plan/shoppingList/creatingShoppingList";
     }
 
-    @GetMapping("/shopping-list/edit/{ingredient}/{quantity}")
-    public String editIngredient(@PathVariable String ingredient, @PathVariable int quantity, Model model) {
-
-        model.addAttribute("shoppingList", planScheduleService.shoppingListIngredients(1));
+    @GetMapping("/shopping-list/edit/{planId}/{shoppingListId}/{IWQId}")
+    public String editIngredient(@PathVariable long planId, @PathVariable long shoppingListId, @PathVariable long IWQId, Model model) {
+        model.addAttribute("ingredientWithQuantity", ingredientWithQuantityService.findById(IWQId));
         model.addAttribute("planId", planId);
-        return "/logged-user/plan/creatingShoppingList";
+        model.addAttribute("shoppingListId", shoppingListId);
+        return "logged-user/plan/shoppingList/editIngredientWithQuantity";
     }
 
-    @GetMapping("/shopping-list/export")
-    public void exportToPDF(HttpServletResponse response) throws IOException {
+    @PostMapping("/shopping-list/edit")
+    public String editingIngredient(@Valid IngredientWithQuantity ingredientWithQuantity, BindingResult result, @ModelAttribute("planId") long planId, @ModelAttribute("shoppingListId") long shoppingListId, Model model) {
+        if (result.hasErrors()) {
+            model.addAttribute("planId", planId);
+            model.addAttribute("shoppingListId", shoppingListId);
+            return "logged-user/plan/shoppingList/editIngredientWithQuantity";
+        }
+        ingredientWithQuantityService.updateIngredientWithQuantity(ingredientWithQuantity);
+        return "redirect:" + planId + "?shoppingListId=" + shoppingListId;
+    }
+
+    @GetMapping("/shopping-list/export/{shoppingListId}")
+    public void exportToPDF(@PathVariable long shoppingListId, HttpServletResponse response) throws IOException {
         response.setContentType("application/pdf; charset=UTF-8");
         DateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss");
         String currentDateTime = dateFormatter.format(new Date());
@@ -153,7 +173,7 @@ public class LoggedUserPlanController {
         response.setHeader(headerKey, headerValue);
 
         //pobieramy dane
-        IngredientsWithQuantitiesPDFExporter exporter = new IngredientsWithQuantitiesPDFExporter(planScheduleService.shoppingListIngredients(1));
+        IngredientsWithQuantitiesPDFExporter exporter = new IngredientsWithQuantitiesPDFExporter(shoppingListService.findByIdWithSetOfIngredientsWithQuantities(shoppingListId));
         exporter.export(response);
 
     }
