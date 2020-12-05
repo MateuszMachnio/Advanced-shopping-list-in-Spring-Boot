@@ -37,7 +37,7 @@
                             <td>${ingredientWithQuantity.quantity} g</td>
                             <td>
                                 <button type="button"><a href="/logged-user/plan/shopping-list/edit/${planId}/${shoppingList.id}/${ingredientWithQuantity.id}">edytuj</a></button>
-                                <button type="button"><a href="/logged-user/plan/shopping-list/delete/${ingredientWithQuantity.id}">usuń</a></button>
+                                <button type="button"><a href="/logged-user/plan/shopping-list/delete/${planId}/${shoppingList.id}/${ingredientWithQuantity.id}">usuń</a></button>
                             </td>
                         </tr>
                     </c:forEach>

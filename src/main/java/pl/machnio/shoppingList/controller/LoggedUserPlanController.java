@@ -161,6 +161,23 @@ public class LoggedUserPlanController {
         return "redirect:" + planId + "?shoppingListId=" + shoppingListId;
     }
 
+    @GetMapping("/shopping-list/delete/{planId}/{shoppingListId}/{IWQId}")
+    public String deleteIngredient(@PathVariable long planId, @PathVariable long shoppingListId, @PathVariable long IWQId, Model model) {
+        model.addAttribute("ingredientWithQuantity", ingredientWithQuantityService.findById(IWQId));
+        model.addAttribute("planId", planId);
+        model.addAttribute("shoppingListId", shoppingListId);
+        return "logged-user/plan/shoppingList/deleteIngredientWithQuantity";
+    }
+
+    @PostMapping("/shopping-list/delete")
+    public String deletingIngredient(IngredientWithQuantity ingredientWithQuantity, @ModelAttribute("planId") long planId, @ModelAttribute("shoppingListId") long shoppingListId) {
+        ShoppingList shoppingList = shoppingListService.findByIdWithSetOfIngredientsWithQuantities(shoppingListId);
+        shoppingList.removeIngredientWithQuantity(ingredientWithQuantity);
+        shoppingListService.updateShoppingList(shoppingList);
+        ingredientWithQuantityService.deleteIngredientWithQuantityById(ingredientWithQuantity.getId());
+        return "redirect:" + planId + "?shoppingListId=" + shoppingListId;
+    }
+
     @GetMapping("/shopping-list/export/{shoppingListId}")
     public void exportToPDF(@PathVariable long shoppingListId, HttpServletResponse response) throws IOException {
         response.setContentType("application/pdf; charset=UTF-8");
