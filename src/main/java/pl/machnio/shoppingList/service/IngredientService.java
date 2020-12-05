@@ -8,6 +8,8 @@ public interface IngredientService {
 
     Ingredient findById(long id);
 
+    Ingredient findByName(String name);
+
     Ingredient saveIngredient(Ingredient ingredient);
 
     void updateIngredient(Ingredient ingredient);

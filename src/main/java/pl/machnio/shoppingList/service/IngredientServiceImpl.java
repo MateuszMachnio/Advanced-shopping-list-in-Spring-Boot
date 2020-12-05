@@ -22,6 +22,11 @@ public class IngredientServiceImpl implements IngredientService{
     }
 
     @Override
+    public Ingredient findByName(String name) {
+        return ingredientRepository.findByName(name).orElseThrow(() -> new EntityNotFoundException("There is no such Ingredient"));
+    }
+
+    @Override
     public Ingredient saveIngredient(Ingredient ingredient) {
         return ingredientRepository.save(ingredient);
     }
