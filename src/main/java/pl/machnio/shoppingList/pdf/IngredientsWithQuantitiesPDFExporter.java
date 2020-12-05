@@ -5,6 +5,7 @@ import com.lowagie.text.Font;
 import com.lowagie.text.pdf.*;
 
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.text.Style;
 import java.awt.*;
 import java.io.IOException;
 import java.util.Map;
@@ -20,28 +21,41 @@ public class IngredientsWithQuantitiesPDFExporter {
     private void writeTableHeader(PdfPTable pdfPTable) throws IOException {
         PdfPCell cell = new PdfPCell();
         cell.setBackgroundColor(Color.decode("#ff6600"));
-        cell.setPadding(5);
-//        cell.setVerticalAlignment(Element.ALIGN_CENTER);
+        cell.setPadding(8);
+        cell.setPaddingTop(0);
         cell.setHorizontalAlignment(Element.ALIGN_CENTER);
-
 
         BaseFont bf = BaseFont.createFont("C:\\Users\\machn\\OneDrive\\Pulpit\\JAVA weekendowo\\advanced-shopping-list\\src\\main\\resources\\fonts\\FreeSans.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
 
-        cell.setPhrase(new Phrase(" TESTING 2 \u015Fi ", new Font(bf, 15)));
-//        cell.setPhrase(new Phrase("Testing of letters \u010c,\u0106,\u0160,\u017d,\u0110", f1));
-//        cell.setPhrase(new Phrase("produkt", font));
+        Font font = new Font(bf, 18);
+        font.setColor(Color.WHITE);
+
+        cell.setPhrase(new Phrase("produkt", font));
         pdfPTable.addCell(cell);
 
-        cell.setPhrase(new Phrase("ilość", new Font(bf, 15)));
-//        cell.setPhrase(new Phrase("ilość", f1));
-//        cell.setPhrase(new Phrase("ilość", font));
+
+        cell.setPhrase(new Phrase("ilość", font));
         pdfPTable.addCell(cell);
     }
 
-    private void writeTableData(PdfPTable pdfPTable) {
+    private void writeTableData(PdfPTable pdfPTable) throws IOException {
+        PdfPCell cell = new PdfPCell();
+        cell.setPadding(8);
+        cell.setPaddingTop(0);
+
+        BaseFont bf = BaseFont.createFont("C:\\Users\\machn\\OneDrive\\Pulpit\\JAVA weekendowo\\advanced-shopping-list\\src\\main\\resources\\fonts\\OrganicTeabags.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+        Font font = new Font(bf,18);
+
         shoppingList.forEach((s, integer) -> {
-            pdfPTable.addCell(s);
-            pdfPTable.addCell(integer + " gram");
+//            font.setSize(25);
+            cell.setHorizontalAlignment(Element.ALIGN_LEFT);
+            cell.setPhrase(new Phrase(s, font));
+            pdfPTable.addCell(cell);
+
+//            font.setSize(15);
+            cell.setHorizontalAlignment(Element.ALIGN_CENTER);
+            cell.setPhrase(new Phrase(integer + " g", font));
+            pdfPTable.addCell(cell);
         });
     }
 
@@ -50,17 +64,16 @@ public class IngredientsWithQuantitiesPDFExporter {
         PdfWriter.getInstance(document, response.getOutputStream());
         document.open();
 
-        Font font = FontFactory.getFont(FontFactory.HELVETICA_BOLD, "UTF-8", 20);
-        font.setColor(Color.decode("#5a615f"));
+        BaseFont bf = BaseFont.createFont("C:\\Users\\machn\\OneDrive\\Pulpit\\JAVA weekendowo\\advanced-shopping-list\\src\\main\\resources\\fonts\\Allura-Regular.otf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+        Font font = new Font(bf, 40);
 
-
-        Paragraph title = new Paragraph("Lista zakźśćupów", font);
+        Paragraph title = new Paragraph("Lista zakupów", font);
         title.setAlignment(Paragraph.ALIGN_CENTER);
         document.add(title);
 
         PdfPTable pdfPTable = new PdfPTable(2);
         pdfPTable.setWidthPercentage(50);
-        pdfPTable.setSpacingBefore(15);
+        pdfPTable.setSpacingBefore(25);
         pdfPTable.setHorizontalAlignment(1);
         pdfPTable.setWidths(new float[] {3f, 1.5f});
 
