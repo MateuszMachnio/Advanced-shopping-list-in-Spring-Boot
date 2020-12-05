@@ -7,9 +7,7 @@ import com.lowagie.text.pdf.*;
 import javax.servlet.http.HttpServletResponse;
 import java.awt.*;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.Map;
-import java.util.Set;
 
 public class IngredientsWithQuantitiesPDFExporter {
 
@@ -19,26 +17,31 @@ public class IngredientsWithQuantitiesPDFExporter {
         this.shoppingList = shoppingList;
     }
 
-    private void writeTableHeader(PdfPTable pdfPTable) {
+    private void writeTableHeader(PdfPTable pdfPTable) throws IOException {
         PdfPCell cell = new PdfPCell();
         cell.setBackgroundColor(Color.decode("#ff6600"));
         cell.setPadding(5);
+//        cell.setVerticalAlignment(Element.ALIGN_CENTER);
         cell.setHorizontalAlignment(Element.ALIGN_CENTER);
 
-        Font font = FontFactory.getFont(FontFactory.HELVETICA, "UTF-8", 16);
-        font.setColor(Color.WHITE);
 
-        cell.setPhrase(new Phrase("produkt", font));
+        BaseFont bf = BaseFont.createFont("C:\\Users\\machn\\OneDrive\\Pulpit\\JAVA weekendowo\\advanced-shopping-list\\src\\main\\resources\\fonts\\FreeSans.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+
+        cell.setPhrase(new Phrase(" TESTING 2 \u015Fi ", new Font(bf, 15)));
+//        cell.setPhrase(new Phrase("Testing of letters \u010c,\u0106,\u0160,\u017d,\u0110", f1));
+//        cell.setPhrase(new Phrase("produkt", font));
         pdfPTable.addCell(cell);
 
-        cell.setPhrase(new Phrase("ilość", font));
+        cell.setPhrase(new Phrase("ilość", new Font(bf, 15)));
+//        cell.setPhrase(new Phrase("ilość", f1));
+//        cell.setPhrase(new Phrase("ilość", font));
         pdfPTable.addCell(cell);
     }
 
     private void writeTableData(PdfPTable pdfPTable) {
         shoppingList.forEach((s, integer) -> {
             pdfPTable.addCell(s);
-            pdfPTable.addCell(String.valueOf(integer) + " gram");
+            pdfPTable.addCell(integer + " gram");
         });
     }
 
@@ -49,6 +52,7 @@ public class IngredientsWithQuantitiesPDFExporter {
 
         Font font = FontFactory.getFont(FontFactory.HELVETICA_BOLD, "UTF-8", 20);
         font.setColor(Color.decode("#5a615f"));
+
 
         Paragraph title = new Paragraph("Lista zakźśćupów", font);
         title.setAlignment(Paragraph.ALIGN_CENTER);
