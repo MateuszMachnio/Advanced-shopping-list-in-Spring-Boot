@@ -18,7 +18,7 @@ public class ShoppingList {
     private Long id;
 
     @OneToMany
-    @JoinColumn(name = "set_of_ingr_with_quant_id")
+    @JoinColumn(name = "shopping_list_id")
     private Set<IngredientWithQuantity> ingredientsWithQuantities = new HashSet<>();
 
     public void addIngredientWithQuantity(IngredientWithQuantity ingredientWithQuantity) {
