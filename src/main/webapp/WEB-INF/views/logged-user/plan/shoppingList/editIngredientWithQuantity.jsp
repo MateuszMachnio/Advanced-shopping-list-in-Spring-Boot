@@ -41,7 +41,7 @@
                     <input type="hidden" name="shoppingListId" value="${shoppingListId}">
 
                     <input type="submit" value="Edytuj">
-                    <form:button><a href="<c:url value="/logged-user/plan/shopping-list/${planId}/${shoppingListId}"/>">Powrót</a></form:button>
+                    <form:button><a href="<c:url value="/logged-user/plan/shopping-list/${planId}?shoppingListId=${shoppingListId}"/>">Powrót</a></form:button>
 
                 </form:form>
 
