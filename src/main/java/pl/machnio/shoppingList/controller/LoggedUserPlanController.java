@@ -16,6 +16,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/logged-user/plan")
@@ -27,6 +28,7 @@ public class LoggedUserPlanController {
     private final MealNameService mealNameService;
     private final DayOfTheWeekService dayOfTheWeekService;
     private final PlanScheduleService planScheduleService;
+    private Map<String, Integer> shoppingList;
 
     public LoggedUserPlanController(PlanService planService, UserService userService, RecipeService recipeService, MealNameService mealNameService, DayOfTheWeekService dayOfTheWeekService, PlanScheduleService planScheduleService) {
         this.planService = planService;
@@ -123,15 +125,25 @@ public class LoggedUserPlanController {
         return "redirect:/logged-user/plan/details/" + planId;
     }
 
-    @GetMapping("/shopping-list")
-    public void createList() {
+    @GetMapping("/shopping-list/{planId}")
+    public String createList(@PathVariable long planId, Model model) {
+        this.shoppingList = planScheduleService.shoppingListIngredients(1);
+        model.addAttribute("shoppingList", );
+        model.addAttribute("planId", planId);
+        return "/logged-user/plan/creatingShoppingList";
+    }
 
+    @GetMapping("/shopping-list/edit/{ingredient}/{quantity}")
+    public String editIngredient(@PathVariable String ingredient, @PathVariable int quantity, Model model) {
+
+        model.addAttribute("shoppingList", planScheduleService.shoppingListIngredients(1));
+        model.addAttribute("planId", planId);
+        return "/logged-user/plan/creatingShoppingList";
     }
 
     @GetMapping("/shopping-list/export")
     public void exportToPDF(HttpServletResponse response) throws IOException {
         response.setContentType("application/pdf; charset=UTF-8");
-//        response.setCharacterEncoding("UTF-8");
         DateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss");
         String currentDateTime = dateFormatter.format(new Date());
 
