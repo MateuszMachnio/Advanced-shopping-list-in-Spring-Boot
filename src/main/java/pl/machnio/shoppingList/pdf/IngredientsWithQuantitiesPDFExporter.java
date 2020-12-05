@@ -3,6 +3,7 @@ package pl.machnio.shoppingList.pdf;
 import com.lowagie.text.*;
 import com.lowagie.text.Font;
 import com.lowagie.text.pdf.*;
+import pl.machnio.shoppingList.entity.shoppingListCreating.ShoppingList;
 
 import javax.servlet.http.HttpServletResponse;
 import java.awt.*;
@@ -11,9 +12,9 @@ import java.util.Map;
 
 public class IngredientsWithQuantitiesPDFExporter {
 
-    private Map<String, Integer> shoppingList;
+    private ShoppingList shoppingList;
 
-    public IngredientsWithQuantitiesPDFExporter(Map<String, Integer> shoppingList) {
+    public IngredientsWithQuantitiesPDFExporter(ShoppingList shoppingList) {
         this.shoppingList = shoppingList;
     }
 
@@ -45,15 +46,15 @@ public class IngredientsWithQuantitiesPDFExporter {
         BaseFont bf = BaseFont.createFont("C:\\Users\\machn\\OneDrive\\Pulpit\\JAVA weekendowo\\advanced-shopping-list\\src\\main\\resources\\fonts\\OrganicTeabags.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
         Font font = new Font(bf,18);
 
-        shoppingList.forEach((s, integer) -> {
+        shoppingList.getIngredientsWithQuantities().forEach(ingredientWithQuantity -> {
 //            font.setSize(25);
             cell.setHorizontalAlignment(Element.ALIGN_LEFT);
-            cell.setPhrase(new Phrase(s, font));
+            cell.setPhrase(new Phrase(ingredientWithQuantity.getIngredient().getName(), font));
             pdfPTable.addCell(cell);
 
 //            font.setSize(15);
             cell.setHorizontalAlignment(Element.ALIGN_CENTER);
-            cell.setPhrase(new Phrase(integer + " g", font));
+            cell.setPhrase(new Phrase(ingredientWithQuantity.getQuantity() + " g", font));
             pdfPTable.addCell(cell);
         });
     }
