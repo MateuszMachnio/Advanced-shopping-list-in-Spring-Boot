@@ -22,6 +22,15 @@ public class IngredientWithQuantity {
     @Range(min = 1, max = 5000)
     private int quantity;
 
+    public IngredientWithQuantity() {
+    }
+
+    public IngredientWithQuantity(Ingredient ingredient, int quantity) {
+        this.ingredient = ingredient;
+        this.quantity = quantity;
+    }
+
+
     public Long getId() {
         return id;
     }
