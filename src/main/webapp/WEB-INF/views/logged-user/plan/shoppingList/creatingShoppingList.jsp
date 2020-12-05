@@ -4,18 +4,18 @@
 <html>
 <head>
     <title>Tworzenie listy zakupów</title>
-    <%@include file="../../../constantParts/head.jspf" %>
+    <%@include file="../../../../constantParts/head.jspf" %>
 </head>
 <body>
 <div class="container">
-    <%@include file="../../../constantParts/loggedHeader.jspf"%>
+    <%@include file="../../../../constantParts/loggedHeader.jspf"%>
 
     <div id="content">
         <div id="topOfContent" style="margin-top: 10px">
         </div>
 
         <div id="middleOfContent">
-            <%@include file="../../../constantParts/loggedSidebar.jsp"%>
+            <%@include file="../../../../constantParts/loggedSidebar.jsp"%>
 
             <div id="text" style="text-align: center">
                 <h1>Tworzenie listy zakupów</h1>
@@ -30,17 +30,19 @@
                             <th>ilość</th>
                             <th>Akcje</th>
                         </tr>
-                    <c:forEach items="${shoppingList}" var="plan">
+                    <c:forEach items="${shoppingList.ingredientsWithQuantities}" var="ingredientWithQuantity">
                         <tr>
-                            <td>${plan.key}</td>
-                            <td>${plan.value} g</td>
+                            <td>${ingredientWithQuantity.ingredient.name}</td>
+                            <td>${ingredientWithQuantity.quantity} g</td>
                             <td>
-                                <button type="button"><a href="/logged-user/plan/shopping-list/edit/${plan.key}/${plan.value}">edytuj</a></button>
-                                <button type="button"><a href="/logged-user/plan/shopping-list/delete/${plan.key}/${plan.value}">usuń</a></button>
+                                <button type="button"><a href="/logged-user/plan/shopping-list/edit/${planId}/${shoppingList.id}/${ingredientWithQuantity.id}">edytuj</a></button>
+                                <button type="button"><a href="/logged-user/plan/shopping-list/delete/${ingredientWithQuantity.id}">usuń</a></button>
                             </td>
                         </tr>
                     </c:forEach>
                     </table>
+
+                <button type="button"><a href="/logged-user/plan/shopping-list/export/${shoppingList.id}">Zatwierdź</a></button>
 
             </div>
         </div>
@@ -49,7 +51,7 @@
         </div>
     </div>
     <!--  koniec divContent  -->
-    <%@include file="../../../constantParts/footer.jspf"%>
+    <%@include file="../../../../constantParts/footer.jspf"%>
 </div>
 </body>
 </html>
