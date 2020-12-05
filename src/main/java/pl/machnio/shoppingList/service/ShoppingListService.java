@@ -9,6 +9,8 @@ public interface ShoppingListService {
 
     ShoppingList findById(long id);
 
+    public ShoppingList findByIdWithSetOfIngredientsWithQuantities(long id);
+
     public ShoppingList saveShoppingList(Map<String, Integer> shoppingList);
 
     void updateShoppingList(ShoppingList shoppingList);
