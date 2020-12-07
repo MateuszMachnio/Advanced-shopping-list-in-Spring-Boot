@@ -16,7 +16,7 @@
         </div>
         <div id="middleOfContent">
 
-            <div id="text">
+            <div id="textNotLoggedIn">
                 <h1>Pomyślnie zarejestrowano</h1>
 
                     <div style="text-align: center">

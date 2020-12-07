@@ -4,7 +4,7 @@
 <div id="footer">
     <img id="newsletterIcon" src="<c:url value="/static/css/images/newsletter_icon.gif"/>" alt="Newsletter icon"/>
     <div id="newsletterText">
-        <div id="newsletterHeader">Zapisz się do Newslettera i bądź na bieżąco z najlepszymi przepisami
+        <div id="newsletterHeader">Zapisz się do Newslettera i bądź na bieżąco z najlepszymi przepisami!
 
         </div>
         <div id="newsletterForm">
@@ -13,15 +13,12 @@
                     <label for="email">Twój e-mail:
                         <input type="text" id="email" class="inputText" name="email" />
                     </label>
-                    <input class="submitButton" type="submit" value="Zapisuję się*" />
-
-                    <input type="checkbox" name="email" id="checkbox"/>
-                    <label for="checkbox" id="checkboxLabel">Akceptuję zasady prywatności.</label>
+                    <input class="submitButton" type="submit" value="*Zapisuję się" />
                 </div>
             </form>
         </div>
         <div id="newsletterInfo">
-            *Będziemy Ciebie informować o nowych ciekawych <em>przepisach</em>. W każdym momencie, możesz wypisać się z Newsletera wysyłając do nas e-mail'a. Przyciskając button "Zapisuje się*" akceptujesz nasze <a href="#">zasady prywatności</a>.
+            *Zapisując się akceptujesz nasze <a href="#">zasady prywatności</a>. W każdym momencie, możesz wypisać się z Newsletera wysyłając do nas maila.
         </div>
     </div>
 </div>

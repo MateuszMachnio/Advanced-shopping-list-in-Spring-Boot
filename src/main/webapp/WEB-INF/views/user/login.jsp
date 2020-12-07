@@ -16,7 +16,7 @@
         </div>
         <div id="middleOfContent">
 
-            <div id="text">
+            <div id="textNotLoggedIn">
                 <h1>Logowanie</h1>
 
                 <div id="form">
@@ -34,19 +34,19 @@
                         </c:if>
                         <div>
                             <label for="username"><i></i></label>
-                            <input type="text" id="username" name="email" placeholder="Enter Email" required>
+                            <input type="text" id="username" name="email" placeholder="Email" required>
                         </div>
                         <br />
                         <div>
                             <label for="password"><i></i></label>
-                            <input type="password" id="password" name="password" placeholder="Enter Password" required>
+                            <input type="password" id="password" name="password" placeholder="Hasło" required>
                         </div>
                         <br />
                         <div>
                             <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
                         </div>
-                        <div>
-                            <input type="submit" value="Log in">
+                        <div style="text-align: center">
+                            <input type="submit" value="Zaloguj">
                         </div>
                     </form>
                 </div>

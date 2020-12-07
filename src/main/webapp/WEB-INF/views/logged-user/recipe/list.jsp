@@ -25,16 +25,16 @@
                 <c:forEach items="${recipeList}" var="recipe">
                 <table class="tableData">
                     <tr>
-                        <th>Nazwa Przepisu</th>
-                        <th>Opis przepisu</th>
-                        <th>Czas przygotowania</th>
-                        <th>Akcje</th>
+                        <th style="width: 20%">Nazwa Przepisu</th>
+                        <th style="width: 40%">Opis przepisu</th>
+                        <th style="width: 18%">Czas przygotowania</th>
+                        <th style="width: 22%">Akcje</th>
                     </tr>
                     <tr>
                         <td>${recipe.name}</td>
-                        <td>${recipe.description}</td>
-                        <td>${recipe.preparationTime} min</td>
-                        <td>
+                        <td style="text-align: center">${recipe.description}</td>
+                        <td style="text-align: center">${recipe.preparationTime} min</td>
+                        <td style="text-align: center">
                             <button type="button"><a href="/logged-user/recipe/details/${recipe.id}">szczegóły</a></button>
                             <button type="button"><a href="/logged-user/recipe/edit/${recipe.id}">edytuj</a></button>
                             <button type="button"><a href="/logged-user/recipe/delete/${recipe.id}">usuń</a></button>

@@ -15,11 +15,17 @@
         </div>
         <div id="middleOfContent">
 
-            <div id="text">
-                <h1>Strona Główna</h1>
-
-
-
+            <div id="textNotLoggedIn">
+                <h3>Zapraszam do skorzystania z najlepszej aplikacji stworzonej w celu zarządzania i organizacji planu żywieniowego!</h3>
+                <div id="notLoggedUserContent">
+                    Po zalogowaniu plikacja pozwala na:
+                    <ul>
+                        <li>stworzenie własnego przepisu;</li>
+                        <li>korzystanie z przepisów innych użytkowników;</li>
+                        <li>ułożenie własnych tygodniowych planów żywieniowych;</li>
+                        <li>stworzenie w prosty sposób listy zakupów potrzebnej do zrealizowania danego planu żywieniowego.</li>
+                    </ul>
+                </div>
             </div>
         </div>
         <!-- koniec środka zawartości -->

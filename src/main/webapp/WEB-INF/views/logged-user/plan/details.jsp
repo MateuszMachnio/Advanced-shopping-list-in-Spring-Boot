@@ -29,15 +29,15 @@
                 <c:forEach items="${planSchedule.keySet()}" var="day">
                     <table class="tableData">
                         <tr>
-                            <th>${day.name}</th>
-                            <th></th>
+                            <th style="width: 20%">${day.name}</th>
+                            <th style="width: 60%"></th>
                             <th><c:if test="${planSchedule.get(day).size() < 5}"><button type="button"><a href="<c:url value="/logged-user/plan/add-recipe/${plan.id}/${day.id}"/>">Dodaj przepis</a></button></c:if></th>
                         </tr>
                         <c:forEach items="${planSchedule.get(day)}" var="schedule">
                             <tr>
                                 <td>${schedule.mealName.name}</td>
-                                <td>${schedule.recipe.name}</td>
-                                <td>
+                                <td style="text-align: center">${schedule.recipe.name}</td>
+                                <td style="text-align: center">
                                     <button type="button"><a href="<c:url value="/logged-user/recipe/details/${schedule.recipe.id}?planId=${plan.id}"/>">szczegóły</a></button>
                                     <button type="button"><a href="<c:url value="/logged-user/plan/remove-schedule/${plan.id}/${schedule.id}"/>">usuń</a></button>
                                 </td>

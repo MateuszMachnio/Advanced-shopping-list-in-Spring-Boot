@@ -17,9 +17,7 @@
                 <%@include file="../../constantParts/loggedSidebar.jsp"%>
 
                 <div id="text">
-                    <h1>Strona Główna</h1>
-
-                    <p>Witam w najlepszej aplikacji stworzonej w celu zarządzania i organizacji planu żywieniowego!</p>
+                    <h3>Witam w najlepszej aplikacji stworzonej w celu zarządzania i organizacji planu żywieniowego!</h3>
                     <p>Aplikacja pozwala na:
                         <ul>
                             <li>stworzenie własnego przepisu;</li>
@@ -28,7 +26,7 @@
                             <li>stworzenie w prosty sposób listy zakupów potrzebnej do zrealizowania danego planu żywieniowego.</li>
                         </ul>
                     </p>
-                    <p>*Jeśli na liści produktów (przy tworzeniu własnego przepisu) nie znajdziesz szukanego produktu, proszę zgłoś problem wysyłając do mnie maila.</p>
+                    <p>*Jeśli na liście produktów (przy tworzeniu własnego przepisu) nie znajdziesz szukanego produktu, proszę zgłoś problem wysyłając do mnie maila.</p>
                 </div>
             </div>
             <!-- koniec środka zawartości -->

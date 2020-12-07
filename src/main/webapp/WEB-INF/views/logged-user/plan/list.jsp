@@ -23,16 +23,16 @@
                 <button type="button"><a href="<c:url value="/logged-user/plan/add"/>">dodaj nowy plan</a></button>
 
                 <c:forEach items="${plans}" var="plan">
-                    <table>
+                    <table class="tableData">
                         <tr>
-                            <th>Nazwa planu</th>
-                            <th>Opis planu</th>
+                            <th style="width: 30%">Nazwa planu</th>
+                            <th style="width: 50%">Opis planu</th>
                             <th>Akcje</th>
                         </tr>
                         <tr>
                             <td>${plan.name}</td>
-                            <td>${plan.description}</td>
-                            <td>
+                            <td style="text-align: center">${plan.description}</td>
+                            <td style="text-align: center">
                                 <button type="button"><a href="/logged-user/plan/details/${plan.id}">szczegóły</a></button>
                                 <button type="button"><a href="/logged-user/plan/delete/${plan.id}">usuń</a></button>
                             </td>
