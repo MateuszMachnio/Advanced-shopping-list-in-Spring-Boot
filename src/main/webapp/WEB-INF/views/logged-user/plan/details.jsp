@@ -23,8 +23,8 @@
                 <a class="shoppingList" href="<c:url value="/logged-user/plan/shopping-list/${plan.id}"/>">Stwórz listę zakupów dla tego planu</a>
                 <a class="return" style="margin-left: 1000px; margin-top: 10px" href="<c:url value="/logged-user/plan/list"/>">Powrót</a>
 
-                <p><b>Nazwa planu:</b> ${plan.name}</p>
-                <p><b>Opis planu:</b> ${plan.description}</p>
+                <p style="font-size: 18px"><b>Nazwa planu:</b> ${plan.name}</p>
+                <p style="font-size: 18px"><b>Opis planu:</b> ${plan.description}</p>
 
                 <c:forEach items="${planSchedule.keySet()}" var="day">
                     <table class="tableData">
