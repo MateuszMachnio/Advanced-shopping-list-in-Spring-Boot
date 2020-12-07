@@ -48,8 +48,8 @@ public class User {
     @JoinTable(name = "user_recipes", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "recipe_id"))
     private Set<Recipe> recipes = new HashSet<>();
 
-    @ManyToMany
-    @JoinTable(name = "user_plans", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "plan_id"))
+    @OneToMany
+    @JoinColumn(name = "user_id")
     private Set<Plan> plans = new HashSet<>();
 
     public void addPlan(Plan plan) {
