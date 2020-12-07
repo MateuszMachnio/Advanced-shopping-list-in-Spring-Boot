@@ -23,7 +23,7 @@
                 <button type="button"><a href="<c:url value="/logged-user/recipe/create-set-of-ingredients"/>">dodaj nowy przepis</a></button>
 
                 <c:forEach items="${recipeList}" var="recipe">
-                <table>
+                <table class="tableData">
                     <tr>
                         <th>Nazwa Przepisu</th>
                         <th>Opis przepisu</th>

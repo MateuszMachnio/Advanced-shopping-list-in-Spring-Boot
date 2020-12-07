@@ -191,7 +191,7 @@ div#sidebar {
     float: left;
     background-color: #5a615f;
     height: 300px;
-    width: 200px;
+    width: 15%;
 }
 div#sidebar ul {
     list-style: none;
@@ -227,6 +227,11 @@ div#sidebar li a:hover {
     background-image: url("images/białe-tło.png");
     width: 1400px;
 }
+#middleOfContent:after {
+    content: "";
+    display: block;
+    clear: both;
+}
 #bottomOfContent {
     background-image: url("images/dol_zawartosci.jpg");
     height: 46px;
@@ -240,6 +245,19 @@ div#text {
     /*height: 300px;*/
     /*position: relative;*/
     min-height: 300px;
+    float: left;
+    width: 77%;
+}
+.tableData {
+    /*margin-bottom: 40px;*/
+    margin: 10px auto;
+}
+.tableData th {
+    padding: 5px 20px;
+    width: 200px;
+}
+.tableData td {
+    padding: 5px 20px;
 }
 h1 {
     text-align: center;

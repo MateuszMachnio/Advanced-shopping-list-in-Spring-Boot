@@ -27,7 +27,7 @@
                 <button type="button"><a href="<c:url value="/logged-user/plan/list"/>">Powrót</a></button>
 
                 <c:forEach items="${planSchedule.keySet()}" var="day">
-                    <table>
+                    <table class="tableData">
                         <tr>
                             <th>${day.name}</th>
                             <th></th>
