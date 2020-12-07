@@ -48,8 +48,18 @@ public class PlanScheduleServiceImpl implements PlanScheduleService {
     }
 
     @Override
+    public void deleteAll(List<PlanSchedule> planSchedules) {
+        planScheduleRepository.deleteAll(planSchedules);
+    }
+
+    @Override
     public List<PlanSchedule> findAllPlanSchedules() {
         return planScheduleRepository.findAll();
+    }
+
+    @Override
+    public List<PlanSchedule> findAllByPlanId(Long plan_id) {
+        return planScheduleRepository.findAllByPlanId(plan_id);
     }
 
     @Override
@@ -77,7 +87,7 @@ public class PlanScheduleServiceImpl implements PlanScheduleService {
 
     @Override
     public Map<String, Integer> shoppingListIngredients(long plan_id) {
-        List<PlanSchedule> plans = planScheduleRepository.findByPlanId(plan_id);
+        List<PlanSchedule> plans = planScheduleRepository.findAllByPlanId(plan_id);
 
         List<Set<IngredientWithQuantity>> listOfIngredientsWithQuantitiesSets = plans.stream()
                 .map(planSchedule -> planSchedule.getRecipe().getSetOfIngredientsWithQuantities().getIngredientsWithQuantities())

@@ -2,7 +2,9 @@ package pl.machnio.shoppingList.service;
 
 import org.springframework.stereotype.Service;
 import pl.machnio.shoppingList.entity.Plan;
+import pl.machnio.shoppingList.entity.PlanSchedule;
 import pl.machnio.shoppingList.repository.PlanRepository;
+import pl.machnio.shoppingList.repository.PlanScheduleRepository;
 
 import javax.persistence.EntityNotFoundException;
 import java.util.List;
@@ -11,9 +13,11 @@ import java.util.List;
 public class PlanServiceImpl implements PlanService{
 
     private final PlanRepository planRepository;
+    private final PlanScheduleRepository planScheduleRepository;
 
-    public PlanServiceImpl(PlanRepository planRepository) {
+    public PlanServiceImpl(PlanRepository planRepository, PlanScheduleRepository planScheduleRepository) {
         this.planRepository = planRepository;
+        this.planScheduleRepository = planScheduleRepository;
     }
 
     @Override

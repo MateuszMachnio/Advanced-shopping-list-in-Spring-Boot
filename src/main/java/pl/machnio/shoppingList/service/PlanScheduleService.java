@@ -18,7 +18,11 @@ public interface PlanScheduleService {
 
     void deletePlanSchedule(long id);
 
+    void deleteAll(List<PlanSchedule> planSchedules);
+
     List<PlanSchedule> findAllPlanSchedules();
+
+    List<PlanSchedule> findAllByPlanId(Long plan_id);
 
     public Map<DayOfTheWeek, List<PlanSchedule>> findPlanSchedulesByPlanId(long plan_id);
 

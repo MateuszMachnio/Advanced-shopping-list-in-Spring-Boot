@@ -20,7 +20,7 @@ public class Plan {
     private String name;
 
     @NotBlank
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private String description;
 
     @Column(name = "created_on")

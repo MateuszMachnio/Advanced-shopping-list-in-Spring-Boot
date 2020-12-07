@@ -532,3 +532,19 @@ table#addRecipeToPlan {
 table#addRecipeToPlan td {
     padding: 10px;
 }
+input.delete {
+    display: inline-block;
+    color: white;
+    padding: 4px 9px;
+    background-color: #f44336;
+    border: 5px solid #f44336;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+    font-size: 16px;
+    cursor: pointer;
+    /*margin-left: 850px;*/
+}
+input.delete:hover {
+    color: #f44336;
+    background-color: white;
+}

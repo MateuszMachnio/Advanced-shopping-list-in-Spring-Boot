@@ -124,6 +124,8 @@ public class LoggedUserPlanController {
         User currentUserWithPlans = userService.getCurrentUserWithPlans();
         currentUserWithPlans.removePlan(plan);
         userService.updateUser(currentUserWithPlans);
+        planScheduleService.deleteAll(planScheduleService.findAllByPlanId(plan.getId()));
+        planService.deletePlanById(plan.getId());
         return "redirect:list";
     }
 

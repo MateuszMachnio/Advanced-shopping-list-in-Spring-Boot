@@ -13,5 +13,5 @@ public interface PlanScheduleRepository extends JpaRepository<PlanSchedule, Long
 
     List<PlanSchedule> findByPlanIdAndDayOfTheWeekId(Long plan_id, Long dayOfTheWeek_id);
 
-    List<PlanSchedule> findByPlanId(Long plan_id);
+    List<PlanSchedule> findAllByPlanId(Long plan_id);
 }
