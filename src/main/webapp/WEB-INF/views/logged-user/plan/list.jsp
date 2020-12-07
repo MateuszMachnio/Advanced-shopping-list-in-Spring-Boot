@@ -20,7 +20,7 @@
             <div id="text" style="text-align: center">
                 <h1>Lista planów</h1>
 
-                <button type="button"><a href="<c:url value="/logged-user/plan/add"/>">dodaj nowy plan</a></button>
+                <a class="action" href="<c:url value="/logged-user/plan/add"/>">dodaj nowy plan</a>
 
                 <c:forEach items="${plans}" var="plan">
                     <table class="tableData">
@@ -30,11 +30,11 @@
                             <th>Akcje</th>
                         </tr>
                         <tr>
-                            <td>${plan.name}</td>
-                            <td style="text-align: center">${plan.description}</td>
-                            <td style="text-align: center">
-                                <button type="button"><a href="/logged-user/plan/details/${plan.id}">szczegóły</a></button>
-                                <button type="button"><a href="/logged-user/plan/delete/${plan.id}">usuń</a></button>
+                            <td style="text-align: left; padding-left: 20px">${plan.name}</td>
+                            <td>${plan.description}</td>
+                            <td>
+                                <a class="button" href="/logged-user/plan/details/${plan.id}">szczegóły</a>
+                                <a class="button-danger" href="/logged-user/plan/delete/${plan.id}">usuń</a>
                             </td>
                         </tr>
                     </table>

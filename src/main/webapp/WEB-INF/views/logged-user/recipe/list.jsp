@@ -20,7 +20,7 @@
             <div id="text" style="text-align: center">
                 <h1>Lista przepisów</h1>
 
-                <button type="button"><a href="<c:url value="/logged-user/recipe/create-set-of-ingredients"/>">dodaj nowy przepis</a></button>
+                <a class="action" href="<c:url value="/logged-user/recipe/create-set-of-ingredients"/>">dodaj nowy przepis</a>
 
                 <c:forEach items="${recipeList}" var="recipe">
                 <table class="tableData">
@@ -31,13 +31,13 @@
                         <th style="width: 22%">Akcje</th>
                     </tr>
                     <tr>
-                        <td>${recipe.name}</td>
-                        <td style="text-align: center">${recipe.description}</td>
-                        <td style="text-align: center">${recipe.preparationTime} min</td>
-                        <td style="text-align: center">
-                            <button type="button"><a href="/logged-user/recipe/details/${recipe.id}">szczegóły</a></button>
-                            <button type="button"><a href="/logged-user/recipe/edit/${recipe.id}">edytuj</a></button>
-                            <button type="button"><a href="/logged-user/recipe/delete/${recipe.id}">usuń</a></button>
+                        <td style="text-align: left; padding-left: 20px">${recipe.name}</td>
+                        <td>${recipe.description}</td>
+                        <td>${recipe.preparationTime} min</td>
+                        <td>
+                            <a class="button" href="/logged-user/recipe/details/${recipe.id}">szczegóły</a>
+                            <a class="button" href="/logged-user/recipe/edit/${recipe.id}">edytuj</a>
+                            <a class="button-danger" href="/logged-user/recipe/delete/${recipe.id}">usuń</a>
                         </td>
                     </tr>
                 </table>

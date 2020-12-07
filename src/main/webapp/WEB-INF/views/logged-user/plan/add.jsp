@@ -20,26 +20,28 @@
             <div id="text" style="text-align: center">
                 <h1>Dodawanie planu</h1>
 
-                <form:form modelAttribute="plan">
-                    <table>
-                        <tr>
-                            <td><form:label path="name">Nazwa planu: </form:label></td>
-                            <td><form:input path="name"/></td>
-                            <td><form:errors path="name" cssClass="error"/></td>
-                        </tr>
+                <div id="form">
+                    <form:form modelAttribute="plan">
+                        <table id="plan">
+                            <tr>
+                                <td><form:label path="name">Nazwa planu: </form:label></td>
+                                <td><form:input path="name" cssStyle="width: 380px"/></td>
+                                <td><form:errors path="name" cssClass="error"/></td>
+                            </tr>
 
-                        <tr>
-                            <td><form:label path="description">Opis planu: </form:label></td>
-                            <td><form:textarea cols="20" rows="5" path="description"/></td>
-                            <td><form:errors path="description" cssClass="error"/></td>
-                        </tr>
-                    </table>
-                    <br />
+                            <tr>
+                                <td><form:label path="description">Opis planu: </form:label></td>
+                                <td><form:textarea cols="50" rows="5" path="description" /></td>
+                                <td><form:errors path="description" cssClass="error"/></td>
+                            </tr>
+                        </table>
+                        <br />
 
-                    <input type="submit" value="Dodaj plan">
-                    <form:button><a href="<c:url value="/logged-user/dashboard"/>">Powrót</a></form:button>
+                        <input type="submit" class="submit" value="Dodaj plan">
+                        <a class="return" href="<c:url value="/logged-user/plan/list"/>">Powrót</a>
 
-                </form:form>
+                    </form:form>
+                </div>
 
             </div>
         </div>
