@@ -429,7 +429,7 @@ a.action:hover {
 input.submit {
     display: inline-block;
     color: white;
-    padding: 7px 18px;
+    padding: 4px 9px;
     background-color: #008CBA;
     border: 5px solid #008CBA;
     border-radius: 4px;
@@ -445,10 +445,10 @@ input.submit:hover {
 a.return {
     display: inline-block;
     color: white;
-    padding: 3px 7px;
+    padding: 1px 3px;
     background-color: #e7e7e7;
     border: 3px solid #e7e7e7;
-    border-radius: 4px;
+    /*border-radius: 4px;*/
     transition-duration: 0.4s;
     font-size: 16px;
     cursor: pointer;
@@ -525,4 +525,10 @@ a.shoppingList:hover {
 }
 a.shoppingList:active {
     border: 5px inset #ff6600;
+}
+table#addRecipeToPlan {
+    margin-left: 285px;
+}
+table#addRecipeToPlan td {
+    padding: 10px;
 }

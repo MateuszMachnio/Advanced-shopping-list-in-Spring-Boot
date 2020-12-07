@@ -20,37 +20,40 @@
             <div id="text" style="text-align: center">
                 <h1>Dodawanie przepisu do planu</h1>
 
-                <form:form modelAttribute="planSchedule" method="post" action="/logged-user/plan/add-recipe">
-                    <table>
-                        <tr>
-                            <td><form:label path="mealName">Nazwa posiłku: </form:label></td>
-                            <td>
-                                <form:select path="mealName">
-                                    <form:option value="0" label="--select meal--"/>
-                                    <form:options items="${mealNames}" itemLabel="name" itemValue="id" />
-                                </form:select>
-                            </td>
-                            <td><form:errors path="mealName" cssClass="error"/></td>
-                        </tr>
+                <div id="form">
+                    <form:form modelAttribute="planSchedule" method="post" action="/logged-user/plan/add-recipe">
+                        <table id="addRecipeToPlan">
+                            <tr>
+                                <td><form:label path="mealName">Nazwa posiłku: </form:label></td>
+                                <td>
+                                    <form:select cssStyle="width: 250px" path="mealName">
+                                        <form:option value="0" label="--wybierz posiłek--"/>
+                                        <form:options items="${mealNames}" itemLabel="name" itemValue="id" />
+                                    </form:select>
+                                </td>
+                                <td><form:errors path="mealName" cssClass="error"/></td>
+                            </tr>
 
-                        <tr>
-                            <td><form:label path="recipe">Nazwa przepisu: </form:label></td>
-                            <td>
-                                <form:select path="recipe">
-                                    <form:option value="0" label="--select recipe--"/>
-                                    <form:options items="${recipes}" itemLabel="name" itemValue="id" />
-                                </form:select>
-                            </td>
-                            <td><form:errors path="recipe" cssClass="error"/></td>
-                        </tr>
-                        <form:hidden path="dayOfTheWeek" value="${dayId}"/>
-                        <form:hidden path="plan" value="${planId}"/>
-                    </table>
-                    <br />
+                            <tr>
+                                <td><form:label path="recipe">Nazwa przepisu: </form:label></td>
+                                <td>
+                                    <form:select cssStyle="width: 250px" path="recipe">
+                                        <form:option value="0" label="--wybierz przepis--"/>
+                                        <form:options items="${recipes}" itemLabel="name" itemValue="id" />
+                                    </form:select>
+                                </td>
+                                <td><form:errors path="recipe" cssClass="error"/></td>
+                            </tr>
+                            <form:hidden path="dayOfTheWeek" value="${dayId}"/>
+                            <form:hidden path="plan" value="${planId}"/>
+                        </table>
+                        <br />
 
-                    <input type="submit" value="Zapisz">
-                    <%--                    <form:button><a href="<c:url value="/logged_user/dashboard"/>">Gotowe</a></form:button>--%>
-                </form:form>
+                        <input class="submit" type="submit" value="Zapisz">
+                        <a class="return" href="<c:url value="/logged-user/plan/details/${planId}"/>">Powrót</a>
+                        <%--                    <form:button><a href="<c:url value="/logged_user/dashboard"/>">Gotowe</a></form:button>--%>
+                    </form:form>
+                </div>
 
             </div>
         </div>

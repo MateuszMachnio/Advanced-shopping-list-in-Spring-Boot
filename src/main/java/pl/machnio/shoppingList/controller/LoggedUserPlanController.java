@@ -101,6 +101,11 @@ public class LoggedUserPlanController {
     @PostMapping("/add-recipe")
     public String addingRecipeToPlan(@Valid PlanSchedule planSchedule, BindingResult result, Model model) {
         if (result.hasErrors()) {
+            Long dayId = planSchedule.getDayOfTheWeek().getId();
+            Long planId = planSchedule.getPlan().getId();
+            model.addAttribute("mealNames", planScheduleService.findMealsOfTheDayThatLeft(planId, dayId));
+            model.addAttribute("planId", planId);
+            model.addAttribute("dayId", dayId);
             return "/logged-user/plan/addRecipeToPlan";
         }
         planScheduleService.savePlanSchedule(planSchedule);
