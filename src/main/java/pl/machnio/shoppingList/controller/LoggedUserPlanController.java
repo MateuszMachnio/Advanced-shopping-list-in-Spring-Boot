@@ -140,6 +140,13 @@ public class LoggedUserPlanController {
         if (shoppingListId == null) {
             Map<String, Integer> shoppingList = planScheduleService.shoppingListIngredients(planId);
             ShoppingList savedShoppingList = shoppingListService.saveShoppingList(shoppingList);
+            User currentUser = userService.getCurrentUser();
+            ShoppingList userShoppingList = currentUser.getShoppingList();
+            currentUser.setShoppingList(savedShoppingList);
+            userService.updateUser(currentUser);
+            if (userShoppingList != null) {
+                shoppingListService.deleteShoppingList(userShoppingList.getId());
+            }
             model.addAttribute("shoppingList", savedShoppingList);
         } else {
             model.addAttribute("shoppingList", shoppingListService.findByIdWithSetOfIngredientsWithQuantities(shoppingListId));

@@ -93,4 +93,9 @@ public class UserServiceImpl implements UserService{
         return user;
     }
 
+    @Override
+    public User getCurrentUser() {
+        return userRepository.findByEmail(getPrincipal());
+    }
+
 }

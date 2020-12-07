@@ -3,6 +3,7 @@ package pl.machnio.shoppingList.entity.shoppingListCreating;
 import org.springframework.web.bind.annotation.GetMapping;
 import pl.machnio.shoppingList.entity.IngredientWithQuantity;
 import pl.machnio.shoppingList.entity.SetOfIngredientsWithQuantities;
+import pl.machnio.shoppingList.entity.User;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -17,9 +18,14 @@ public class ShoppingList {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.REMOVE)
     @JoinColumn(name = "shopping_list_id")
     private Set<IngredientWithQuantity> ingredientsWithQuantities = new HashSet<>();
+
+//    @NotNull
+//    @OneToOne(optional = false)
+//    @JoinColumn(name = "user_id")
+//    private User user;
 
     public void addIngredientWithQuantity(IngredientWithQuantity ingredientWithQuantity) {
         ingredientsWithQuantities.add(ingredientWithQuantity);

@@ -1,8 +1,11 @@
 package pl.machnio.shoppingList.entity;
 
+import pl.machnio.shoppingList.entity.shoppingListCreating.ShoppingList;
+
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Objects;
@@ -51,6 +54,10 @@ public class User {
     @OneToMany
     @JoinColumn(name = "user_id")
     private Set<Plan> plans = new HashSet<>();
+
+    @OneToOne
+    @JoinColumn(name = "shopping_list_id")
+    private ShoppingList shoppingList;
 
     public void addPlan(Plan plan) {
         plans.add(plan);
@@ -184,6 +191,14 @@ public class User {
 
     public void setPlans(Set<Plan> plans) {
         this.plans = plans;
+    }
+
+    public ShoppingList getShoppingList() {
+        return shoppingList;
+    }
+
+    public void setShoppingList(ShoppingList shoppingList) {
+        this.shoppingList = shoppingList;
     }
 
     @Override

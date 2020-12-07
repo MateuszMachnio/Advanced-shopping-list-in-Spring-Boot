@@ -24,4 +24,6 @@ public interface UserService {
 
     User getCurrentUserWithRecipes();
 
+    User getCurrentUser();
+
 }
