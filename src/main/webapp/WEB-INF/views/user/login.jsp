@@ -24,23 +24,19 @@
                     <form action="${loginUrl}" method="post">
 
                         <c:if test="${param.error != null}">
-                            <div class="alert-danger">
-                                <p>Invalid username or password.</p>
-                            </div>
+                            <div class="alert-danger">Nieprawidłowy login lub hasło.</div>
                         </c:if>
                         <c:if test="${param.logout != null}">
-                            <div class="alert-success">
-                                <p>You have been logged out successfully.</p>
-                            </div>
+                            <div class="alert-success">Zostałeś pomyślnie wylogowany.</div>
                         </c:if>
 
                         <div>
-                            <input type="text" id="username" name="email" placeholder="Email" required>
+                            <input type="text" name="email" placeholder="Email" required>
                         </div>
                         <br />
 
                         <div>
-                            <input type="password" id="password" name="password" placeholder="Hasło" required>
+                            <input type="password" name="password" placeholder="Hasło" required>
                         </div>
                         <br />
 
@@ -51,6 +47,11 @@
                         <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
 
                     </form>
+
+                    <c:if test="${param.error != null}">
+                        <div>Jeśli nie masz jeszcze konta, proszę <a href="<c:url value="/user/registration"/>">zarejestruj się</a>.</div>
+                    </c:if>
+
                 </div>
 
             </div>

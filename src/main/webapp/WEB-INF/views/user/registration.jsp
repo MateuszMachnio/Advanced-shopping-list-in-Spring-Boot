@@ -26,66 +26,33 @@
                     <form:form modelAttribute="user">
 <%--                        <form:input type="hidden" path="id" id="id"/>--%>
 
-                        <div class="row">
-                            <div>
-                                <div>
-                                    <form:input type="text" path="firstName" id="firstName" placeholder="Imię"/>
-                                    <div class="has-error">
-                                        <form:errors path="firstName" class="help-inline"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <br />
+                        <table id="registration">
+                            <tr>
+                                <td><form:input type="text" path="firstName" placeholder="Imię"/></td>
+                                <td><form:errors path="firstName" class="alert-danger"/></td>
+                            </tr>
 
-                        <div class="row">
-                            <div>
-                                <div>
-                                    <form:input type="text" path="lastName" id="lastName" placeholder="Nazwisko" />
-                                    <div class="has-error">
-                                        <form:errors path="lastName" class="help-inline"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <br />
+                            <tr>
+                                <td><form:input type="text" path="lastName" placeholder="Nazwisko" /></td>
+                                <td><form:errors path="lastName" class="alert-danger"/></td>
+                            </tr>
 
-                        <div class="row">
-                            <div>
-                                <div>
-                                    <form:input type="password" path="password" id="password" placeholder="Hasło" />
-                                    <div class="has-error">
-                                        <form:errors path="password" class="help-inline"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <br />
+                            <tr>
+                                <td><form:input type="password" path="password" placeholder="Hasło" /></td>
+                                <td><form:errors path="password" class="alert-danger"/></td>
+                            </tr>
 
-                        <div class="row">
-                            <div>
-                                <div>
-                                    <form:input type="text" path="email" id="email" placeholder="Email" />
-                                    <div class="has-error">
-                                        <form:errors path="email" class="help-inline"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <br />
+                            <tr>
+                                <td><form:input type="text" path="email" placeholder="Email" /></td>
+                                <td><form:errors path="email" class="alert-danger"/></td>
+                            </tr>
 
-                        <div class="row" style="text-align: center">
-                            <div>
-                                <c:choose>
-                                    <c:when test="${edit}">
-                                        <input type="submit" value="Update" /> or <a href="<c:url value='/list' />">Cancel</a>
-                                    </c:when>
-                                    <c:otherwise>
-                                        <input type="submit" value="Zarejestruj" />
-                                    </c:otherwise>
-                                </c:choose>
-                            </div>
-                        </div>
+                            <tr>
+                                <td style="text-align: center"><input type="submit" value="Zarejestruj" /></td>
+                                <td></td>
+                            </tr>
+                        </table>
+
                     </form:form>
                 </div>
 

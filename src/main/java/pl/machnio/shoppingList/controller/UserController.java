@@ -37,7 +37,6 @@ public class UserController {
     @GetMapping("/registration")
     public String newUser(Model model) {
         model.addAttribute("user", new User());
-        model.addAttribute("edit", false);
 //        model.addAttribute("loggedinuser", getPrincipal());
         return "user/registration";
     }

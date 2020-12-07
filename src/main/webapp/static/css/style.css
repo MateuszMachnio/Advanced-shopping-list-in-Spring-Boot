@@ -13,17 +13,26 @@ div.container {
     /*border: 3px solid black;*/
 }
 div#form {
-    margin: 30px 568px;
-    padding: 30px 0 40px 0;
+    width: 1000px;
+    margin: 0 auto;
+    /*margin: 30px 568px;*/
+    padding: 20px 0 40px 0;
+    text-align: center;
 }
 div#insideOfForm {
 
 }
-div.alert-danger {
+.alert-danger {
     color: red;
 }
-div.alert-success {
+.alert-success {
     color: green;
+}
+table#registration {
+    margin-left: 395px;
+}
+table#registration td {
+    padding: 10px;
 }
 a {
     color: teal;
