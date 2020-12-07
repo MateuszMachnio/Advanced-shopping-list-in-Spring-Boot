@@ -27,8 +27,8 @@
                     <tr>
                         <th style="width: 20%">Nazwa Przepisu</th>
                         <th style="width: 40%">Opis przepisu</th>
-                        <th style="width: 18%">Czas przygotowania</th>
-                        <th style="width: 22%">Akcje</th>
+                        <th>Czas przygotowania</th>
+                        <th>Akcje</th>
                     </tr>
                     <tr>
                         <td style="text-align: left; padding-left: 20px">${recipe.name}</td>

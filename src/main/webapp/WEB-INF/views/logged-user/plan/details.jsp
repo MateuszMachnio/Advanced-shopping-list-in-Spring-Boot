@@ -20,26 +20,26 @@
             <div id="text" style="text-align: center">
                 <h1>Szczegóły planu</h1>
 
-                <p>Nazwa planu: ${plan.name}</p>
-                <p>Opis planu: ${plan.description}</p>
+                <a class="shoppingList" href="<c:url value="/logged-user/plan/shopping-list/${plan.id}"/>">Stwórz listę zakupów dla tego planu</a>
+                <a class="return" style="margin-left: 1000px; margin-top: 10px" href="<c:url value="/logged-user/plan/list"/>">Powrót</a>
 
-                <button type="button"><a href="<c:url value="/logged-user/plan/shopping-list/${plan.id}"/>">Stwórz listę zakupów dla tego planu</a></button>
-                <button type="button"><a href="<c:url value="/logged-user/plan/list"/>">Powrót</a></button>
+                <p><b>Nazwa planu:</b> ${plan.name}</p>
+                <p><b>Opis planu:</b> ${plan.description}</p>
 
                 <c:forEach items="${planSchedule.keySet()}" var="day">
                     <table class="tableData">
                         <tr>
                             <th style="width: 20%">${day.name}</th>
                             <th style="width: 60%"></th>
-                            <th><c:if test="${planSchedule.get(day).size() < 5}"><button type="button"><a href="<c:url value="/logged-user/plan/add-recipe/${plan.id}/${day.id}"/>">Dodaj przepis</a></button></c:if></th>
+                            <th><c:if test="${planSchedule.get(day).size() < 5}"><a class="day" href="<c:url value="/logged-user/plan/add-recipe/${plan.id}/${day.id}"/>">dodaj przepis do dnia</a></c:if></th>
                         </tr>
                         <c:forEach items="${planSchedule.get(day)}" var="schedule">
                             <tr>
                                 <td>${schedule.mealName.name}</td>
                                 <td style="text-align: center">${schedule.recipe.name}</td>
                                 <td style="text-align: center">
-                                    <button type="button"><a href="<c:url value="/logged-user/recipe/details/${schedule.recipe.id}?planId=${plan.id}"/>">szczegóły</a></button>
-                                    <button type="button"><a href="<c:url value="/logged-user/plan/remove-schedule/${plan.id}/${schedule.id}"/>">usuń</a></button>
+                                    <a class="button" href="<c:url value="/logged-user/recipe/details/${schedule.recipe.id}?planId=${plan.id}"/>">szczegóły</a>
+                                    <a class="button-danger" href="<c:url value="/logged-user/plan/remove-schedule/${plan.id}/${schedule.id}"/>">usuń</a>
                                 </td>
                             </tr>
                         </c:forEach>
