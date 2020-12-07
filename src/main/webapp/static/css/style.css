@@ -19,6 +19,12 @@ div#form {
 div#insideOfForm {
 
 }
+div.alert-danger {
+    color: red;
+}
+div.alert-success {
+    color: green;
+}
 a {
     color: teal;
     text-decoration: none;

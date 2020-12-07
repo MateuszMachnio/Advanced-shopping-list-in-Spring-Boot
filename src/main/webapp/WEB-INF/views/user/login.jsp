@@ -22,32 +22,34 @@
                 <div id="form">
                     <c:url var="loginUrl" value="/user/login" />
                     <form action="${loginUrl}" method="post">
+
                         <c:if test="${param.error != null}">
-                            <div class="alert alert-danger">
+                            <div class="alert-danger">
                                 <p>Invalid username or password.</p>
                             </div>
                         </c:if>
                         <c:if test="${param.logout != null}">
-                            <div class="alert alert-success">
+                            <div class="alert-success">
                                 <p>You have been logged out successfully.</p>
                             </div>
                         </c:if>
+
                         <div>
-                            <label for="username"><i></i></label>
                             <input type="text" id="username" name="email" placeholder="Email" required>
                         </div>
                         <br />
+
                         <div>
-                            <label for="password"><i></i></label>
                             <input type="password" id="password" name="password" placeholder="Hasło" required>
                         </div>
                         <br />
-                        <div>
-                            <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
-                        </div>
+
                         <div style="text-align: center">
                             <input type="submit" value="Zaloguj">
                         </div>
+
+                        <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
+
                     </form>
                 </div>
 
