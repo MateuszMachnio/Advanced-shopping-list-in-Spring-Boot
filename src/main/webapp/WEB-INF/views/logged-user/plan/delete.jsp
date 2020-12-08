@@ -34,7 +34,7 @@
                         <c:forEach items="${planSchedule.get(day)}" var="schedule">
                             <tr>
                                 <td>${schedule.mealName.name}</td>
-                                <td style="text-align: center">${schedule.recipe.name}</td>
+                                <td>${schedule.recipe.name}</td>
                             </tr>
                         </c:forEach>
                     </table>

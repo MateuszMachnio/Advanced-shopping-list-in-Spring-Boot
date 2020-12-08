@@ -20,30 +20,30 @@
             <div id="text" style="text-align: center">
                 <h1>Tworzenie listy zakupów</h1>
 
-                <button type="button"><a href="<c:url value="/logged-user/plan/details/${planId}"/>">anuluj</a></button>
+                <a class="return" style="margin-left: 1000px; margin-top: 10px" href="<c:url value="/logged-user/plan/details/${planId}"/>">Powrót</a>
 
-                <p>Teraz możesz dostosować listę zakupów. Jeśli masz jakieś produkty w domu, usuń produkt z listy lub edytuj jego ilość.</p>
-                <p>Jeśli lista będzie gotowa wystarczy nacisnąć przycisk "Gotowe!" w celu pobrania listy zakupów.</p>
+                <p style="font-size: 18px">Teraz możesz dostosować listę zakupów. Jeśli masz jakieś produkty w domu, możesz usunąć produkt z listy lub edytować jego ilość.</p>
+                <p style="font-size: 18px">Jeśli lista będzie gotowa wystarczy nacisnąć przycisk <em><b>"Gotowe!"</b></em> w celu pobrania listy zakupów.</p>
 
-                    <table>
+                    <table class="tableData">
                         <tr>
-                            <th>produkt</th>
+                            <th style="width: 40%">produkt</th>
                             <th>ilość</th>
-                            <th>Akcje</th>
+                            <th style="width: 40%">akcje</th>
                         </tr>
                     <c:forEach items="${shoppingList.ingredientsWithQuantities}" var="ingredientWithQuantity">
                         <tr>
                             <td>${ingredientWithQuantity.ingredient.name}</td>
                             <td>${ingredientWithQuantity.quantity} g</td>
                             <td>
-                                <button type="button"><a href="/logged-user/plan/shopping-list/edit/${planId}/${shoppingList.id}/${ingredientWithQuantity.id}">edytuj</a></button>
-                                <button type="button"><a href="/logged-user/plan/shopping-list/delete/${planId}/${shoppingList.id}/${ingredientWithQuantity.id}">usuń</a></button>
+                                <a class="button" href="/logged-user/plan/shopping-list/edit/${planId}/${shoppingList.id}/${ingredientWithQuantity.id}">edytuj</a>
+                                <a class="button-danger" href="/logged-user/plan/shopping-list/delete/${planId}/${shoppingList.id}/${ingredientWithQuantity.id}">usuń</a>
                             </td>
                         </tr>
                     </c:forEach>
                     </table>
 
-                <button type="button"><a href="/logged-user/plan/shopping-list/export/${shoppingList.id}">Gotowe!</a></button>
+                <a class="shoppingList" style="margin: 0 0 50px 0" href="/logged-user/plan/shopping-list/export/${shoppingList.id}">Gotowe!</a>
 
             </div>
         </div>
