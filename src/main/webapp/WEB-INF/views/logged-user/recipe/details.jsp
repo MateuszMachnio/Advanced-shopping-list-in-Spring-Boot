@@ -23,7 +23,7 @@
                 <c:if test="${planId == null}"><a class="return" style="margin-left: 1000px; margin-top: 10px" href="<c:url value="/logged-user/recipe/list"/>">Powrót</a></c:if>
                 <c:if test="${planId != null}"><a class="return" style="margin-left: 1000px; margin-top: 10px" href="<c:url value="/logged-user/plan/details/${planId}"/>">Powrót</a></c:if>
 
-                <div style="font-size: 18px; float: right; width: 400px; margin-top: 20px">
+                <div style="font-size: 18px; float: right; width: 480px; margin-top: 20px">
                     <p><b>Czas przygotowania:</b> ${recipe.preparationTime} min</p>
                     <p><b>Ilość porcji:</b> ${recipe.numberOfServings}</p>
                 </div>
