@@ -20,30 +20,32 @@
             <div id="text" style="text-align: center">
                 <h1>Edycja elementu listy zakupów</h1>
 
-                <form:form modelAttribute="ingredientWithQuantity" action="/logged-user/plan/shopping-list/edit" method="post">
-                    <form:hidden path="id"/>
-                    <table>
-                        <tr>
-                            <td><form:label path="ingredient">Nazwa produktu: </form:label></td>
-                            <td><input type="text" value="${ingredientWithQuantity.ingredient.name}" readonly /></td>
-                            <form:hidden path="ingredient" />
-                            <td><form:errors path="ingredient" cssClass="error"/></td>
-                        </tr>
-                        <tr>
-                            <td><form:label path="quantity">Ilość: </form:label></td>
-                            <td><form:input path="quantity" /></td>
-                            <td><form:errors path="quantity" cssClass="error"/></td>
-                        </tr>
-                    </table>
-                    <br />
+                <div id="form">
+                    <form:form modelAttribute="ingredientWithQuantity" action="/logged-user/plan/shopping-list/edit" method="post">
+                        <form:hidden path="id"/>
+                        <table id="editIngredientWQ">
+                            <tr>
+                                <td><form:label path="ingredient">Nazwa produktu: </form:label></td>
+                                <td><input type="text" style="width: 200px" value="${ingredientWithQuantity.ingredient.name}" readonly /></td>
+                                <form:hidden path="ingredient" />
+                                <td><form:errors path="ingredient" cssClass="error"/></td>
+                            </tr>
+                            <tr>
+                                <td><form:label path="quantity">Ilość: </form:label></td>
+                                <td><form:input cssStyle="width: 200px" path="quantity" /> g</td>
+                                <td><form:errors path="quantity" cssClass="error"/></td>
+                            </tr>
+                        </table>
+                        <br />
 
-                    <input type="hidden" name="planId" value="${planId}">
-                    <input type="hidden" name="shoppingListId" value="${shoppingListId}">
+                        <input type="hidden" name="planId" value="${planId}">
+                        <input type="hidden" name="shoppingListId" value="${shoppingListId}">
 
-                    <input type="submit" value="Edytuj">
-                    <form:button><a href="<c:url value="/logged-user/plan/shopping-list/${planId}?shoppingListId=${shoppingListId}"/>">Powrót</a></form:button>
+                        <input class="submit" type="submit" value="Edytuj">
+                        <a class="return" href="<c:url value="/logged-user/plan/shopping-list/${planId}?shoppingListId=${shoppingListId}"/>">Powrót</a>
 
-                </form:form>
+                    </form:form>
+                </div>
 
             </div>
         </div>

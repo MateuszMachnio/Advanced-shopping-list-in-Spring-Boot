@@ -548,3 +548,9 @@ input.delete:hover {
     color: #f44336;
     background-color: white;
 }
+table#editIngredientWQ {
+    margin-left: 324px;
+}
+table#editIngredientWQ td {
+    padding: 10px;
+}
