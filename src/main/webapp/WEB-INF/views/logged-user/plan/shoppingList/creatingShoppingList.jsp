@@ -22,28 +22,37 @@
 
                 <a class="return" style="margin-left: 1000px; margin-top: 10px" href="<c:url value="/logged-user/plan/details/${planId}"/>">Powrót</a>
 
-                <p style="font-size: 18px">Teraz możesz dostosować listę zakupów. Jeśli masz jakieś produkty w domu, możesz usunąć produkt z listy lub edytować jego ilość.</p>
-                <p style="font-size: 18px">Jeśli lista będzie gotowa wystarczy nacisnąć przycisk <em><b>"Gotowe!"</b></em> w celu pobrania listy zakupów.</p>
+                <c:choose>
+                    <c:when test="${shoppingList.ingredientsWithQuantities.size() == 0}">
+                        <p style="font-size: 18px">Niestety do tego planu nie jest przypisany żadny przepis. W związku z tym na liście zakupów nie ma żadnego produktu.</p>
+                    </c:when>
+                    <c:otherwise>
 
-                    <table class="tableData">
-                        <tr>
-                            <th style="width: 40%">produkt</th>
-                            <th>ilość</th>
-                            <th style="width: 40%">akcje</th>
-                        </tr>
-                    <c:forEach items="${shoppingList.ingredientsWithQuantities}" var="ingredientWithQuantity">
-                        <tr>
-                            <td>${ingredientWithQuantity.ingredient.name}</td>
-                            <td>${ingredientWithQuantity.quantity} g</td>
-                            <td>
-                                <a class="button" href="/logged-user/plan/shopping-list/edit/${planId}/${shoppingList.id}/${ingredientWithQuantity.id}">edytuj</a>
-                                <a class="button-danger" href="/logged-user/plan/shopping-list/delete/${planId}/${shoppingList.id}/${ingredientWithQuantity.id}">usuń</a>
-                            </td>
-                        </tr>
-                    </c:forEach>
-                    </table>
+                        <p style="font-size: 18px">Teraz możesz dostosować listę zakupów. Jeśli masz jakieś produkty w domu, możesz usunąć produkt z listy lub edytować jego ilość.</p>
+                        <p style="font-size: 18px">Jeśli lista będzie gotowa wystarczy nacisnąć przycisk <em><b>"Gotowe!"</b></em> w celu pobrania listy zakupów.</p>
 
-                <a class="shoppingList" style="margin: 0 0 50px 0" href="/logged-user/plan/shopping-list/export/${shoppingList.id}">Gotowe!</a>
+                        <table class="tableData">
+                            <tr>
+                                <th style="width: 40%">produkt</th>
+                                <th>ilość</th>
+                                <th style="width: 40%">akcje</th>
+                            </tr>
+                            <c:forEach items="${shoppingList.ingredientsWithQuantities}" var="ingredientWithQuantity">
+                                <tr>
+                                    <td>${ingredientWithQuantity.ingredient.name}</td>
+                                    <td>${ingredientWithQuantity.quantity} g</td>
+                                    <td>
+                                        <a class="button" href="/logged-user/plan/shopping-list/edit/${planId}/${shoppingList.id}/${ingredientWithQuantity.id}">edytuj</a>
+                                        <a class="button-danger" href="/logged-user/plan/shopping-list/delete/${planId}/${shoppingList.id}/${ingredientWithQuantity.id}">usuń</a>
+                                    </td>
+                                </tr>
+                            </c:forEach>
+                        </table>
+
+                        <a class="shoppingList" style="margin: 0 0 50px 0" href="/logged-user/plan/shopping-list/export/${shoppingList.id}">Gotowe!</a>
+
+                    </c:otherwise>
+                </c:choose>
 
             </div>
         </div>

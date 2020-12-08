@@ -20,28 +20,30 @@
             <div id="text" style="text-align: center">
                 <h1>Czy na pewno chcesz usunąć ten element z listy zakupów?</h1>
 
-                <form:form modelAttribute="ingredientWithQuantity" action="/logged-user/plan/shopping-list/delete" method="post">
-                    <form:hidden path="id"/>
-                    <table>
-                        <tr>
-                            <td><form:label path="ingredient">Nazwa produktu: </form:label></td>
-                            <td><input type="text" value="${ingredientWithQuantity.ingredient.name}" readonly /></td>
-                            <form:hidden path="ingredient" />
-                        </tr>
-                        <tr>
-                            <td><form:label path="quantity">Ilość: </form:label></td>
-                            <td><form:input path="quantity" readonly="true" /></td>
-                        </tr>
-                    </table>
-                    <br />
+                <div id="form">
+                    <form:form modelAttribute="ingredientWithQuantity" action="/logged-user/plan/shopping-list/delete" method="post">
+                        <form:hidden path="id"/>
+                        <table id="editIngredientWQ">
+                            <tr>
+                                <td><form:label path="ingredient">Nazwa produktu: </form:label></td>
+                                <td><input type="text" style="width: 200px" value="${ingredientWithQuantity.ingredient.name}" readonly /></td>
+                                <form:hidden path="ingredient" />
+                            </tr>
+                            <tr>
+                                <td><form:label path="quantity">Ilość: </form:label></td>
+                                <td><form:input cssStyle="width: 200px" path="quantity" readonly="true" /></td>
+                            </tr>
+                        </table>
+                        <br />
 
-                    <input type="hidden" name="planId" value="${planId}">
-                    <input type="hidden" name="shoppingListId" value="${shoppingListId}">
+                        <input type="hidden" name="planId" value="${planId}">
+                        <input type="hidden" name="shoppingListId" value="${shoppingListId}">
 
-                    <input type="submit" value="Usuń">
-                    <form:button><a href="<c:url value="/logged-user/plan/shopping-list/${planId}?shoppingListId=${shoppingListId}"/>">Powrót</a></form:button>
+                        <input class="delete" type="submit" value="Usuń">
+                        <a class="return" href="<c:url value="/logged-user/plan/shopping-list/${planId}?shoppingListId=${shoppingListId}"/>">Anuluj</a>
 
-                </form:form>
+                    </form:form>
+                </div>
 
             </div>
         </div>

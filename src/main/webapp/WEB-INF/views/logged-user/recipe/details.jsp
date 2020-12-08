@@ -20,47 +20,43 @@
             <div id="text" style="text-align: center">
                 <h1>Szczegóły przepisu</h1>
 
-                <form:form modelAttribute="recipe" action="/logged-user/recipe/delete" method="post">
-                    <form:hidden path="id"/>
-                    <table>
-                        <tr>
-                            <td><form:label path="name">Nazwa przepisu: </form:label></td>
-                            <td><form:input path="name" readonly="true"/></td>
-                        </tr>
-                        <tr>
-                            <td><form:label path="description">Opis przepisu: </form:label></td>
-                            <td><form:textarea cols="20" rows="5" path="description" readonly="true"/></td>
-                        </tr>
-                        <tr>
-                            <td><form:label path="preparation">Przygotowanie: </form:label></td>
-                            <td><form:textarea cols="20" rows="10" path="preparation" readonly="true"/></td>
-                        </tr>
-                        <tr>
-                            <td><form:label path="numberOfServings">Ilość porcji: </form:label></td>
-                            <td><form:input path="numberOfServings" readonly="true"/></td>
-                        </tr>
-                        <tr>
-                            <td><form:label path="preparationTime">Czas przygotowania: </form:label></td>
-                            <td><form:input path="preparationTime" readonly="true"/></td>
-                        </tr>
-                        <tr>
-                            <td><form:label path="setOfIngredientsWithQuantities">Składniki: </form:label></td>
-                            <td>
-                                <table>
-                                    <c:forEach items="${setOfIngredients.ingredientsWithQuantities}" var="ingredientWithQuantity">
-                                        <tr>
-                                            <td>${ingredientWithQuantity.ingredient.name}</td>
-                                            <td>${ingredientWithQuantity.quantity} gram</td>
-                                        </tr>
-                                    </c:forEach>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
-                    <%--                    <form:button><a href="<c:url value="/logged_user/dashboard"/>">Gotowe</a></form:button>--%>
-                </form:form>
-                <c:if test="${planId == null}"><button type="button"><a href="<c:url value="/logged-user/recipe/list"/>">Wróć</a></button></c:if>
-                <c:if test="${planId != null}"><button type="button"><a href="<c:url value="/logged-user/plan/details/${planId}"/>">Wróć</a></button></c:if>
+                <c:if test="${planId == null}"><a class="return" style="margin-left: 1000px; margin-top: 10px" href="<c:url value="/logged-user/recipe/list"/>">Powrót</a></c:if>
+                <c:if test="${planId != null}"><a class="return" style="margin-left: 1000px; margin-top: 10px" href="<c:url value="/logged-user/plan/details/${planId}"/>">Powrót</a></c:if>
+
+                <div style="font-size: 18px; float: right; width: 400px; margin-top: 20px">
+                    <p><b>Czas przygotowania:</b> ${recipe.preparationTime} min</p>
+                    <p><b>Ilość porcji:</b> ${recipe.numberOfServings}</p>
+                </div>
+
+                <div style="font-size: 18px; float: left; width: 750px; clear: right">
+                    <p style="font-size: 18px"><b>Nazwa przepisu:</b> ${recipe.name}</p>
+                    <p style="font-size: 18px"><b>Opis przepisu:</b> ${recipe.description}</p>
+                </div>
+
+
+
+                <div style="font-size: 18px; clear: left">
+
+                    <div style="float: left; width: 50%">
+                        <p style="font-size: 18px"><b>Przygotowanie:</b> ${recipe.preparation}</p>
+                    </div>
+
+                    <div style="float: right; width: 50%">
+                        <table class="tableData" title="Składniki">
+                            <tr>
+                                <th style="width: 50%">składnik</th>
+                                <th>ilość</th>
+                            </tr>
+                            <c:forEach items="${setOfIngredients.ingredientsWithQuantities}" var="ingredientWithQuantity">
+                                <tr>
+                                    <td>${ingredientWithQuantity.ingredient.name}</td>
+                                    <td>${ingredientWithQuantity.quantity} g</td>
+                                </tr>
+                            </c:forEach>
+                        </table>
+                    </div>
+
+                </div>
             </div>
         </div>
         <!-- koniec środka zawartości -->

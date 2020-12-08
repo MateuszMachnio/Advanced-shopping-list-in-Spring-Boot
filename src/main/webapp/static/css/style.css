@@ -554,3 +554,9 @@ table#editIngredientWQ {
 table#editIngredientWQ td {
     padding: 10px;
 }
+table#recipeDetails {
+    margin-left: 324px;
+}
+table#recipeDetails td {
+    padding: 10px;
+}

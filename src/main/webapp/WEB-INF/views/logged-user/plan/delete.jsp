@@ -43,7 +43,7 @@
                 <form:form modelAttribute="plan" action="/logged-user/plan/delete" method="post">
                     <form:hidden path="id"/>
 
-                    <input class="delete" type="submit" value="Usuń przepis">
+                    <input class="delete" type="submit" value="Usuń plan">
                     <a class="return" href="<c:url value="/logged-user/plan/list"/>">Anuluj</a>
                 </form:form>
             </div>
