@@ -105,6 +105,9 @@ public class Plan implements Comparable<Plan> {
 
     @Override
     public int compareTo(Plan plan) {
+        if (name.compareToIgnoreCase(plan.name) == 0) {
+            return 1;
+        }
         return name.compareToIgnoreCase(plan.name);
     }
 }

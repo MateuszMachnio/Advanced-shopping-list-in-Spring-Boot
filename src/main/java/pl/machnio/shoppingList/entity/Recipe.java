@@ -182,6 +182,9 @@ public class Recipe implements Comparable<Recipe> {
 
     @Override
     public int compareTo(Recipe recipe) {
+        if (name.compareToIgnoreCase(recipe.name) == 0) {
+            return 1;
+        }
         return name.compareToIgnoreCase(recipe.name);
     }
 }
