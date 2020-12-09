@@ -25,7 +25,7 @@
                         <table id="plan">
                             <tr>
                                 <td><form:label path="name">Nazwa planu: </form:label></td>
-                                <td><form:input path="name" cssStyle="width: 380px"/></td>
+                                <td><form:input path="name" cssStyle="width: 340px"/></td>
                                 <td><form:errors path="name" cssClass="error"/></td>
                             </tr>
 
