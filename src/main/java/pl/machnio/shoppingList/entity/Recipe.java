@@ -23,11 +23,11 @@ public class Recipe {
     private String name;
 
     @NotBlank
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private String description;
 
     @NotBlank
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private String preparation;
 
     @Range(min = 1, max = 150)
@@ -48,6 +48,18 @@ public class Recipe {
     @OneToOne(optional = false)
     @JoinColumn(name = "set_of_ingr_with_quant_id")
     private SetOfIngredientsWithQuantities setOfIngredientsWithQuantities;
+
+    public Recipe() {
+    }
+
+    public Recipe(String name, String description, String preparation, int numberOfServings, int preparationTime, SetOfIngredientsWithQuantities setOfIngredientsWithQuantities) {
+        this.name = name;
+        this.description = description;
+        this.preparation = preparation;
+        this.numberOfServings = numberOfServings;
+        this.preparationTime = preparationTime;
+        this.setOfIngredientsWithQuantities = setOfIngredientsWithQuantities;
+    }
 
     @PrePersist
     public void setCreated() {
@@ -136,13 +148,12 @@ public class Recipe {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Recipe recipe = (Recipe) o;
-        return id.equals(recipe.id) &&
-                description.equals(recipe.description);
+        return id.equals(recipe.id);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, description);
+        return Objects.hash(id);
     }
 
     @Override

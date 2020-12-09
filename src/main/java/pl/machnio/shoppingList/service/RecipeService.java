@@ -18,4 +18,6 @@ public interface RecipeService {
 
     List<Recipe> findAllRecipes();
 
+    public Recipe createCopyOfRecipe(long recipeId);
+
 }
