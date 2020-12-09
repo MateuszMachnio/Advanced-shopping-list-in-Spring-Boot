@@ -20,7 +20,8 @@
             <div id="text" style="text-align: center">
                 <h1>Szczegóły przepisu</h1>
 
-                <c:if test="${planId == null}"><a class="return" style="margin-left: 1000px; margin-top: 10px" href="<c:url value="/logged-user/recipe/list"/>">Powrót</a></c:if>
+                <c:if test="${all != null}"><a class="return" style="margin-left: 1000px; margin-top: 10px" href="<c:url value="/logged-user/recipe/all/list"/>">Powrót</a></c:if>
+                <c:if test="${planId == null && all==null}"><a class="return" style="margin-left: 1000px; margin-top: 10px" href="<c:url value="/logged-user/recipe/mine/list"/>">Powrót</a></c:if>
                 <c:if test="${planId != null}"><a class="return" style="margin-left: 1000px; margin-top: 10px" href="<c:url value="/logged-user/plan/details/${planId}"/>">Powrót</a></c:if>
 
                 <div style="font-size: 18px; float: right; width: 480px; margin-top: 20px">
