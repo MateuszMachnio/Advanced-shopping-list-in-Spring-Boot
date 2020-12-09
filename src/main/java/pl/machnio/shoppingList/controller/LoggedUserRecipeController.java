@@ -128,9 +128,9 @@ public class LoggedUserRecipeController {
         return "redirect:list";
     }
 
-    @GetMapping("/edit-set-of-ingredients")
-    public String editSetOfIngredients(@ModelAttribute("setOfIngredientsId") long setId, @ModelAttribute("recipeId") long recipeId, Model model) {
-        model.addAttribute("setOfIngredients", setOfIngredientsWithQuantitiesService.findByIdWithSetOfIngredientsWithQuantity(setId));
+    @GetMapping("/edit-set-of-ingredients/{recipeId}/{setOfIngredientsId}")
+    public String editSetOfIngredients(@PathVariable long recipeId, @PathVariable long setOfIngredientsId, Model model) {
+        model.addAttribute("setOfIngredients", setOfIngredientsWithQuantitiesService.findByIdWithSetOfIngredientsWithQuantity(setOfIngredientsId));
         model.addAttribute("recipeId", recipeId);
         return "logged-user/recipe/editSetOfIngredients";
     }

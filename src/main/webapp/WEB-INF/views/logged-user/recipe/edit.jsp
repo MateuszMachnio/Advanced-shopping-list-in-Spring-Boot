@@ -22,7 +22,7 @@
 
                 <form:form modelAttribute="recipe" action="/logged-user/recipe/edit" method="post">
                     <form:hidden path="id"/>
-                    <div style="font-size: 18px; float: right; width: 480px; margin-top: 100px">
+                    <div style="font-size: 18px; float: right; width: 480px; margin-top: 20px">
                         <p><b><form:label path="preparationTime">Czas przygotowania: </form:label></b><form:input cssStyle="width: 35px" path="preparationTime" /> min<form:errors path="preparationTime" cssClass="error"/></p>
                         <p><b><form:label path="numberOfServings">Ilość porcji: </form:label></b><form:input cssStyle="width: 35px" path="numberOfServings" /><form:errors path="numberOfServings" cssClass="error"/></p>
                     </div>
@@ -42,35 +42,31 @@
                             <form:textarea cssStyle="margin-top: 5px" cols="70" rows="10" path="preparation" /><form:errors path="preparation" cssClass="error"/></p>
                     </div>
 
+                    <div style="font-size: 18px; float: right; width: 50%">
+                        <table class="tableData" style="margin: 35px auto 15px auto" title="Składniki">
+                            <tr>
+                                <th style="width: 50%">składnik</th>
+                                <th>ilość</th>
+                            </tr>
+                            <c:forEach items="${setOfIngredients.ingredientsWithQuantities}" var="ingredientWithQuantity">
+                                <tr>
+                                    <td>${ingredientWithQuantity.ingredient.name}</td>
+                                    <td>${ingredientWithQuantity.quantity} g</td>
+                                </tr>
+                            </c:forEach>
+                        </table>
+
+                        <a class="action" style="margin-bottom: 100px; margin-left: 0; border: 0; padding: 2px 5px" href="<c:url value="/logged-user/recipe/edit-set-of-ingredients/${recipe.id}/${setOfIngredients.id}"/>">Edytuj składniki</a>
+                    </div>
+
                     <form:hidden path="setOfIngredientsWithQuantities" value="${setOfIngredients.id}"/>
                     <form:hidden path="created"/>
-                    <div style="clear: right; position: absolute; margin-left: 970px">
-                        <input style="font-size: 20px; padding: 8px 18px" class="submit" type="submit" value="Zapisz"><br />
-                        <a class="return" style="margin-top: 10px; margin-left: 50px" href="<c:url value="/logged-user/recipe/list"/>">Anuluj</a>
+                    <div style="clear: right; margin-bottom: 50px">
+                        <input style="" class="submit" type="submit" value="Zapisz">
+                        <a class="return" href="<c:url value="/logged-user/recipe/list"/>">Anuluj</a>
                     </div>
 
                 </form:form>
-
-                <div style="font-size: 18px; float: right; width: 50%">
-                    <table class="tableData" style="margin: 35px auto 15px auto" title="Składniki">
-                        <tr>
-                            <th style="width: 50%">składnik</th>
-                            <th>ilość</th>
-                        </tr>
-                        <c:forEach items="${setOfIngredients.ingredientsWithQuantities}" var="ingredientWithQuantity">
-                            <tr>
-                                <td>${ingredientWithQuantity.ingredient.name}</td>
-                                <td>${ingredientWithQuantity.quantity} g</td>
-                            </tr>
-                        </c:forEach>
-                    </table>
-
-                    <form action="<c:url value="/logged-user/recipe/edit-set-of-ingredients"/>">
-                        <input type="hidden" name="setOfIngredientsId" value="${setOfIngredients.id}">
-                        <input type="hidden" name="recipeId" value="${recipe.id}">
-                        <input style="margin-bottom: 100px; border: 0; padding: 2px 5px" class="submit" type="submit" value="Edytuj składniki">
-                    </form>
-                </div>
 
             </div>
         </div>
