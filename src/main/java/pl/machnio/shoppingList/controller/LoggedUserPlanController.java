@@ -17,6 +17,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeSet;
 
 @Controller
 @RequestMapping("/logged-user/plan")
@@ -78,7 +79,7 @@ public class LoggedUserPlanController {
 
     @GetMapping("/list")
     public String showPlans(Model model) {
-        model.addAttribute("plans", userService.getCurrentUserWithPlans().getPlans());
+        model.addAttribute("plans", new TreeSet<>(userService.getCurrentUserWithPlans().getPlans()));
         return "/logged-user/plan/list";
     }
 

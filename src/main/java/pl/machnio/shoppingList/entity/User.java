@@ -47,11 +47,11 @@ public class User {
 
     @ManyToMany
     @JoinTable(name = "user_recipes", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "recipe_id"))
-    private Set<Recipe> recipes = new TreeSet<>();
+    private Set<Recipe> recipes = new HashSet<>();
 
     @OneToMany
     @JoinColumn(name = "user_id")
-    private Set<Plan> plans = new TreeSet<>();
+    private Set<Plan> plans = new HashSet<>();
 
     @OneToOne
     @JoinColumn(name = "shopping_list_id")

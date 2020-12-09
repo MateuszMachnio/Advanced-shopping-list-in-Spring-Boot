@@ -9,6 +9,7 @@ import pl.machnio.shoppingList.service.*;
 
 import javax.validation.Valid;
 import java.util.List;
+import java.util.TreeSet;
 
 @Controller
 @RequestMapping("/logged-user/recipe")
@@ -95,7 +96,7 @@ public class LoggedUserRecipeController {
 
     @GetMapping("/mine/list")
     public String myRecipes(Model model) {
-        model.addAttribute("recipeList", userService.getCurrentUserWithRecipes().getRecipes());
+        model.addAttribute("recipeList", new TreeSet<>(userService.getCurrentUserWithRecipes().getRecipes()));
         return "logged-user/recipe/myRecipes";
     }
 
