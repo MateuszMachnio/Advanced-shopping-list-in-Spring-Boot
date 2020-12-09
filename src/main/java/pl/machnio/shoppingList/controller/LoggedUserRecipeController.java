@@ -84,13 +84,33 @@ public class LoggedUserRecipeController {
         User currentUserWithRecipes = userService.getCurrentUserWithRecipes();
         currentUserWithRecipes.addRecipe(savedRecipe);
         userService.updateUser(currentUserWithRecipes);
-        return "redirect:list";
+        return "redirect:mine/list";
     }
 
     @GetMapping("/list")
-    public String recipeList(Model model) {
-        model.addAttribute("recipeList", userService.getCurrentUserWithRecipes().getRecipes());
+    public String recipeList() {
         return "logged-user/recipe/list";
+    }
+
+    @GetMapping("/mine/list")
+    public String myRecipes(Model model) {
+        model.addAttribute("recipeList", userService.getCurrentUserWithRecipes().getRecipes());
+        return "logged-user/recipe/myRecipes";
+    }
+
+    @GetMapping("/all/list")
+    public String recipeList(Model model) {
+        model.addAttribute("recipeList", recipeService.findAllRecipes());
+        return "logged-user/recipe/allRecipes";
+    }
+
+    @GetMapping("/add-to-my-list/{recipeId}")
+    public String addToMyList(@PathVariable long recipeId) {
+        User currentUserWithRecipes = userService.getCurrentUserWithRecipes();
+        Recipe copyOfRecipe = recipeService.createCopyOfRecipe(recipeId);
+        currentUserWithRecipes.addRecipe(copyOfRecipe);
+        userService.updateUser(currentUserWithRecipes);
+        return "redirect:/logged-user/recipe/mine/list";
     }
 
     @GetMapping("/delete/{id}")
@@ -107,7 +127,7 @@ public class LoggedUserRecipeController {
         currentUserWithRecipes.removeRecipe(recipe);
         userService.updateUser(currentUserWithRecipes);
         recipeService.deleteRecipe(recipe);
-        return "redirect:list";
+        return "redirect:mine/list";
     }
 
     @GetMapping("/edit/{id}")
@@ -125,7 +145,7 @@ public class LoggedUserRecipeController {
             return "logged-user/recipe/edit";
         }
         recipeService.updateRecipe(recipe);
-        return "redirect:list";
+        return "redirect:mine/list";
     }
 
     @GetMapping("/edit-set-of-ingredients/{recipeId}/{setOfIngredientsId}")
@@ -192,10 +212,11 @@ public class LoggedUserRecipeController {
     }
 
     @GetMapping("/details/{recipeId}")
-    public String recipeDetails(@PathVariable long recipeId, @RequestParam(required = false) Long planId, Model model) {
+    public String recipeDetails(@PathVariable long recipeId, @RequestParam(required = false) Long planId, @RequestParam(required = false) String all, Model model) {
         Recipe recipe = recipeService.findById(recipeId);
         model.addAttribute("recipe", recipe);
         model.addAttribute("planId", planId);
+        model.addAttribute("all", all);
         model.addAttribute("setOfIngredients", setOfIngredientsWithQuantitiesService.findByIdWithSetOfIngredientsWithQuantity(recipe.getSetOfIngredientsWithQuantities().getId()));
         return "logged-user/recipe/details";
     }
