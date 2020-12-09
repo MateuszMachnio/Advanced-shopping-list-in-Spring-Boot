@@ -38,7 +38,7 @@
                 <div style="font-size: 18px; clear: left">
 
                     <div style="float: left; width: 50%">
-                        <p style="font-size: 18px"><b>Przygotowanie:</b> ${recipe.preparation}</p>
+                        <p><b>Przygotowanie:</b> ${recipe.preparation}</p>
                     </div>
 
                     <div style="float: right; width: 50%">
