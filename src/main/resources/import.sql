@@ -212,9 +212,9 @@ INSERT INTO shopping_list.set_of_ingredients_with_quantities (id) VALUES (1);
 INSERT INTO shopping_list.set_of_ingredients_with_quantities (id) VALUES (2);
 INSERT INTO shopping_list.set_of_ingredients_with_quantities (id) VALUES (3);
 
-INSERT INTO shopping_list.recipes (id, created_on, description, name, number_of_servings, preparation, preparation_time, updated_on, set_of_ingr_with_quant_id) VALUES (1, '2020-12-03 10:32:26.420925', 'opis 1', 'przepis 1', 1, 'jakieś przygotowanie', 30, null, 1);
-INSERT INTO shopping_list.recipes (id, created_on, description, name, number_of_servings, preparation, preparation_time, updated_on, set_of_ingr_with_quant_id) VALUES (2, '2020-12-03 10:33:04.243881', 'opis 2', 'przepis 2', 5, 'jakieś', 40, null, 2);
-INSERT INTO shopping_list.recipes (id, created_on, description, name, number_of_servings, preparation, preparation_time, updated_on, set_of_ingr_with_quant_id) VALUES (3, '2020-12-03 10:33:46.001128', 'opis 3', 'przepis 3', 3, 'przygotuj to sam', 50, null, 3);
+INSERT INTO shopping_list.recipes (id, created_on, description, name, number_of_servings, preparation, preparation_time, updated_on, original, set_of_ingr_with_quant_id) VALUES (1, '2020-12-03 10:32:26.420925', 'opis 1', 'przepis 1', 1, 'jakieś przygotowanie', 30, null, true, 1);
+INSERT INTO shopping_list.recipes (id, created_on, description, name, number_of_servings, preparation, preparation_time, updated_on, original, set_of_ingr_with_quant_id) VALUES (2, '2020-12-03 10:33:04.243881', 'opis 2', 'przepis 2', 5, 'jakieś', 40, null, true, 2);
+INSERT INTO shopping_list.recipes (id, created_on, description, name, number_of_servings, preparation, preparation_time, updated_on, original, set_of_ingr_with_quant_id) VALUES (3, '2020-12-03 10:33:46.001128', 'opis 3', 'przepis 3', 3, 'przygotuj to sam', 50, null, true, 3);
 
 INSERT INTO shopping_list.user_recipes (user_id, recipe_id) VALUES (1, 1);
 INSERT INTO shopping_list.user_recipes (user_id, recipe_id) VALUES (1, 2);

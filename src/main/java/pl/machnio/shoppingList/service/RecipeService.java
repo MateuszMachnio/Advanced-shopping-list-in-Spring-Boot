@@ -20,4 +20,6 @@ public interface RecipeService {
 
     public Recipe createCopyOfRecipe(long recipeId);
 
+    List<Recipe> findAllOriginal();
+
 }

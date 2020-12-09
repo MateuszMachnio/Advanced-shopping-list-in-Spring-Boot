@@ -80,6 +80,7 @@ public class LoggedUserRecipeController {
             model.addAttribute("setOfIngredients", setOfIngredientsWithQuantitiesService.findByIdWithSetOfIngredientsWithQuantity(recipe.getSetOfIngredientsWithQuantities().getId()));
             return "logged-user/recipe/add";
         }
+        recipe.setOriginal(true);
         Recipe savedRecipe = recipeService.saveRecipe(recipe);
         User currentUserWithRecipes = userService.getCurrentUserWithRecipes();
         currentUserWithRecipes.addRecipe(savedRecipe);
@@ -100,7 +101,8 @@ public class LoggedUserRecipeController {
 
     @GetMapping("/all/list")
     public String recipeList(Model model) {
-        model.addAttribute("recipeList", recipeService.findAllRecipes());
+        model.addAttribute("recipeList", recipeService.findAllOriginal());
+//        model.addAttribute("recipeList", recipeService.findAllRecipes());
         return "logged-user/recipe/allRecipes";
     }
 

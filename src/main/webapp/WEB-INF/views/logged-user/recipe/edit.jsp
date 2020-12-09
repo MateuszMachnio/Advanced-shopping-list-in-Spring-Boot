@@ -63,7 +63,7 @@
                     <form:hidden path="created"/>
                     <div style="clear: right; margin-bottom: 50px">
                         <input style="" class="submit" type="submit" value="Zapisz">
-                        <a class="return" href="<c:url value="/logged-user/recipe/list"/>">Anuluj</a>
+                        <a class="return" href="<c:url value="/logged-user/recipe/mine/list"/>">Anuluj</a>
                     </div>
 
                 </form:form>

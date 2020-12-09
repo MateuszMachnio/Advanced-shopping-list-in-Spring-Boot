@@ -56,6 +56,11 @@ public class RecipeServiceImpl implements RecipeService {
     }
 
     @Override
+    public List<Recipe> findAllOriginal() {
+        return recipeRepository.findAllByOriginalTrueOrderByName();
+    }
+
+    @Override
     public Recipe createCopyOfRecipe(long recipeId) {
         Recipe recipe = findById(recipeId);
 
@@ -67,7 +72,7 @@ public class RecipeServiceImpl implements RecipeService {
         });
         SetOfIngredientsWithQuantities savedSet = setOfIngredientsWithQuantitiesRepository.save(setOfIngredientsWithQuantities);
 
-        Recipe newRecipe = new Recipe(recipe.getName(), recipe.getDescription(), recipe.getPreparation(), recipe.getNumberOfServings(), recipe.getPreparationTime(), savedSet);
+        Recipe newRecipe = new Recipe(recipe.getName(), recipe.getDescription(), recipe.getPreparation(), recipe.getNumberOfServings(), recipe.getPreparationTime(), false, savedSet);
         return saveRecipe(newRecipe);
     }
 

@@ -26,6 +26,8 @@ public class Recipe {
     @Column(nullable = false)
     private String description;
 
+    private Boolean original;
+
     @NotBlank
     @Column(nullable = false)
     private String preparation;
@@ -52,12 +54,13 @@ public class Recipe {
     public Recipe() {
     }
 
-    public Recipe(String name, String description, String preparation, int numberOfServings, int preparationTime, SetOfIngredientsWithQuantities setOfIngredientsWithQuantities) {
+    public Recipe(String name, String description, String preparation, int numberOfServings, int preparationTime, boolean original, SetOfIngredientsWithQuantities setOfIngredientsWithQuantities) {
         this.name = name;
         this.description = description;
         this.preparation = preparation;
         this.numberOfServings = numberOfServings;
         this.preparationTime = preparationTime;
+        this.original = original;
         this.setOfIngredientsWithQuantities = setOfIngredientsWithQuantities;
     }
 
@@ -141,6 +144,14 @@ public class Recipe {
 
     public void setSetOfIngredientsWithQuantities(SetOfIngredientsWithQuantities setOfIngredientsWithQuantities) {
         this.setOfIngredientsWithQuantities = setOfIngredientsWithQuantities;
+    }
+
+    public boolean isOriginal() {
+        return original;
+    }
+
+    public void setOriginal(boolean original) {
+        this.original = original;
     }
 
     @Override
