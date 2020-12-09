@@ -7,9 +7,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
 @Entity
 @Table(name = "users")
@@ -49,11 +47,11 @@ public class User {
 
     @ManyToMany
     @JoinTable(name = "user_recipes", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "recipe_id"))
-    private Set<Recipe> recipes = new HashSet<>();
+    private Set<Recipe> recipes = new TreeSet<>();
 
     @OneToMany
     @JoinColumn(name = "user_id")
-    private Set<Plan> plans = new HashSet<>();
+    private Set<Plan> plans = new TreeSet<>();
 
     @OneToOne
     @JoinColumn(name = "shopping_list_id")

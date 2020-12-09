@@ -11,7 +11,7 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "recipes")
-public class Recipe {
+public class Recipe implements Comparable<Recipe> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -178,5 +178,10 @@ public class Recipe {
                 ", created=" + created +
                 ", updated=" + updated +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Recipe recipe) {
+        return name.compareToIgnoreCase(recipe.name);
     }
 }
