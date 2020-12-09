@@ -560,3 +560,9 @@ table#recipeDetails {
 table#recipeDetails td {
     padding: 10px;
 }
+textarea {
+    font-family: sans-serif;
+}
+input {
+    font-family: sans-serif;
+}

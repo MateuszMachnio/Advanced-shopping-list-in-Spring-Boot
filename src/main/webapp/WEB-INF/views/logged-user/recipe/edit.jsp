@@ -22,64 +22,55 @@
 
                 <form:form modelAttribute="recipe" action="/logged-user/recipe/edit" method="post">
                     <form:hidden path="id"/>
-                    <table>
-                        <tr>
-                            <td><form:label path="name">Nazwa przepisu: </form:label></td>
-                            <td><form:input path="name" /></td>
-                            <td><form:errors path="name" cssClass="error"/></td>
-                        </tr>
-                        <tr>
-                            <td><form:label path="description">Opis przepisu: </form:label></td>
-                            <td><form:textarea cols="20" rows="5" path="description" /></td>
-                            <td><form:errors path="description" cssClass="error"/></td>
-                        </tr>
-                        <tr>
-                            <td><form:label path="preparation">Przygotowanie: </form:label></td>
-                            <td><form:textarea cols="20" rows="10" path="preparation" /></td>
-                            <td><form:errors path="preparation" cssClass="error"/></td>
-                        </tr>
-                        <tr>
-                            <td><form:label path="numberOfServings">Ilość porcji: </form:label></td>
-                            <td><form:input path="numberOfServings" /></td>
-                            <td><form:errors path="numberOfServings" cssClass="error"/></td>
-                        </tr>
-                        <tr>
-                            <td><form:label path="preparationTime">Czas przygotowania: </form:label></td>
-                            <td><form:input path="preparationTime" /></td>
-                            <td><form:errors path="preparationTime" cssClass="error"/></td>
-                        </tr>
-                    </table>
-                    <br />
+                    <div style="font-size: 18px; float: right; width: 480px; margin-top: 100px">
+                        <p><b><form:label path="preparationTime">Czas przygotowania: </form:label></b><form:input cssStyle="width: 35px" path="preparationTime" /> min<form:errors path="preparationTime" cssClass="error"/></p>
+                        <p><b><form:label path="numberOfServings">Ilość porcji: </form:label></b><form:input cssStyle="width: 35px" path="numberOfServings" /><form:errors path="numberOfServings" cssClass="error"/></p>
+                    </div>
+
+                    <div style="font-size: 18px; float: left; width: 750px; clear: right">
+                        <p style="font-size: 18px"><b><form:label path="name">Nazwa przepisu: </form:label></b>
+                            <br />
+                            <form:input cssStyle="width: 469px; margin-top: 5px" path="name" /><form:errors path="name" cssClass="error"/></p>
+                        <p style="font-size: 18px"><b><form:label cssStyle="text-align: start" path="description">Opis przepisu: </form:label></b>
+                            <br />
+                            <form:textarea cssStyle="margin-top: 5px" cols="70" rows="4" path="description" /><form:errors path="description" cssClass="error"/></p>
+                    </div>
+
+                    <div style="font-size: 18px; clear: left; float: left; width: 50%">
+                        <p><b><form:label path="preparation">Przygotowanie: </form:label></b>
+                            <br />
+                            <form:textarea cssStyle="margin-top: 5px" cols="70" rows="10" path="preparation" /><form:errors path="preparation" cssClass="error"/></p>
+                    </div>
 
                     <form:hidden path="setOfIngredientsWithQuantities" value="${setOfIngredients.id}"/>
                     <form:hidden path="created"/>
-                    <input type="submit" value="Edytuj przepis">
-                    <%--                    <form:button><a href="<c:url value="/logged_user/dashboard"/>">Gotowe</a></form:button>--%>
+                    <div style="clear: right; position: absolute; margin-left: 970px">
+                        <input style="font-size: 20px; padding: 8px 18px" class="submit" type="submit" value="Zapisz"><br />
+                        <a class="return" style="margin-top: 10px; margin-left: 50px" href="<c:url value="/logged-user/recipe/list"/>">Anuluj</a>
+                    </div>
+
                 </form:form>
 
-                <table>
-                    <tr>
-                        <td>Składniki: </td>
+                <div style="font-size: 18px; float: right; width: 50%">
+                    <table class="tableData" style="margin: 35px auto 15px auto" title="Składniki">
+                        <tr>
+                            <th style="width: 50%">składnik</th>
+                            <th>ilość</th>
+                        </tr>
+                        <c:forEach items="${setOfIngredients.ingredientsWithQuantities}" var="ingredientWithQuantity">
+                            <tr>
+                                <td>${ingredientWithQuantity.ingredient.name}</td>
+                                <td>${ingredientWithQuantity.quantity} g</td>
+                            </tr>
+                        </c:forEach>
+                    </table>
 
-                        <td>
-                            <table>
-                                <c:forEach items="${setOfIngredients.ingredientsWithQuantities}" var="ingredientWithQuantity">
-                                    <tr>
-                                        <td>${ingredientWithQuantity.ingredient.name}</td>
-                                        <td>${ingredientWithQuantity.quantity} gram</td>
-                                    </tr>
-                                </c:forEach>
-                            </table>
-                        </td>
-                        <td>
-                            <form action="<c:url value="/logged-user/recipe/edit-set-of-ingredients"/>">
-                                <input type="hidden" name="setOfIngredientsId" value="${setOfIngredients.id}">
-                                <input type="hidden" name="recipeId" value="${recipe.id}">
-                                <input type="submit" value="Edytuj składniki">
-                            </form>
-                        </td>
-                    </tr>
-                </table>
+                    <form action="<c:url value="/logged-user/recipe/edit-set-of-ingredients"/>">
+                        <input type="hidden" name="setOfIngredientsId" value="${setOfIngredients.id}">
+                        <input type="hidden" name="recipeId" value="${recipe.id}">
+                        <input style="margin-bottom: 100px; border: 0; padding: 2px 5px" class="submit" type="submit" value="Edytuj składniki">
+                    </form>
+                </div>
 
             </div>
         </div>
