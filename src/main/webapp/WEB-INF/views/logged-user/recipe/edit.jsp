@@ -62,7 +62,7 @@
                     <form:hidden path="setOfIngredientsWithQuantities" value="${setOfIngredients.id}"/>
                     <form:hidden path="created"/>
                     <div style="clear: right; margin-bottom: 50px">
-                        <input style="" class="submit" type="submit" value="Zapisz">
+                        <input class="submit" type="submit" value="Zapisz">
                         <a class="return" href="<c:url value="/logged-user/recipe/mine/list"/>">Anuluj</a>
                     </div>
 
