@@ -578,3 +578,9 @@ table#createSet {
 table#createSet td {
     padding: 10px;
 }
+table#newIngredient {
+    margin-left: 294px;
+}
+table#newIngredient td {
+    padding: 10px;
+}

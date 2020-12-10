@@ -20,20 +20,22 @@
             <div id="text" style="text-align: center">
                 <h1>Dodawanie nowego składniku</h1>
 
+                <div id="form">
                 <form:form modelAttribute="ingredient">
-                    <table>
+                    <table id="newIngredient">
                         <tr>
                             <td><form:label path="name">Nazwa składnika: </form:label></td>
-                            <td><form:input path="name"/></td>
+                            <td><form:input cssStyle="width: 220px" path="name"/></td>
                             <td><form:errors path="name" cssClass="error"/></td>
                         </tr>
                     </table>
                     <br />
 
-                    <input type="submit" value="Dodaj składnik">
-                    <form:button><a href="<c:url value="/logged-user/dashboard"/>">Powrót</a></form:button>
+                    <input type="submit" class="submit" value="Dodaj składnik">
+                    <a class="return" href="<c:url value="/logged-user/dashboard"/>">Powrót</a>
 
                 </form:form>
+                </div>
 
             </div>
         </div>
