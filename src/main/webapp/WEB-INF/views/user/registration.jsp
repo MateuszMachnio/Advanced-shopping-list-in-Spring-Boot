@@ -28,22 +28,22 @@
 
                         <table id="registration">
                             <tr>
-                                <td><form:input type="text" path="firstName" placeholder="Imię"/></td>
+                                <td><form:input type="text" path="firstName" placeholder="Imię" required="true"/></td>
                                 <td><form:errors path="firstName" class="alert-danger"/></td>
                             </tr>
 
                             <tr>
-                                <td><form:input type="text" path="lastName" placeholder="Nazwisko" /></td>
+                                <td><form:input type="text" path="lastName" placeholder="Nazwisko" required="true" /></td>
                                 <td><form:errors path="lastName" class="alert-danger"/></td>
                             </tr>
 
                             <tr>
-                                <td><form:input type="password" path="password" placeholder="Hasło" /></td>
+                                <td><form:input type="password" path="password" placeholder="Hasło" required="true" /></td>
                                 <td><form:errors path="password" class="alert-danger"/></td>
                             </tr>
 
                             <tr>
-                                <td><form:input type="text" path="email" placeholder="Email" /></td>
+                                <td><form:input type="text" path="email" placeholder="Email" pattern="[_a-zA-Z0-9-]+(\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.([a-zA-Z]{2,}){1}" title="Podaj prawidłowy adres email."/></td>
                                 <td><form:errors path="email" class="alert-danger"/></td>
                             </tr>
 
