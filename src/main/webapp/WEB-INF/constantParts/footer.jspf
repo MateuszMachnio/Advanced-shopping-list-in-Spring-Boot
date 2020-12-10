@@ -13,7 +13,7 @@
                     <label for="email">Twój e-mail:
                         <input type="text" id="email" class="inputText" name="email" />
                     </label>
-                    <input class="submitButton" type="submit" value="*Zapisuję się" />
+                    <input class="submitButton" type="button" value="*Zapisuję się" />
                 </div>
             </form>
         </div>
