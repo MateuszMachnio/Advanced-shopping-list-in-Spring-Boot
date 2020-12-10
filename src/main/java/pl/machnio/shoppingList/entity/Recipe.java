@@ -32,13 +32,15 @@ public class Recipe implements Comparable<Recipe> {
     @Column(nullable = false)
     private String preparation;
 
+    @NotNull
     @Range(min = 1, max = 150)
     @Column(name = "number_of_servings", nullable = false)
-    private int numberOfServings;
+    private Integer numberOfServings;
 
+    @NotNull
     @Range(min = 1, max = 300)
     @Column(name = "preparation_time", nullable = false)
-    private int preparationTime;
+    private Integer preparationTime;
 
     @Column(name = "created_on")
     private LocalDateTime created;

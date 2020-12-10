@@ -19,8 +19,9 @@ public class IngredientWithQuantity {
     @JoinColumn(name = "ingredient_id")
     private Ingredient ingredient;
 
+    @NotNull
     @Range(min = 1, max = 5000)
-    private int quantity;
+    private Integer quantity;
 
     public IngredientWithQuantity() {
     }
