@@ -31,7 +31,7 @@
                         </c:if>
 
                         <div>
-                            <input type="text" name="email" placeholder="Email" required>
+                            <input type="email" name="email" placeholder="Email" required>
                         </div>
                         <br />
 
