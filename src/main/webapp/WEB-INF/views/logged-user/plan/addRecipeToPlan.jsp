@@ -18,8 +18,15 @@
             <%@include file="../../../constantParts/loggedSidebar.jsp"%>
 
             <div id="text" style="text-align: center">
-                <h1>Dodawanie przepisu do planu</h1>
+                <h1 style="margin-bottom: 60px">Dodawanie przepisu do planu</h1>
 
+                <c:if test="${recipes.size() == 0}">
+                    <p style="font-size: 18px; text-align: center">Niestety nie masz jeszcze żadnego przepisu na swojej liście przepisów.<br />
+                        Do planu można dodać tylko przepisy ze swojej listy przepisów.<br />
+                        Proszę, dodaj do swojej listy przepis z listy wszystkich przepisów lub stwórz własny przepis.</p>
+                </c:if>
+
+                <c:if test="${recipes.size() > 0}">
                 <div id="form">
                     <form:form modelAttribute="planSchedule" method="post" action="/logged-user/plan/add-recipe">
                         <table id="addRecipeToPlan">
@@ -54,6 +61,7 @@
                         <%--                    <form:button><a href="<c:url value="/logged_user/dashboard"/>">Gotowe</a></form:button>--%>
                     </form:form>
                 </div>
+                </c:if>
 
             </div>
         </div>

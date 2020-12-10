@@ -14,10 +14,7 @@ import javax.validation.Valid;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeSet;
+import java.util.*;
 
 @Controller
 @RequestMapping("/logged-user/plan")
@@ -44,8 +41,8 @@ public class LoggedUserPlanController {
     }
 
     @ModelAttribute("recipes")
-    public List<Recipe> getRecipes() {
-        return recipeService.findAllRecipes();
+    public Set<Recipe> getRecipes() {
+        return new TreeSet<>(userService.getCurrentUserWithRecipes().getRecipes());
     }
 
     @ModelAttribute("mealNames")
