@@ -20,7 +20,7 @@
                 <h1>Pomyślnie zarejestrowano</h1>
 
                     <div style="text-align: center">
-                        <%@include file="authHeader.jspf" %>
+                        <strong>${loggedinuser}</strong>, dziękujemy za dołączenie do naszego świata przepisów.
                         <br />
                         Jeśli już teraz chcesz korzystać z aplikacji, proszę się <a href="<c:url value="/user/login" />">zalogować</a>.
                     </div>
