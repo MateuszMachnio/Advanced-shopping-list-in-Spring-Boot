@@ -54,6 +54,7 @@ public class LoggedUserRecipeController {
             SetOfIngredientsWithQuantities set = setOfIngredientsWithQuantitiesService.findByIdWithSetOfIngredientsWithQuantity(setId);
             set.addIngredientWithQuantity(savedIngredientWithQuantity);
             setOfIngredientsWithQuantitiesService.updateSetOfIngredientsWithQuantities(set);
+            model.addAttribute("ingredientsWithQuantity", new IngredientWithQuantity());
             model.addAttribute("setWithIngredients", set);
             return "logged-user/recipe/creatingSetOfIngredients";
         }
@@ -62,11 +63,12 @@ public class LoggedUserRecipeController {
         setOfIngredientsWithQuantities.addIngredientWithQuantity(savedIngredientWithQuantity);
         SetOfIngredientsWithQuantities savedSetOfIngredientsWithQuantities = setOfIngredientsWithQuantitiesService.saveSetOfIngredientsWithQuantities(setOfIngredientsWithQuantities);
         model.addAttribute("setWithIngredients", savedSetOfIngredientsWithQuantities);
+        model.addAttribute("ingredientsWithQuantity", new IngredientWithQuantity());
         return "logged-user/recipe/creatingSetOfIngredients";
     }
 
-    @GetMapping("/add")
-    public String joinSetOfIngredientsToRecipe(@ModelAttribute("setId") long setId, Model model) {
+    @GetMapping("/add/{setId}")
+    public String joinSetOfIngredientsToRecipe(@PathVariable long setId, Model model) {
         SetOfIngredientsWithQuantities setOfIngredients = setOfIngredientsWithQuantitiesService.findByIdWithSetOfIngredientsWithQuantity(setId);
         Recipe recipe = new Recipe();
 //        recipe.setSetOfIngredientsWithQuantities(setOfIngredients);
@@ -95,7 +97,10 @@ public class LoggedUserRecipeController {
     }
 
     @GetMapping("/mine/list")
-    public String myRecipes(Model model) {
+    public String myRecipes(Model model, @RequestParam(required = false) Long setId) {
+        if (setId != null) {
+            setOfIngredientsWithQuantitiesService.deleteSetOfIngredientsWithQuantitiesById(setId);
+        }
         model.addAttribute("recipeList", new TreeSet<>(userService.getCurrentUserWithRecipes().getRecipes()));
         return "logged-user/recipe/myRecipes";
     }

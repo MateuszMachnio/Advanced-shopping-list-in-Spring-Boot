@@ -18,12 +18,25 @@
             <%@include file="../../../constantParts/loggedSidebar.jsp"%>
 
             <div id="text" style="text-align: center">
-                <h1>Dodawanie składniku do przepisu</h1>
+                <h1>Tworzenie nowego przepisu</h1>
+
+                <c:if test="${setWithIngredients == null}">
+                    <a class="return" style="margin-left: 1000px; margin-top: 10px" href="<c:url value="/logged-user/recipe/mine/list"/>">Powrót</a>
+                </c:if>
+
                 <c:if test="${setWithIngredients != null}">
-                    <table>
+                    <a class="return" style="margin-left: 1000px; margin-top: 10px" href="<c:url value="/logged-user/recipe/mine/list?setId=${setWithIngredients.id}"/>">Powrót</a>
+                </c:if>
+
+                <c:if test="${setWithIngredients == null}">
+                    <p style="font-size: 18px; text-align: center">Najpierw proszę stworzyć listę składników dla nowego przepisu.</p>
+                </c:if>
+
+                <c:if test="${setWithIngredients != null}">
+                    <table class="tableData" style="width: 40%; float: left; margin-bottom: 70px">
                         <tr>
-                            <th>składnik</th>
-                            <th>ilość</th>
+                            <th style="width: 40%">składnik</th>
+                            <th style="width: 20%">ilość</th>
                         </tr>
 
                         <c:forEach items="${setWithIngredients.ingredientsWithQuantities}" var="ingredientWithQuantity">
@@ -33,23 +46,21 @@
                             </tr>
                         </c:forEach>
                     </table>
-                    <form action="<c:url value="/logged-user/recipe/add"/>">
-                        <input type="hidden" name="setId" value="${setWithIngredients.id}">
-                        <input type="submit" value="Zatwierdź">
-                    </form>
-<%--                    jeśli nie można postem to równie dobrze można zrobić zwykły button, czemu nie można postem?--%>
-
                 </c:if>
 
-
-
+                <c:if test="${setWithIngredients == null}">
+                    <div id="form" style="width: 60%; padding-top: 50px; padding-bottom: 70px">
+                </c:if>
+                <c:if test="${setWithIngredients != null}">
+                    <div id="form" style="width: 60%; float: left; padding-top: 50px; padding-bottom: 70px">
+                </c:if>
                 <form:form modelAttribute="ingredientsWithQuantity">
-                    <table>
+                    <table id="createSet">
                         <tr>
                             <td><form:label path="ingredient">Składnik: </form:label></td>
                             <td>
-                                <form:select path="ingredient">
-                                <form:option value="0" label="--select ingredient--"/>
+                                <form:select cssStyle="width: 220px" path="ingredient">
+                                <form:option value="0" label="--wybierz składnik--" />
                                 <form:options items="${ingredients}" itemLabel="name" itemValue="id" />
                                 </form:select>
                             </td>
@@ -58,7 +69,7 @@
 
                         <tr>
                             <td><form:label path="quantity">Ilość: </form:label></td>
-                            <td><form:input path="quantity"/>gram</td>
+                            <td style="width: 220px"><form:input cssStyle="width: 205px" path="quantity" required="true" pattern="\d*" title="tylko cyfry"/> g</td>
                             <td><form:errors path="quantity" cssClass="error"/></td>
                         </tr>
                     </table>
@@ -71,10 +82,17 @@
                         <input type="hidden" name="setId" value="0">
                     </c:if>
 
-                    <input type="submit" value="Dodaj składnik">
+                    <input type="submit" class="submit" value="Dodaj składnik">
 <%--                    <form:button><a href="<c:url value="/logged_user/dashboard"/>">Gotowe</a></form:button>--%>
 
                 </form:form>
+                </div>
+
+                <c:if test="${setWithIngredients != null}">
+                    <div style="clear: both">
+                        <a class="action" style="margin-left: 0; margin-bottom: 40px" href="<c:url value="/logged-user/recipe/add/${setWithIngredients.id}"/>">Zatwierdź</a>
+                    </div>
+                </c:if>
 
             </div>
         </div>
