@@ -566,3 +566,9 @@ textarea {
 input {
     font-family: sans-serif;
 }
+table#addIngredient {
+    margin-left: 300px;
+}
+table#addIngredient td {
+    padding: 10px;
+}

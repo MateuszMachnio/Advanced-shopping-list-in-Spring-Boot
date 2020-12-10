@@ -20,13 +20,16 @@
             <div id="text" style="text-align: center">
                 <h1>Dodawanie nowego składniku do zbioru składników</h1>
 
+                <a class="return" style="margin-left: 1000px; margin-top: 10px" href="<c:url value="/logged-user/recipe/edit-set-of-ingredients/${recipeId}/${setId}"/>">Powrót</a>
+
+                <div id="form">
                 <form:form modelAttribute="ingredientWithQuantity" method="post" action="/logged-user/recipe/adding-ingredient">
-                    <table>
+                    <table id="addIngredient">
                         <tr>
                             <td><form:label path="ingredient">Składnik: </form:label></td>
                             <td>
-                                <form:select path="ingredient">
-                                    <form:option value="0" label="--select ingredient--"/>
+                                <form:select cssStyle="width: 220px" path="ingredient">
+                                    <form:option value="0" label="--wybierz składnik--"/>
                                     <form:options items="${ingredients}" itemLabel="name" itemValue="id" />
                                 </form:select>
                             </td>
@@ -35,7 +38,7 @@
 
                         <tr>
                             <td><form:label path="quantity">Ilość: </form:label></td>
-                            <td><form:input path="quantity"/>gram</td>
+                            <td><form:input cssStyle="width: 220px" path="quantity"/> g</td>
                             <td><form:errors path="quantity" cssClass="error"/></td>
                         </tr>
                     </table>
@@ -44,9 +47,10 @@
                     <input type="hidden" name="setId" value="${setId}">
                     <input type="hidden" name="recipeId" value="${recipeId}">
 
-                    <input type="submit" value="Dodaj składnik">
+                    <input type="submit" class="submit" value="Dodaj składnik">
                     <%--                    <form:button><a href="<c:url value="/logged_user/dashboard"/>">Gotowe</a></form:button>--%>
                 </form:form>
+                </div>
 
             </div>
         </div>
