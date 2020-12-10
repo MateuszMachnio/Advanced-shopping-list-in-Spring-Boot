@@ -11,7 +11,6 @@
 </head>
 <body>
 <div class="generic-container">
-    <%@include file="authHeader.jspf" %>
     <div class="panel panel-default">
         <!-- Default panel contents -->
         <div class="panel-heading"><span class="lead">List of Users </span></div>
