@@ -18,14 +18,14 @@
             <%@include file="../../constantParts/loggedSidebar.jsp"%>
 
             <div id="text" style="text-align: center">
-                <h1>Dodawanie nowego składniku</h1>
+                <h1>Dodawanie nowego składnika</h1>
 
                 <div id="form">
                 <form:form modelAttribute="ingredient">
                     <table id="newIngredient">
                         <tr>
                             <td><form:label path="name">Nazwa składnika: </form:label></td>
-                            <td><form:input cssStyle="width: 220px" path="name"/></td>
+                            <td><form:input cssStyle="width: 220px" path="name" required="true" /></td>
                             <td><form:errors path="name" cssClass="error"/></td>
                         </tr>
                     </table>

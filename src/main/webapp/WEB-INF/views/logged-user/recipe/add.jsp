@@ -22,23 +22,23 @@
 
                 <form:form modelAttribute="recipe" action="/logged-user/recipe/add" method="post">
                     <div style="font-size: 18px; float: right; width: 480px; margin-top: 20px">
-                        <p><b><form:label path="preparationTime">Czas przygotowania: </form:label></b><form:input cssStyle="width: 35px" path="preparationTime" pattern="\d*" title="Proszę wpisać wartość liczbową." /> min<form:errors path="preparationTime" cssClass="error"/></p>
-                        <p><b><form:label path="numberOfServings">Ilość porcji: </form:label></b><form:input cssStyle="width: 35px" path="numberOfServings" pattern="\d*" title="Proszę wpisać wartość liczbową." /><form:errors path="numberOfServings" cssClass="error"/></p>
+                        <p><b><form:label path="preparationTime">Czas przygotowania: </form:label></b><form:input cssStyle="width: 35px" path="preparationTime" required="true" pattern="\d*" title="Proszę wpisać wartość liczbową." /> min<form:errors path="preparationTime" cssClass="error"/></p>
+                        <p><b><form:label path="numberOfServings">Ilość porcji: </form:label></b><form:input cssStyle="width: 35px" path="numberOfServings" required="true" pattern="\d*" title="Proszę wpisać wartość liczbową." /><form:errors path="numberOfServings" cssClass="error"/></p>
                     </div>
 
                     <div style="font-size: 18px; float: left; width: 750px; clear: right">
                         <p style="font-size: 18px"><b><form:label path="name">Nazwa przepisu: </form:label></b>
                             <br />
-                            <form:input cssStyle="width: 469px; margin-top: 5px" path="name" /><form:errors path="name" cssClass="error"/></p>
+                            <form:input cssStyle="width: 469px; margin-top: 5px" path="name" required="true" /><form:errors path="name" cssClass="error"/></p>
                         <p style="font-size: 18px"><b><form:label cssStyle="text-align: start" path="description">Opis przepisu: </form:label></b>
                             <br />
-                            <form:textarea cssStyle="margin-top: 5px" cols="70" rows="4" path="description" /><form:errors path="description" cssClass="error"/></p>
+                            <form:textarea cssStyle="margin-top: 5px" cols="70" rows="4" path="description" required="true" /><form:errors path="description" cssClass="error"/></p>
                     </div>
 
                     <div style="font-size: 18px; clear: left; float: left; width: 50%; margin-bottom: 70px">
                         <p><b><form:label path="preparation">Przygotowanie: </form:label></b>
                             <br />
-                            <form:textarea cssStyle="margin-top: 5px" cols="70" rows="10" path="preparation" /><form:errors path="preparation" cssClass="error"/></p>
+                            <form:textarea cssStyle="margin-top: 5px" cols="70" rows="10" path="preparation" required="true" /><form:errors path="preparation" cssClass="error"/></p>
                     </div>
 
                     <div style="font-size: 18px; float: right; width: 50%">

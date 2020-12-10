@@ -25,13 +25,13 @@
                         <table id="plan">
                             <tr>
                                 <td><form:label path="name">Nazwa planu: </form:label></td>
-                                <td><form:input path="name" cssStyle="width: 340px"/></td>
+                                <td><form:input path="name" cssStyle="width: 340px" required="true" /></td>
                                 <td><form:errors path="name" cssClass="error"/></td>
                             </tr>
 
                             <tr>
                                 <td><form:label path="description">Opis planu: </form:label></td>
-                                <td><form:textarea cols="50" rows="5" path="description" /></td>
+                                <td><form:textarea cols="50" rows="5" path="description" required="true" /></td>
                                 <td><form:errors path="description" cssClass="error"/></td>
                             </tr>
                         </table>
