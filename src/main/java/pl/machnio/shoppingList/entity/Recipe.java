@@ -100,19 +100,19 @@ public class Recipe implements Comparable<Recipe> {
         this.description = description;
     }
 
-    public int getNumberOfServings() {
+    public Integer getNumberOfServings() {
         return numberOfServings;
     }
 
-    public void setNumberOfServings(int numberOfServings) {
+    public void setNumberOfServings(Integer numberOfServings) {
         this.numberOfServings = numberOfServings;
     }
 
-    public int getPreparationTime() {
+    public Integer getPreparationTime() {
         return preparationTime;
     }
 
-    public void setPreparationTime(int preparationTime) {
+    public void setPreparationTime(Integer preparationTime) {
         this.preparationTime = preparationTime;
     }
 

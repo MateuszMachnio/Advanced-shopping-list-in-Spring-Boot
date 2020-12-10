@@ -48,11 +48,11 @@ public class IngredientWithQuantity {
         this.ingredient = ingredient;
     }
 
-    public int getQuantity() {
+    public Integer getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(int quantity) {
+    public void setQuantity(Integer quantity) {
         this.quantity = quantity;
     }
 
