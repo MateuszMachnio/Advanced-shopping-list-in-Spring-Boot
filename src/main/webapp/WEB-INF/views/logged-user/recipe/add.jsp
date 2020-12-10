@@ -22,8 +22,8 @@
 
                 <form:form modelAttribute="recipe" action="/logged-user/recipe/add" method="post">
                     <div style="font-size: 18px; float: right; width: 480px; margin-top: 20px">
-                        <p><b><form:label path="preparationTime">Czas przygotowania: </form:label></b><form:input cssStyle="width: 35px" path="preparationTime" /> min<form:errors path="preparationTime" cssClass="error"/></p>
-                        <p><b><form:label path="numberOfServings">Ilość porcji: </form:label></b><form:input cssStyle="width: 35px" path="numberOfServings" /><form:errors path="numberOfServings" cssClass="error"/></p>
+                        <p><b><form:label path="preparationTime">Czas przygotowania: </form:label></b><form:input cssStyle="width: 35px" path="preparationTime" pattern="\d*" title="Proszę wpisać wartość liczbową." /> min<form:errors path="preparationTime" cssClass="error"/></p>
+                        <p><b><form:label path="numberOfServings">Ilość porcji: </form:label></b><form:input cssStyle="width: 35px" path="numberOfServings" pattern="\d*" title="Proszę wpisać wartość liczbową." /><form:errors path="numberOfServings" cssClass="error"/></p>
                     </div>
 
                     <div style="font-size: 18px; float: left; width: 750px; clear: right">

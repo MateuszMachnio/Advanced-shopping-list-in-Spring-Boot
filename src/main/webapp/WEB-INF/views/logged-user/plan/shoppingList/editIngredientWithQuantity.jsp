@@ -32,7 +32,7 @@
                             </tr>
                             <tr>
                                 <td><form:label path="quantity">Ilość: </form:label></td>
-                                <td><form:input cssStyle="width: 200px" path="quantity" /> g</td>
+                                <td><form:input cssStyle="width: 200px" path="quantity" pattern="\d*" title="Proszę wpisać wartość liczbową." /> g</td>
                                 <td><form:errors path="quantity" cssClass="error"/></td>
                             </tr>
                         </table>

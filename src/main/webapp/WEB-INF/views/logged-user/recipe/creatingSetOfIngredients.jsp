@@ -69,7 +69,7 @@
 
                         <tr>
                             <td><form:label path="quantity">Ilość: </form:label></td>
-                            <td style="width: 220px"><form:input cssStyle="width: 205px" path="quantity" required="true" pattern="\d*" title="tylko cyfry"/> g</td>
+                            <td style="width: 220px"><form:input cssStyle="width: 205px" path="quantity" pattern="\d*" title="Proszę wpisać wartość liczbową."/> g</td>
                             <td><form:errors path="quantity" cssClass="error"/></td>
                         </tr>
                     </table>

@@ -34,7 +34,7 @@
                         </tr>
                         <tr>
                             <td><form:label path="quantity">Ilość: </form:label></td>
-                            <td><form:input cssStyle="width: 220px" path="quantity" required="true"/> g</td>
+                            <td><form:input cssStyle="width: 220px" path="quantity" pattern="\d*" title="Proszę wpisać wartość liczbową." /> g</td>
                             <td><form:errors path="quantity" cssClass="error"/></td>
                         </tr>
                     </table>

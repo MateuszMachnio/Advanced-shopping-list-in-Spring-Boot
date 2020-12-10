@@ -43,7 +43,7 @@
                             </tr>
 
                             <tr>
-                                <td><form:input type="text" path="email" placeholder="Email" pattern="[_a-zA-Z0-9-]+(\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.([a-zA-Z]{2,}){1}" title="Podaj prawidłowy adres email."/></td>
+                                <td><form:input type="text" path="email" placeholder="Email" required="true" pattern="[_a-zA-Z0-9-]+(\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.([a-zA-Z]{2,}){1}" title="Podaj prawidłowy adres email."/></td>
                                 <td><form:errors path="email" class="alert-danger"/></td>
                             </tr>
 
