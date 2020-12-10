@@ -55,6 +55,7 @@
 
                 <form:form modelAttribute="recipe" action="/logged-user/recipe/delete" method="post">
                     <form:hidden path="id"/>
+                    <form:hidden path="setOfIngredientsWithQuantities"/>
 
                     <div style="clear: right; margin-bottom: 50px; padding-top: 50px">
                         <input class="delete" type="submit" value="Usuń">

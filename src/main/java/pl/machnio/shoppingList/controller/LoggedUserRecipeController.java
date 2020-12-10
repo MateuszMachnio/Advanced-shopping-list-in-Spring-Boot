@@ -129,7 +129,9 @@ public class LoggedUserRecipeController {
         User currentUserWithRecipes = userService.getCurrentUserWithRecipes();
         currentUserWithRecipes.removeRecipe(recipe);
         userService.updateUser(currentUserWithRecipes);
+        Long setId = recipe.getSetOfIngredientsWithQuantities().getId();
         recipeService.deleteRecipe(recipe);
+        setOfIngredientsWithQuantitiesService.deleteSetOfIngredientsWithQuantitiesById(setId);
         return "redirect:mine/list";
     }
 

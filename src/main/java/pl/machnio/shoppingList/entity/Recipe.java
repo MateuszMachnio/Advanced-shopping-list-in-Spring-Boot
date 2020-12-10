@@ -146,11 +146,11 @@ public class Recipe implements Comparable<Recipe> {
         this.setOfIngredientsWithQuantities = setOfIngredientsWithQuantities;
     }
 
-    public boolean isOriginal() {
+    public Boolean getOriginal() {
         return original;
     }
 
-    public void setOriginal(boolean original) {
+    public void setOriginal(Boolean original) {
         this.original = original;
     }
 

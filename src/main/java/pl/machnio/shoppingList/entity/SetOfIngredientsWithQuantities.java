@@ -13,7 +13,7 @@ public class SetOfIngredientsWithQuantities {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.REMOVE)
     @JoinColumn(name = "set_of_ingr_with_quant_id")
     private Set<IngredientWithQuantity> ingredientsWithQuantities = new HashSet<>();
 
