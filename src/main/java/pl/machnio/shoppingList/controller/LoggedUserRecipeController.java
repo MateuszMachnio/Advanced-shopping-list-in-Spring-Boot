@@ -107,7 +107,7 @@ public class LoggedUserRecipeController {
 
     @GetMapping("/all/list")
     public String recipeList(Model model) {
-        model.addAttribute("recipeList", recipeService.findAllOriginal());
+        model.addAttribute("recipeList", new TreeSet<>(recipeService.findAllOriginal()));
 //        model.addAttribute("recipeList", recipeService.findAllRecipes());
         return "logged-user/recipe/allRecipes";
     }
