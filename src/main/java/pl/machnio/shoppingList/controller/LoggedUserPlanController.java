@@ -22,19 +22,15 @@ public class LoggedUserPlanController {
 
     private final PlanService planService;
     private final UserService userService;
-    private final RecipeService recipeService;
     private final MealNameService mealNameService;
-    private final DayOfTheWeekService dayOfTheWeekService;
     private final PlanScheduleService planScheduleService;
     private final ShoppingListService shoppingListService;
     private final IngredientWithQuantityService ingredientWithQuantityService;
 
-    public LoggedUserPlanController(PlanService planService, UserService userService, RecipeService recipeService, MealNameService mealNameService, DayOfTheWeekService dayOfTheWeekService, PlanScheduleService planScheduleService, ShoppingListService shoppingListService, IngredientWithQuantityService ingredientWithQuantityService) {
+    public LoggedUserPlanController(PlanService planService, UserService userService, MealNameService mealNameService, PlanScheduleService planScheduleService, ShoppingListService shoppingListService, IngredientWithQuantityService ingredientWithQuantityService) {
         this.planService = planService;
         this.userService = userService;
-        this.recipeService = recipeService;
         this.mealNameService = mealNameService;
-        this.dayOfTheWeekService = dayOfTheWeekService;
         this.planScheduleService = planScheduleService;
         this.shoppingListService = shoppingListService;
         this.ingredientWithQuantityService = ingredientWithQuantityService;
@@ -47,14 +43,10 @@ public class LoggedUserPlanController {
 
     @ModelAttribute("mealNames")
     public List<MealName> getMealNames() {
-        return mealNameService.findAllMealNames();
+        List<MealName> mealNames = mealNameService.findAllMealNames();
+        Collections.sort(mealNames);
+        return mealNames;
     }
-
-    @ModelAttribute("daysOfTheWeek")
-    public List<DayOfTheWeek> getDaysOfTheWeek() {
-        return dayOfTheWeekService.findAllDaysOfTheWeek();
-    }
-
 
     @GetMapping("/add")
     public String addPlan(Model model) {

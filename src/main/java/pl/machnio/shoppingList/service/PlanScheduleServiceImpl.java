@@ -82,6 +82,7 @@ public class PlanScheduleServiceImpl implements PlanScheduleService {
                 .map(PlanSchedule::getMealName)
                 .collect(Collectors.toSet());
         allMeals.removeAll(savedMeals);
+        Collections.sort(allMeals);
         return allMeals;
     }
 

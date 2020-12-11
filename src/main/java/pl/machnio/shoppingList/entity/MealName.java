@@ -5,7 +5,7 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "meal_names")
-public class MealName {
+public class MealName implements Comparable<MealName> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,13 +35,12 @@ public class MealName {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         MealName mealName = (MealName) o;
-        return id.equals(mealName.id) &&
-                name.equals(mealName.name);
+        return id.equals(mealName.id);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name);
+        return Objects.hash(id);
     }
 
     @Override
@@ -50,5 +49,10 @@ public class MealName {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(MealName mealName) {
+        return this.id.compareTo(mealName.id);
     }
 }
