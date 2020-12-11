@@ -32,7 +32,7 @@
                             <form:input cssStyle="width: 469px; margin-top: 5px" path="name" required="true" /><form:errors path="name" cssClass="error"/></p>
                         <p style="font-size: 18px"><b><form:label cssStyle="text-align: start" path="description">Opis przepisu: </form:label></b>
                             <br />
-                            <form:textarea cssStyle="margin-top: 5px" cols="70" rows="4" path="description" required="true" /><form:errors path="description" cssClass="error"/></p>
+                            <form:textarea cssStyle="margin-top: 5px" cols="70" rows="4" path="description" /><form:errors path="description" cssClass="error"/></p>
                     </div>
 
                     <div style="font-size: 18px; clear: left; float: left; width: 50%; margin-bottom: 70px">

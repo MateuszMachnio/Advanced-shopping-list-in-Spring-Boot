@@ -22,8 +22,7 @@ public class Recipe implements Comparable<Recipe> {
     @Column(nullable = false, length = 50)
     private String name;
 
-    @NotBlank
-    @Column(nullable = false)
+    @Column
     private String description;
 
     private Boolean original;

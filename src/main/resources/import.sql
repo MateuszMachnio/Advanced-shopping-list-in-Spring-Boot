@@ -372,5 +372,20 @@ INSERT INTO shopping_list.users (id, created_on, email, first_name, last_name, p
 
 
 
+INSERT INTO shopping_list.set_of_ingredients_with_quantities (id) VALUES (1);
+
+INSERT INTO shopping_list.ingredients_with_quantities (id, quantity, ingredient_id, shopping_list_id, set_of_ingr_with_quant_id) VALUES (1, 60, 303, null, 1);
+INSERT INTO shopping_list.ingredients_with_quantities (id, quantity, ingredient_id, shopping_list_id, set_of_ingr_with_quant_id) VALUES (2, 5, 12, null, 1);
+INSERT INTO shopping_list.ingredients_with_quantities (id, quantity, ingredient_id, shopping_list_id, set_of_ingr_with_quant_id) VALUES (3, 60, 46, null, 1);
+INSERT INTO shopping_list.ingredients_with_quantities (id, quantity, ingredient_id, shopping_list_id, set_of_ingr_with_quant_id) VALUES (4, 50, 3, null, 1);
+INSERT INTO shopping_list.ingredients_with_quantities (id, quantity, ingredient_id, shopping_list_id, set_of_ingr_with_quant_id) VALUES (5, 5, 296, null, 1);
+INSERT INTO shopping_list.ingredients_with_quantities (id, quantity, ingredient_id, shopping_list_id, set_of_ingr_with_quant_id) VALUES (6, 60, 152, null, 1);
+INSERT INTO shopping_list.ingredients_with_quantities (id, quantity, ingredient_id, shopping_list_id, set_of_ingr_with_quant_id) VALUES (7, 50, 150, null, 1);
+INSERT INTO shopping_list.ingredients_with_quantities (id, quantity, ingredient_id, shopping_list_id, set_of_ingr_with_quant_id) VALUES (8, 5, 311, null, 1);
+
+INSERT INTO shopping_list.recipes (id, created_on, description, name, number_of_servings, original, preparation, preparation_time, updated_on, set_of_ingr_with_quant_id) VALUES (1, '2020-12-11 17:53:20.480916', 'pyszne dietetyczne śniadanie', 'Chleb graham z twarożkiem i rzodkiewką', 1, true, 'Twaróg wymieszać z jogurtem, olejem, i drobno pokrojoną rzodkiewką. Przyprawić solą i pieprzem. Ułożyć na kromkach posmarowanych masłem. Na wierzch ułożyć plastry ogórka i posypać pokrojonym szczypiorkiem.', 10, null, 1);
+
+INSERT INTO shopping_list.user_recipes (user_id, recipe_id) VALUES (1, 1);
+
 
 
