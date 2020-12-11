@@ -56,20 +56,33 @@
                 </c:if>
                 <form:form modelAttribute="ingredientsWithQuantity">
                     <table id="createSet">
+<%--                        <tr>--%>
+<%--                            <td><form:label path="ingredient">Składnik: </form:label></td>--%>
+<%--                            <td>--%>
+<%--                                <form:select cssStyle="width: 220px" path="ingredient">--%>
+<%--                                <form:option value="0" label="--wybierz składnik--" />--%>
+<%--                                <form:options items="${ingredients}" itemLabel="name" itemValue="id" />--%>
+<%--                                </form:select>--%>
+<%--                            </td>--%>
+<%--                            <td><form:errors path="ingredient" cssClass="error"/></td>--%>
+<%--                        </tr>--%>
+
                         <tr>
                             <td><form:label path="ingredient">Składnik: </form:label></td>
                             <td>
-                                <form:select cssStyle="width: 220px" path="ingredient">
-                                <form:option value="0" label="--wybierz składnik--" />
-                                <form:options items="${ingredients}" itemLabel="name" itemValue="id" />
-                                </form:select>
+                                <form:input path="ingredient" cssStyle="width: 262px" list="ingredients" placeholder="zacznij pisać lub wybierz składnik z listy" required="true" />
+                                <datalist id="ingredients">
+                                    <c:forEach items="${ingredients}" var="ingredient">
+                                        <option value="${ingredient.name}"></option>
+                                    </c:forEach>
+                                </datalist>
                             </td>
                             <td><form:errors path="ingredient" cssClass="error"/></td>
                         </tr>
 
                         <tr>
                             <td><form:label path="quantity">Ilość: </form:label></td>
-                            <td style="width: 220px"><form:input cssStyle="width: 205px" path="quantity" required="true" pattern="\d*" title="Proszę wpisać wartość liczbową."/> g</td>
+                            <td style="width: 220px"><form:input cssStyle="width: 40px" path="quantity" required="true" pattern="\d*" title="Proszę wpisać wartość liczbową."/> g</td>
                             <td><form:errors path="quantity" cssClass="error"/></td>
                         </tr>
                     </table>
