@@ -335,7 +335,6 @@ INSERT INTO shopping_list.ingredients (name) VALUES ('mięso mielone z indyka');
 INSERT INTO shopping_list.ingredients (name) VALUES ('mięso mielone z kurczaka');
 INSERT INTO shopping_list.ingredients (name) VALUES ('indyk filet');
 INSERT INTO shopping_list.ingredients (name) VALUES ('kurczak filet');
-INSERT INTO shopping_list.ingredients (name) VALUES ('czosnek');
 INSERT INTO shopping_list.ingredients (name) VALUES ('borówki');
 INSERT INTO shopping_list.ingredients (name) VALUES ('borówki mrożone');
 INSERT INTO shopping_list.ingredients (name) VALUES ('jabłko');
