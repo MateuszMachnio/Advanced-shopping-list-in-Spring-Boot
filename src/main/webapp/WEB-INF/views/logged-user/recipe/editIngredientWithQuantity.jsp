@@ -28,8 +28,8 @@
                     <table id="addIngredient" style="margin-left: 310px">
                         <tr>
                             <td><form:label path="ingredient">Nazwa: </form:label></td>
-                            <form:hidden path="ingredient" value="${ingredientId}" />
-                            <td><input style="width: 220px" type="text" value="${ingredientName}" readonly></td>
+                            <td><form:input cssStyle="width: 220px" path="ingredient" value="${ingredientName}" readonly="true" /></td>
+<%--                            <td><input style="width: 220px" type="text" value="${ingredientName}" readonly></td>--%>
                             <td><form:errors path="ingredient" cssClass="error"/></td>
                         </tr>
                         <tr>

@@ -26,8 +26,8 @@
                         <table id="editIngredientWQ">
                             <tr>
                                 <td><form:label path="ingredient">Nazwa produktu: </form:label></td>
-                                <td><input type="text" style="width: 200px" value="${ingredientWithQuantity.ingredient.name}" readonly /></td>
-                                <form:hidden path="ingredient" />
+<%--                                <input type="text" style="width: 200px" value="${ingredientWithQuantity.ingredient.name}" readonly />--%>
+                                <td><form:input cssStyle="width: 200px" path="ingredient" value="${ingredientWithQuantity.ingredient.name}" readonly="true" /></td>
                                 <td><form:errors path="ingredient" cssClass="error"/></td>
                             </tr>
                             <tr>
