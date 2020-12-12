@@ -4,6 +4,7 @@ import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
+import java.util.TreeSet;
 
 @Entity
 @Table(name = "set_of_ingredients_with_quantities")
@@ -34,7 +35,7 @@ public class SetOfIngredientsWithQuantities {
     }
 
     public Set<IngredientWithQuantity> getIngredientsWithQuantities() {
-        return ingredientsWithQuantities;
+        return new TreeSet<>(ingredientsWithQuantities);
     }
 
     public void setIngredientsWithQuantities(Set<IngredientWithQuantity> ingredientsWithQuantities) {

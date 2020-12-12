@@ -8,7 +8,7 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "ingredients_with_quantities")
-public class IngredientWithQuantity {
+public class IngredientWithQuantity implements Comparable<IngredientWithQuantity> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -76,5 +76,10 @@ public class IngredientWithQuantity {
                 ", ingredient=" + ingredient +
                 ", quantity=" + quantity +
                 '}';
+    }
+
+    @Override
+    public int compareTo(IngredientWithQuantity ingredientWithQuantity) {
+        return this.ingredient.getName().compareToIgnoreCase(ingredientWithQuantity.ingredient.getName());
     }
 }
