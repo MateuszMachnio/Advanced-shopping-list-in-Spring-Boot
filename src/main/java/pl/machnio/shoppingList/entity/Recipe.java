@@ -18,17 +18,18 @@ public class Recipe implements Comparable<Recipe> {
     private Long id;
 
     @NotBlank
-    @Size(max = 50)
-    @Column(nullable = false, length = 50)
+    @Size(max = 60)
+    @Column(nullable = false, length = 60)
     private String name;
 
+    @Size(max = 255)
     @Column
     private String description;
 
     private Boolean original;
 
     @NotBlank
-    @Column(nullable = false)
+    @Column(nullable = false, length = 700)
     private String preparation;
 
     @NotNull
