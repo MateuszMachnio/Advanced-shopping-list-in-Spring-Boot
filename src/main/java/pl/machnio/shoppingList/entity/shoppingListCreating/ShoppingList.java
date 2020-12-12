@@ -44,7 +44,7 @@ public class ShoppingList {
     }
 
     public Set<IngredientWithQuantity> getIngredientsWithQuantities() {
-        return ingredientsWithQuantities;
+        return new HashSet<>(ingredientsWithQuantities);
     }
 
     public void setIngredientsWithQuantities(Set<IngredientWithQuantity> ingredientsWithQuantities) {
