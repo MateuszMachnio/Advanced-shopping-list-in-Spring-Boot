@@ -30,7 +30,7 @@
                             <th>Akcje</th>
                         </tr>
                         <tr>
-                            <td style="text-align: left; padding-left: 20px">${plan.name}</td>
+                            <td>${plan.name}</td>
                             <td>${plan.description}</td>
                             <td>
                                 <a class="button" href="/logged-user/plan/details/${plan.id}">szczegóły</a>
