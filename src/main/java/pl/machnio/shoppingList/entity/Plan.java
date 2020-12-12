@@ -19,8 +19,9 @@ public class Plan implements Comparable<Plan> {
     @Column(nullable = false, length = 50)
     private String name;
 
+    @Size(max = 700)
     @NotBlank
-    @Column(nullable = false)
+    @Column(nullable = false, length = 700)
     private String description;
 
     @Column(name = "created_on")
