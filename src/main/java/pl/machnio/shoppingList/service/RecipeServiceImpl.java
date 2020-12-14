@@ -61,6 +61,11 @@ public class RecipeServiceImpl implements RecipeService {
     }
 
     @Override
+    public List<Recipe> findAllByNameContains(String name) {
+        return recipeRepository.findAllByNameContains(name);
+    }
+
+    @Override
     public Recipe createCopyOfRecipe(long recipeId) {
         Recipe recipe = findById(recipeId);
 

@@ -22,4 +22,6 @@ public interface RecipeService {
 
     List<Recipe> findAllOriginal();
 
+    List<Recipe> findAllByNameContains(String name);
+
 }

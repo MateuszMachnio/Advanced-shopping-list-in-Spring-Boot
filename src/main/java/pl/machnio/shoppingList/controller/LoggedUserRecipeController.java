@@ -112,6 +112,12 @@ public class LoggedUserRecipeController {
         return "logged-user/recipe/allRecipes";
     }
 
+    @PostMapping("/all/list")
+    public String searchRecipes(@ModelAttribute("searchRecipes") String keyWord, Model model) {
+        model.addAttribute("recipeList", new TreeSet<>(recipeService.findAllByNameContains(keyWord)));
+        return "logged-user/recipe/allRecipes";
+    }
+
     @GetMapping("/add-to-my-list/{recipeId}")
     public String addToMyList(@PathVariable long recipeId) {
         User currentUserWithRecipes = userService.getCurrentUserWithRecipes();

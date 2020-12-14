@@ -20,6 +20,21 @@
             <div id="text" style="text-align: center">
                 <h1>Lista przepisów</h1>
 
+                <div style="margin: 30px auto; padding: 20px 0">
+                    <form method="post">
+                        <label>
+                            <h3 style="display: inline-block">Wyszukaj przepis:</h3>
+                            <input type="text" style="width: 350px" name="searchRecipes" placeholder="wpisz szukaną frazę">
+                        </label>
+                        <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
+                        <input type="submit" class="submit" style="margin-left: 20px" value="wyszukaj">
+                    </form>
+                </div>
+
+                <c:if test="${recipeList.size() == 0}">
+                    <p class="alert-danger" style="text-align: center; font-size: 18px">Niestety nie ma przepisu który w nazwie zawiera szukaną frazę.</p>
+                </c:if>
+
                 <c:forEach items="${recipeList}" var="recipe">
                     <table class="tableData">
                         <tr>
