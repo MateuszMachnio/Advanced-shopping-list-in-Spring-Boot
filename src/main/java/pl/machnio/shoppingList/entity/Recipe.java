@@ -29,7 +29,7 @@ public class Recipe implements Comparable<Recipe> {
     private Boolean original;
 
     @NotBlank
-    @Column(nullable = false, length = 700)
+    @Column(nullable = false, length = 1000)
     private String preparation;
 
     @NotNull
