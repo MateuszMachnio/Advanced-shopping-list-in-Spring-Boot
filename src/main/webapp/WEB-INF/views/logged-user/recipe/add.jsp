@@ -38,7 +38,7 @@
                     <div style="font-size: 18px; clear: left; float: left; width: 50%; margin-bottom: 70px">
                         <p><b><form:label path="preparation">Przygotowanie: </form:label></b>
                             <br />
-                            <form:textarea cssStyle="margin-top: 5px" cols="70" rows="10" path="preparation" required="true" /><form:errors path="preparation" cssClass="error"/></p>
+                            <form:textarea cssStyle="margin-top: 5px" cols="70" rows="14" path="preparation" required="true" /><form:errors path="preparation" cssClass="error"/></p>
                     </div>
 
                     <div style="font-size: 18px; float: right; width: 50%">
