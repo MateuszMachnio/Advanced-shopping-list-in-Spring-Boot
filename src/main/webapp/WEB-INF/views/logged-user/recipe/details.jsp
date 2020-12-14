@@ -31,7 +31,9 @@
 
                 <div style="font-size: 18px; float: left; width: 750px; clear: right">
                     <p style="font-size: 18px"><b>Nazwa przepisu:</b> ${recipe.name}</p>
-                    <p style="font-size: 18px"><b>Opis przepisu:</b> ${recipe.description}</p>
+                    <c:if test="${!recipe.description.equals('')}">
+                        <p style="font-size: 18px"><b>Opis przepisu:</b> ${recipe.description}</p>
+                    </c:if>
                 </div>
 
 
