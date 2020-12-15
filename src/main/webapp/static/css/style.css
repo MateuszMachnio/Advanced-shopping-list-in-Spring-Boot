@@ -492,6 +492,64 @@ a.button-danger:hover {
     color: red;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 red;
 }
+
+input.button {
+    display: inline-block;
+    color: black;
+    padding: 2px 6px;
+    background-color: #e7e7e7;
+    border: 3px solid #e7e7e7;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 0 4px;
+    /*margin-left: 850px;*/
+}
+input.button:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+input.button-danger {
+    display: inline-block;
+    color: black;
+    padding: 2px 6px;
+    background-color: #e7e7e7;
+    border: 3px solid #e7e7e7;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 0 7px;
+    /*margin-left: 850px;*/
+}
+input.button-danger:hover {
+    color: red;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 red;
+}
+td form {
+    display: inline-block;
+    margin-bottom: 0;
+}
+input.day {
+    display: inline-block;
+    color: white;
+    padding: 4px 12px;
+    background-color: #008CBA;
+    border: 5px solid #008CBA;
+    border-radius: 2px;
+    transition-duration: 0.4s;
+    font-size: 16px;
+    cursor: pointer;
+    /*margin-left: 850px;*/
+}
+input.day:hover {
+    color: #008CBA;
+    background-color: white;
+}
+th form {
+    display: inline-block;
+    margin-bottom: 0;
+}
 a.day {
     display: inline-block;
     color: white;
@@ -505,6 +563,23 @@ a.day {
     /*margin-left: 850px;*/
 }
 a.day:hover {
+    color: #008CBA;
+    background-color: white;
+}
+input.action {
+    display: inline-block;
+    color: white;
+    padding: 10px 27px;
+    background-color: #008CBA;
+    border: 5px solid #008CBA;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+    font-size: 16px;
+    margin-left: 0;
+    cursor: pointer;
+    margin-bottom: 40px
+}
+input.action:hover {
     color: #008CBA;
     background-color: white;
 }
