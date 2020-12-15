@@ -72,11 +72,14 @@ public class LoggedUserPlanController {
         return "/logged-user/plan/list";
     }
 
-    @RequestMapping(value = "/details", method = {RequestMethod.GET, RequestMethod.POST})
-    public String planDetails(@ModelAttribute("planId") long planId, Model model) {
-        model.addAttribute("plan", planService.findById(planId));
-        model.addAttribute("planSchedule", planScheduleService.findPlanSchedulesByPlanId(planId));
-        return "/logged-user/plan/details";
+    @GetMapping("/details/{planId}")
+    public String planDetails(@PathVariable long planId, Model model) {
+        if (userService.currentUserHasPlan(planId)) {
+            model.addAttribute("plan", planService.findById(planId));
+            model.addAttribute("planSchedule", planScheduleService.findPlanSchedulesByPlanId(planId));
+            return "/logged-user/plan/details";
+        }
+        return "redirect:/logged-user/plan/list";
     }
 
     @PostMapping("/add-recipe")
@@ -90,16 +93,16 @@ public class LoggedUserPlanController {
 
     @PostMapping("/adding-recipe")
     public String addingRecipeToPlan(@Valid PlanSchedule planSchedule, BindingResult result, Model model) {
+        Long planId = planSchedule.getPlan().getId();
         if (result.hasErrors()) {
             Long dayId = planSchedule.getDayOfTheWeek().getId();
-            Long planId = planSchedule.getPlan().getId();
             model.addAttribute("mealNames", planScheduleService.findMealsOfTheDayThatLeft(planId, dayId));
             model.addAttribute("planId", planId);
             model.addAttribute("dayId", dayId);
             return "/logged-user/plan/addRecipeToPlan";
         }
         planScheduleService.savePlanSchedule(planSchedule);
-        return "redirect:details/" + planSchedule.getPlan().getId();
+        return "redirect:details/" + planId;
     }
 
     @PostMapping("/delete")
