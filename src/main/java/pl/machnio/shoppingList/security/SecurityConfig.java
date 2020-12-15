@@ -39,8 +39,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         filter.setForceEncoding(true);
         http.addFilterBefore(filter, CsrfFilter.class);
         http.authorizeRequests()
-                .antMatchers("/**", "/user/*", "/static/**").permitAll()
-                .anyRequest().authenticated()
+                .antMatchers("/", "/user/*", "/static/**").permitAll()
+                .antMatchers("/logged-user/**").access("hasRole('USER') or hasRole('ADMIN')")
+                .antMatchers("/admin/*").access("hasRole('ADMIN')")
+//                .anyRequest().authenticated()
                 .and()
                 .formLogin()
                 .loginPage("/user/login")
@@ -51,15 +53,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .exceptionHandling()
                 .accessDeniedPage("/user/access-denied");
-
-
-//        http.authorizeRequests().antMatchers("/", "/list")
-//                .access("hasRole('USER') or hasRole('ADMIN') or hasRole('DBA')")
-//                .antMatchers("/newuser/**", "/delete-user-*").access("hasRole('ADMIN')").antMatchers("/edit-user-*")
-//                .access("hasRole('ADMIN') or hasRole('DBA')").and().formLogin().loginPage("/login")
-//                .loginProcessingUrl("/login").usernameParameter("ssoId").passwordParameter("password").and()
-//                .rememberMe().rememberMeParameter("remember-me").tokenRepository(tokenRepository)
-//                .tokenValiditySeconds(86400).and().csrf().and().exceptionHandling().accessDeniedPage("/Access_Denied");
     }
 
     @Bean
