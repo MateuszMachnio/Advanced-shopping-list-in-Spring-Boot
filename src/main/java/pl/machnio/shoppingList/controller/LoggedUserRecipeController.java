@@ -118,8 +118,8 @@ public class LoggedUserRecipeController {
         return "logged-user/recipe/allRecipes";
     }
 
-    @GetMapping("/add-to-my-list/{recipeId}")
-    public String addToMyList(@PathVariable long recipeId) {
+    @PostMapping("/add-to-my-list")
+    public String addToMyList(@ModelAttribute("recipeId") long recipeId) {
         User currentUserWithRecipes = userService.getCurrentUserWithRecipes();
         Recipe copyOfRecipe = recipeService.createCopyOfRecipe(recipeId);
         currentUserWithRecipes.addRecipe(copyOfRecipe);
@@ -127,15 +127,15 @@ public class LoggedUserRecipeController {
         return "redirect:/logged-user/recipe/mine/list";
     }
 
-    @GetMapping("/delete/{id}")
-    public String deleteRecipe(@PathVariable long id, Model model) {
-        Recipe recipe = recipeService.findById(id);
+    @PostMapping("/delete")
+    public String deleteRecipe(@ModelAttribute("recipeId") long recipeId, Model model) {
+        Recipe recipe = recipeService.findById(recipeId);
         model.addAttribute("recipe", recipe);
         model.addAttribute("setOfIngredients", setOfIngredientsWithQuantitiesService.findByIdWithSetOfIngredientsWithQuantity(recipe.getSetOfIngredientsWithQuantities().getId()));
         return "logged-user/recipe/delete";
     }
 
-    @PostMapping("/delete")
+    @PostMapping("/deleting")
     public String deletingRecipe(Recipe recipe) {
         User currentUserWithRecipes = userService.getCurrentUserWithRecipes();
         currentUserWithRecipes.removeRecipe(recipe);
@@ -146,15 +146,15 @@ public class LoggedUserRecipeController {
         return "redirect:mine/list";
     }
 
-    @GetMapping("/edit/{id}")
-    public String editRecipe(@PathVariable long id, Model model) {
-        Recipe recipe = recipeService.findById(id);
+    @PostMapping("/edit")
+    public String editRecipe(@ModelAttribute("recipeId") long recipeId, Model model) {
+        Recipe recipe = recipeService.findById(recipeId);
         model.addAttribute("recipe", recipe);
         model.addAttribute("setOfIngredients", setOfIngredientsWithQuantitiesService.findByIdWithSetOfIngredientsWithQuantity(recipe.getSetOfIngredientsWithQuantities().getId()));
         return "logged-user/recipe/edit";
     }
 
-    @PostMapping("/edit")
+    @PostMapping("/editing")
     public String editingRecipe(@Valid Recipe recipe, BindingResult result, Model model) {
         if (result.hasErrors()) {
             model.addAttribute("setOfIngredients", setOfIngredientsWithQuantitiesService.findByIdWithSetOfIngredientsWithQuantity(recipe.getSetOfIngredientsWithQuantities().getId()));
@@ -164,15 +164,15 @@ public class LoggedUserRecipeController {
         return "redirect:mine/list";
     }
 
-    @GetMapping("/edit-set-of-ingredients/{recipeId}/{setOfIngredientsId}")
-    public String editSetOfIngredients(@PathVariable long recipeId, @PathVariable long setOfIngredientsId, Model model) {
+    @PostMapping("/edit-set-of-ingredients")
+    public String editSetOfIngredients(@ModelAttribute("recipeId") long recipeId, @ModelAttribute("setOfIngredientsId") long setOfIngredientsId, Model model) {
         model.addAttribute("setOfIngredients", setOfIngredientsWithQuantitiesService.findByIdWithSetOfIngredientsWithQuantity(setOfIngredientsId));
         model.addAttribute("recipeId", recipeId);
         return "logged-user/recipe/editSetOfIngredients";
     }
 
-    @GetMapping("/edit-ingredient/{recipeId}/{setId}/{iwqId}")
-    public String editIngredient(@PathVariable long recipeId, @PathVariable long setId, @PathVariable long iwqId, Model model) {
+    @PostMapping("/edit-ingredient")
+    public String editIngredient(@ModelAttribute("recipeId") long recipeId, @ModelAttribute("setId") long setId, @ModelAttribute("iwqId") long iwqId, Model model) {
         IngredientWithQuantity ingredientWithQuantity = ingredientWithQuantityService.findById(iwqId);
         model.addAttribute("ingredientWithQuantity", ingredientWithQuantity);
         model.addAttribute("ingredientId", ingredientWithQuantity.getIngredient().getId());
@@ -194,8 +194,8 @@ public class LoggedUserRecipeController {
         return "logged-user/recipe/editSetOfIngredients";
     }
 
-    @GetMapping("/delete-ingredient/{recipeId}/{setId}/{iwqId}")
-    public String deleteIngredient(@PathVariable long recipeId, @PathVariable long setId, @PathVariable long iwqId, Model model) {
+    @PostMapping("/delete-ingredient")
+    public String deleteIngredient(@ModelAttribute("recipeId") long recipeId, @ModelAttribute("setId") long setId, @ModelAttribute("iwqId") long iwqId, Model model) {
         SetOfIngredientsWithQuantities set = setOfIngredientsWithQuantitiesService.findByIdWithSetOfIngredientsWithQuantity(setId);
         set.removeIngredientWithQuantity(ingredientWithQuantityService.findById(iwqId));
         setOfIngredientsWithQuantitiesService.updateSetOfIngredientsWithQuantities(set);
@@ -205,8 +205,8 @@ public class LoggedUserRecipeController {
         return "/logged-user/recipe/editSetOfIngredients";
     }
 
-    @GetMapping("/add-ingredient/{recipeId}/{setId}")
-    public String addIngredient(@PathVariable long recipeId, @PathVariable long setId, Model model) {
+    @PostMapping("/add-ingredient")
+    public String addIngredient(@ModelAttribute("recipeId") long recipeId, @ModelAttribute("setId") long setId, Model model) {
         model.addAttribute("ingredientWithQuantity", new IngredientWithQuantity());
         model.addAttribute("setId", setId);
         model.addAttribute("recipeId", recipeId);
