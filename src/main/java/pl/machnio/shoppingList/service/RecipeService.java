@@ -8,6 +8,8 @@ public interface RecipeService {
 
     Recipe findById(long id);
 
+    Recipe findBySetOfIWQId(long setOfIngredientsWithQuantities_id);
+
     Recipe saveRecipe(Recipe recipe);
 
     void updateRecipe(Recipe recipe);

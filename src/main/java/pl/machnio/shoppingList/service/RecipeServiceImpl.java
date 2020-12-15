@@ -31,6 +31,11 @@ public class RecipeServiceImpl implements RecipeService {
     }
 
     @Override
+    public Recipe findBySetOfIWQId(long setOfIngredientsWithQuantities_id) {
+        return recipeRepository.findBySetOfIngredientsWithQuantitiesId(setOfIngredientsWithQuantities_id);
+    }
+
+    @Override
     public Recipe saveRecipe(Recipe recipe) {
         return recipeRepository.save(recipe);
     }
