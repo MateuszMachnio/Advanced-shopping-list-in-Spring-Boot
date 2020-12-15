@@ -40,7 +40,7 @@
                     </table>
                 </c:forEach>
 
-                <form:form modelAttribute="plan" action="/logged-user/plan/delete" method="post">
+                <form:form modelAttribute="plan" action="/logged-user/plan/deleting" method="post">
                     <form:hidden path="id"/>
 
                     <input class="delete" type="submit" value="Usuń plan">

@@ -53,7 +53,7 @@
                 </div>
 
 
-                <form:form modelAttribute="recipe" action="/logged-user/recipe/delete" method="post">
+                <form:form modelAttribute="recipe" action="/logged-user/recipe/deleting" method="post">
                     <form:hidden path="id"/>
                     <form:hidden path="setOfIngredientsWithQuantities"/>
 
