@@ -459,6 +459,23 @@ a.return:hover {
     color: #e7e7e7;
     background-color: white;
 }
+input.return {
+    display: inline-block;
+    color: white;
+    padding: 1px 3px;
+    background-color: #e7e7e7;
+    border: 3px solid #e7e7e7;
+    /*border-radius: 4px;*/
+    transition-duration: 0.4s;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+    /*margin-left: 850px;*/
+}
+input.return:hover {
+    color: #e7e7e7;
+    background-color: white;
+}
 a.button {
     display: inline-block;
     color: black;
@@ -575,7 +592,6 @@ input.action {
     border-radius: 4px;
     transition-duration: 0.4s;
     font-size: 16px;
-    margin-left: 0;
     cursor: pointer;
     margin-bottom: 40px
 }
