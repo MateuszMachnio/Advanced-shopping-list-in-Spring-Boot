@@ -72,10 +72,10 @@ public class IngredientsWithQuantitiesPDFExporter {
         document.add(title);
 
         PdfPTable pdfPTable = new PdfPTable(2);
-        pdfPTable.setWidthPercentage(50);
+        pdfPTable.setWidthPercentage(70);
         pdfPTable.setSpacingBefore(25);
         pdfPTable.setHorizontalAlignment(1);
-        pdfPTable.setWidths(new float[] {3f, 1.5f});
+        pdfPTable.setWidths(new float[] {4f, 1f});
 
         writeTableHeader(pdfPTable);
         writeTableData(pdfPTable);
