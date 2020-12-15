@@ -31,7 +31,15 @@
                         <tr>
                             <th style="width: 20%">${day.name}</th>
                             <th style="width: 60%"></th>
-                            <th><c:if test="${planSchedule.get(day).size() < 5}"><a class="day" href="<c:url value="/logged-user/plan/add-recipe/${plan.id}/${day.id}"/>">dodaj przepis do dnia</a></c:if></th>
+                            <th><c:if test="${planSchedule.get(day).size() < 5}">
+                                <form action="<c:url value="/logged-user/plan/add-recipe"/>" method="post">
+                                    <input type="hidden" name="planId" value="${plan.id}" />
+                                    <input type="hidden" name="dayId" value="${day.id}" />
+                                    <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
+                                    <input type="submit" class="day" value="dodaj przepis do dnia">
+                                </form>
+                            </c:if></th>
+<%--                                <a class="day" href="<c:url value="/logged-user/plan/add-recipe/${plan.id}/${day.id}"/>">dodaj przepis do dnia</a>--%>
                         </tr>
                         <c:forEach items="${planSchedule.get(day)}" var="schedule">
                             <tr>
@@ -39,7 +47,13 @@
                                 <td style="text-align: center">${schedule.recipe.name}</td>
                                 <td style="text-align: center">
                                     <a class="button" href="<c:url value="/logged-user/recipe/details/${schedule.recipe.id}?planId=${plan.id}"/>">szczegóły</a>
-                                    <a class="button-danger" href="<c:url value="/logged-user/plan/remove-schedule/${plan.id}/${schedule.id}"/>">usuń</a>
+                                    <form action="<c:url value="/logged-user/plan/remove-schedule"/>" method="post">
+                                        <input type="hidden" name="planId" value="${plan.id}" />
+                                        <input type="hidden" name="scheduleId" value="${schedule.id}" />
+                                        <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
+                                        <input type="submit" class="button-danger" value="usuń">
+                                    </form>
+<%--                                    <a class="button-danger" href="<c:url value="/logged-user/plan/remove-schedule/${plan.id}/${schedule.id}"/>">usuń</a>--%>
                                 </td>
                             </tr>
                         </c:forEach>

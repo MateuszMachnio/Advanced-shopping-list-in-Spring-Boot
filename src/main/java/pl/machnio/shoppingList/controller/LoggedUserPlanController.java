@@ -55,7 +55,7 @@ public class LoggedUserPlanController {
     }
 
     @PostMapping("/add")
-    public String addingPlan(@Valid Plan plan, BindingResult result, Model model) {
+    public String addingPlan(@Valid Plan plan, BindingResult result) {
         if (result.hasErrors()) {
             return "/logged-user/plan/add";
         }
@@ -72,15 +72,15 @@ public class LoggedUserPlanController {
         return "/logged-user/plan/list";
     }
 
-    @GetMapping("/details/{id}")
-    public String planDetails(@PathVariable long id, Model model) {
-        model.addAttribute("plan", planService.findById(id));
-        model.addAttribute("planSchedule", planScheduleService.findPlanSchedulesByPlanId(id));
+    @RequestMapping(value = "/details", method = {RequestMethod.GET, RequestMethod.POST})
+    public String planDetails(@ModelAttribute("planId") long planId, Model model) {
+        model.addAttribute("plan", planService.findById(planId));
+        model.addAttribute("planSchedule", planScheduleService.findPlanSchedulesByPlanId(planId));
         return "/logged-user/plan/details";
     }
 
-    @GetMapping("/add-recipe/{planId}/{dayId}")
-    public String addRecipeToPlan(@PathVariable long planId, @PathVariable long dayId, Model model) {
+    @PostMapping("/add-recipe")
+    public String addRecipeToPlan(@ModelAttribute("planId") long planId, @ModelAttribute("dayId") long dayId, Model model) {
         model.addAttribute("planSchedule", new PlanSchedule());
         model.addAttribute("mealNames", planScheduleService.findMealsOfTheDayThatLeft(planId, dayId));
         model.addAttribute("planId", planId);
@@ -88,7 +88,7 @@ public class LoggedUserPlanController {
         return "/logged-user/plan/addRecipeToPlan";
     }
 
-    @PostMapping("/add-recipe")
+    @PostMapping("/adding-recipe")
     public String addingRecipeToPlan(@Valid PlanSchedule planSchedule, BindingResult result, Model model) {
         if (result.hasErrors()) {
             Long dayId = planSchedule.getDayOfTheWeek().getId();
@@ -102,14 +102,14 @@ public class LoggedUserPlanController {
         return "redirect:details/" + planSchedule.getPlan().getId();
     }
 
-    @GetMapping("/delete/{id}")
-    public String deletePlan(@PathVariable long id, Model model) {
-        model.addAttribute("plan", planService.findById(id));
-        model.addAttribute("planSchedule", planScheduleService.findPlanSchedulesByPlanId(id));
+    @PostMapping("/delete")
+    public String deletePlan(@ModelAttribute("planId") long planId, Model model) {
+        model.addAttribute("plan", planService.findById(planId));
+        model.addAttribute("planSchedule", planScheduleService.findPlanSchedulesByPlanId(planId));
         return "/logged-user/plan/delete";
     }
 
-    @PostMapping("/delete")
+    @PostMapping("/deleting")
     public String deletingPlan(Plan plan) {
         User currentUserWithPlans = userService.getCurrentUserWithPlans();
         currentUserWithPlans.removePlan(plan);
@@ -119,8 +119,8 @@ public class LoggedUserPlanController {
         return "redirect:list";
     }
 
-    @GetMapping("/remove-schedule/{planId}/{scheduleId}")
-    public String removeScheduleFromPlan(@PathVariable long planId, @PathVariable long scheduleId, Model model) {
+    @PostMapping("/remove-schedule")
+    public String removeScheduleFromPlan(@ModelAttribute("planId") long planId, @ModelAttribute("scheduleId") long scheduleId) {
         planScheduleService.deletePlanSchedule(scheduleId);
         return "redirect:/logged-user/plan/details/" + planId;
     }
@@ -146,15 +146,15 @@ public class LoggedUserPlanController {
         return "logged-user/plan/shoppingList/creatingShoppingList";
     }
 
-    @GetMapping("/shopping-list/edit/{planId}/{shoppingListId}/{IWQId}")
-    public String editIngredient(@PathVariable long planId, @PathVariable long shoppingListId, @PathVariable long IWQId, Model model) {
+    @PostMapping("/shopping-list/edit")
+    public String editIngredient(@ModelAttribute("planId") long planId, @ModelAttribute("shoppingListId") long shoppingListId, @ModelAttribute("IWQId") long IWQId, Model model) {
         model.addAttribute("ingredientWithQuantity", ingredientWithQuantityService.findById(IWQId));
         model.addAttribute("planId", planId);
         model.addAttribute("shoppingListId", shoppingListId);
         return "logged-user/plan/shoppingList/editIngredientWithQuantity";
     }
 
-    @PostMapping("/shopping-list/edit")
+    @PostMapping("/shopping-list/editing")
     public String editingIngredient(@Valid IngredientWithQuantity ingredientWithQuantity, BindingResult result, @ModelAttribute("planId") long planId, @ModelAttribute("shoppingListId") long shoppingListId, Model model) {
         if (result.hasErrors()) {
             model.addAttribute("planId", planId);
@@ -165,15 +165,15 @@ public class LoggedUserPlanController {
         return "redirect:" + planId + "?shoppingListId=" + shoppingListId;
     }
 
-    @GetMapping("/shopping-list/delete/{planId}/{shoppingListId}/{IWQId}")
-    public String deleteIngredient(@PathVariable long planId, @PathVariable long shoppingListId, @PathVariable long IWQId, Model model) {
+    @PostMapping("/shopping-list/delete")
+    public String deleteIngredient(@ModelAttribute("planId") long planId, @ModelAttribute("shoppingListId") long shoppingListId, @ModelAttribute("IWQId") long IWQId, Model model) {
         model.addAttribute("ingredientWithQuantity", ingredientWithQuantityService.findById(IWQId));
         model.addAttribute("planId", planId);
         model.addAttribute("shoppingListId", shoppingListId);
         return "logged-user/plan/shoppingList/deleteIngredientWithQuantity";
     }
 
-    @PostMapping("/shopping-list/delete")
+    @PostMapping("/shopping-list/deleting")
     public String deletingIngredient(IngredientWithQuantity ingredientWithQuantity, @ModelAttribute("planId") long planId, @ModelAttribute("shoppingListId") long shoppingListId) {
         ShoppingList shoppingList = shoppingListService.findByIdWithSetOfIngredientsWithQuantities(shoppingListId);
         shoppingList.removeIngredientWithQuantity(ingredientWithQuantity);

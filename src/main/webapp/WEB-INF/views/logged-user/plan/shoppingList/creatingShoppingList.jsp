@@ -42,8 +42,22 @@
                                     <td>${ingredientWithQuantity.ingredient.name}</td>
                                     <td>${ingredientWithQuantity.quantity} g</td>
                                     <td>
-                                        <a class="button" href="/logged-user/plan/shopping-list/edit/${planId}/${shoppingList.id}/${ingredientWithQuantity.id}">edytuj</a>
-                                        <a class="button-danger" href="/logged-user/plan/shopping-list/delete/${planId}/${shoppingList.id}/${ingredientWithQuantity.id}">usuń</a>
+                                        <form method="post" action="<c:url value="/logged-user/plan/shopping-list/edit" />">
+                                            <input type="hidden" name="planId" value="${planId}" />
+                                            <input type="hidden" name="shoppingListId" value="${shoppingList.id}" />
+                                            <input type="hidden" name="IWQId" value="${ingredientWithQuantity.id}" />
+                                            <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
+                                            <input type="submit" class="button" value="edytuj">
+                                        </form>
+                                        <form method="post" action="<c:url value="/logged-user/plan/shopping-list/delete"/>">
+                                            <input type="hidden" name="planId" value="${planId}" />
+                                            <input type="hidden" name="shoppingListId" value="${shoppingList.id}" />
+                                            <input type="hidden" name="IWQId" value="${ingredientWithQuantity.id}" />
+                                            <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
+                                            <input type="submit" class="button-danger" value="usuń">
+                                        </form>
+<%--                                        <a class="button" href="/logged-user/plan/shopping-list/edit/${planId}/${shoppingList.id}/${ingredientWithQuantity.id}">edytuj</a>--%>
+<%--                                        <a class="button-danger" href="/logged-user/plan/shopping-list/delete/${planId}/${shoppingList.id}/${ingredientWithQuantity.id}">usuń</a>--%>
                                     </td>
                                 </tr>
                             </c:forEach>
