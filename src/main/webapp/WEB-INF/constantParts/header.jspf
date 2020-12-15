@@ -9,7 +9,7 @@
             <ul id="topMenuList">
                 <li><a href="<c:url value="/user/login"/>"><span class="topMenuSpan">Logowanie</span></a></li>
                 <li><a href="<c:url value="/user/registration"/>"><span class="topMenuSpan">Rejestracja</span></a></li>
-                <li><a href="#"><span class="topMenuSpan">Zakładka</span></a></li>
+                <li><a href="<c:url value="/user/shopping-list"/>"><span class="topMenuSpan">Przykładowa lista zakupów</span></a></li>
             </ul>
         </div>
         <div id="contactBox">

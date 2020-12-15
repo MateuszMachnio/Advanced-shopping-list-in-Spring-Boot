@@ -72,12 +72,9 @@ public class UserController {
 
     @RequestMapping(value = "/access-denied", method = RequestMethod.GET)
     public String accessDeniedPage(Model model) {
-        model.addAttribute("loggedinuser", userService.getPrincipal());
+        model.addAttribute("loggedinuser", userService.getCurrentUser().getFirstName());
         return "user/accessDenied";
     }
-
-
-
 
     @RequestMapping(value="/logout", method = RequestMethod.GET)
     public String logoutPage (HttpServletRequest request, HttpServletResponse response){
@@ -88,6 +85,11 @@ public class UserController {
             SecurityContextHolder.getContext().setAuthentication(null);
         }
         return "redirect:/user/login?logout";
+    }
+
+    @GetMapping("/shopping-list")
+    public String showExampleOfShoppingList() {
+        return "user/shoppingList";
     }
 
     private boolean isCurrentAuthenticationAnonymous() {
