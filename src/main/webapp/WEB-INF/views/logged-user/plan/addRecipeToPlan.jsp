@@ -28,7 +28,7 @@
 
                 <c:if test="${recipes.size() > 0}">
                 <div id="form">
-                    <form:form modelAttribute="planSchedule" method="post" action="/logged-user/plan/add-recipe">
+                    <form:form modelAttribute="planSchedule" method="post" action="/logged-user/plan/adding-recipe">
                         <table id="addRecipeToPlan">
                             <tr>
                                 <td><form:label path="mealName">Nazwa posiłku: </form:label></td>

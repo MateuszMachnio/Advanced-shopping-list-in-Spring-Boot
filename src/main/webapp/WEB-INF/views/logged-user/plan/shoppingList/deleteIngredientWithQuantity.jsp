@@ -21,7 +21,7 @@
                 <h1>Czy na pewno chcesz usunąć ten element z listy zakupów?</h1>
 
                 <div id="form">
-                    <form:form modelAttribute="ingredientWithQuantity" action="/logged-user/plan/shopping-list/delete" method="post">
+                    <form:form modelAttribute="ingredientWithQuantity" action="/logged-user/plan/shopping-list/deleting" method="post">
                         <form:hidden path="id"/>
                         <table id="editIngredientWQ">
                             <tr>

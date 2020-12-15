@@ -21,7 +21,7 @@
                 <h1>Edycja elementu listy zakupów</h1>
 
                 <div id="form">
-                    <form:form modelAttribute="ingredientWithQuantity" action="/logged-user/plan/shopping-list/edit" method="post">
+                    <form:form modelAttribute="ingredientWithQuantity" action="/logged-user/plan/shopping-list/editing" method="post">
                         <form:hidden path="id"/>
                         <table id="editIngredientWQ">
                             <tr>

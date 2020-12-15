@@ -20,7 +20,7 @@
             <div id="text" style="text-align: center">
                 <h1>Dodawanie przepisu</h1>
 
-                <form:form modelAttribute="recipe" action="/logged-user/recipe/add" method="post">
+                <form:form modelAttribute="recipe" action="/logged-user/recipe/adding" method="post">
                     <div style="font-size: 18px; float: right; width: 480px; margin-top: 20px">
                         <p><b><form:label path="preparationTime">Czas przygotowania: </form:label></b><form:input cssStyle="width: 35px" path="preparationTime" required="true" pattern="\d*" title="Proszę wpisać wartość liczbową." /> min<form:errors path="preparationTime" cssClass="error"/></p>
                         <p><b><form:label path="numberOfServings">Ilość porcji: </form:label></b><form:input cssStyle="width: 35px" path="numberOfServings" required="true" pattern="\d*" title="Proszę wpisać wartość liczbową." /><form:errors path="numberOfServings" cssClass="error"/></p>
