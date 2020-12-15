@@ -49,7 +49,12 @@
                             <td>${recipe.preparationTime} min</td>
                             <td>
                                 <a class="button" style="margin-bottom: 5px" href="/logged-user/recipe/details/${recipe.id}?all">szczegóły</a>
-                                <a class="button" href="/logged-user/recipe/add-to-my-list/${recipe.id}">dodaj do moich przepisów</a>
+                                <form method="post" action="<c:url value="/logged-user/recipe/add-to-my-list"/>">
+                                    <input type="hidden" name="recipeId" value="${recipe.id}" />
+                                    <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
+                                    <input type="submit" class="button" value="dodaj do moich przepisów">
+                                </form>
+<%--                                <a class="button" href="/logged-user/recipe/add-to-my-list/${recipe.id}">dodaj do moich przepisów</a>--%>
                             </td>
                         </tr>
                     </table>

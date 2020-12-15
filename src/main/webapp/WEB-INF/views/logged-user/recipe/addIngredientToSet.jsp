@@ -20,7 +20,13 @@
             <div id="text" style="text-align: center">
                 <h1>Dodawanie nowego składniku do zbioru składników</h1>
 
-                <a class="return" style="margin-left: 1000px; margin-top: 10px" href="<c:url value="/logged-user/recipe/edit-set-of-ingredients/${recipeId}/${setId}"/>">Powrót</a>
+                <form method="post" action="<c:url value="/logged-user/recipe/edit-set-of-ingredients"/>">
+                    <input type="hidden" name="recipeId" value="${recipeId}" />
+                    <input type="hidden" name="setOfIngredientsId" value="${setId}" />
+                    <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
+                    <input type="submit" class="return" style="margin-left: 1000px; margin-top: 10px" value="Powrót">
+                </form>
+<%--                <a class="return" style="margin-left: 1000px; margin-top: 10px" href="<c:url value="/logged-user/recipe/edit-set-of-ingredients/${recipeId}/${setId}"/>">Powrót</a>--%>
 
                 <div id="form">
                 <form:form modelAttribute="ingredientWithQuantity" method="post" action="/logged-user/recipe/adding-ingredient">

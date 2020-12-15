@@ -103,7 +103,12 @@
 
                 <c:if test="${setWithIngredients != null}">
                     <div style="clear: both">
-                        <a class="action" style="margin-left: 0; margin-bottom: 40px" href="<c:url value="/logged-user/recipe/add/${setWithIngredients.id}"/>">Zatwierdź</a>
+                        <form method="post" action="<c:url value="/logged-user/recipe/add"/>">
+                            <input type="hidden" name="setId" value="${setWithIngredients.id}" />
+                            <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
+                            <input type="submit" class="action" value="Zatwierdź">
+                        </form>
+<%--                        <a class="action" style="margin-left: 0; margin-bottom: 40px" href="<c:url value="/logged-user/recipe/add/${setWithIngredients.id}"/>">Zatwierdź</a>--%>
                     </div>
                 </c:if>
 

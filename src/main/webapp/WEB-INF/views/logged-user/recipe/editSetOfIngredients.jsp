@@ -20,7 +20,13 @@
             <div id="text" style="text-align: center">
                 <h1>Edycja składników przepisu</h1>
 
-                <a class="action" href="/logged-user/recipe/add-ingredient/${recipeId}/${setOfIngredients.id}">dodaj nowy składnik</a>
+                <form method="post" action="<c:url value="/logged-user/recipe/add-ingredient"/>">
+                    <input type="hidden" name="recipeId" value="${recipeId}" />
+                    <input type="hidden" name="setId" value="${setOfIngredients.id}" />
+                    <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
+                    <input type="submit" class="action" style="margin-left: 850px; margin-bottom: 0" value="dodaj nowy składnik">
+                </form>
+<%--                <a class="action" href="/logged-user/recipe/add-ingredient/${recipeId}/${setOfIngredients.id}">dodaj nowy składnik</a>--%>
 
                 <table class="tableData" style="margin-bottom: 20px">
                         <tr>
@@ -33,14 +39,33 @@
                                 <td>${ingredientWithQuantity.ingredient.name}</td>
                                 <td>${ingredientWithQuantity.quantity} gram</td>
                                 <td>
-                                    <a class="button" href="/logged-user/recipe/edit-ingredient/${recipeId}/${setOfIngredients.id}/${ingredientWithQuantity.id}">edytuj</a>
-                                    <a class="button-danger" href="/logged-user/recipe/delete-ingredient/${recipeId}/${setOfIngredients.id}/${ingredientWithQuantity.id}">usuń</a>
+                                    <form method="post" action="<c:url value="/logged-user/recipe/edit-ingredient"/>">
+                                        <input type="hidden" name="recipeId" value="${recipeId}" />
+                                        <input type="hidden" name="setId" value="${setOfIngredients.id}" />
+                                        <input type="hidden" name="iwqId" value="${ingredientWithQuantity.id}" />
+                                        <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
+                                        <input type="submit" class="button" value="edytuj">
+                                    </form>
+<%--                                    <a class="button" href="/logged-user/recipe/edit-ingredient/${recipeId}/${setOfIngredients.id}/${ingredientWithQuantity.id}">edytuj</a>--%>
+                                    <form method="post" action="<c:url value="/logged-user/recipe/delete-ingredient"/>">
+                                        <input type="hidden" name="recipeId" value="${recipeId}" />
+                                        <input type="hidden" name="setId" value="${setOfIngredients.id}" />
+                                        <input type="hidden" name="iwqId" value="${ingredientWithQuantity.id}" />
+                                        <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
+                                        <input type="submit" class="button-danger" value="usuń">
+                                    </form>
+<%--                                    <a class="button-danger" href="/logged-user/recipe/delete-ingredient/${recipeId}/${setOfIngredients.id}/${ingredientWithQuantity.id}">usuń</a>--%>
                                 </td>
                             </tr>
                         </c:forEach>
                     </table>
 
-                <a class="action" style="margin-left: 0; margin-bottom: 70px" href="/logged-user/recipe/edit/${recipeId}">Zatwierdź</a>
+                <form method="post" action="<c:url value="/logged-user/recipe/edit"/>">
+                    <input type="hidden" name="recipeId" value="${recipeId}" />
+                    <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
+                    <input type="submit" class="action" value="Zatwierdź">
+                </form>
+<%--                <a class="action" style="margin-left: 0; margin-bottom: 70px" href="/logged-user/recipe/edit/${recipeId}">Zatwierdź</a>--%>
 
                     <%--                    <form:button><a href="<c:url value="/logged_user/dashboard"/>">Gotowe</a></form:button>--%>
             </div>
