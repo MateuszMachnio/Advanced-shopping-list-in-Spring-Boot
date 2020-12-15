@@ -67,8 +67,8 @@ public class LoggedUserRecipeController {
         return "logged-user/recipe/creatingSetOfIngredients";
     }
 
-    @GetMapping("/add/{setId}")
-    public String joinSetOfIngredientsToRecipe(@PathVariable long setId, Model model) {
+    @PostMapping("/add")
+    public String joinSetOfIngredientsToRecipe(@ModelAttribute("setId") long setId, Model model) {
         SetOfIngredientsWithQuantities setOfIngredients = setOfIngredientsWithQuantitiesService.findByIdWithSetOfIngredientsWithQuantity(setId);
         Recipe recipe = new Recipe();
 //        recipe.setSetOfIngredientsWithQuantities(setOfIngredients);
@@ -77,7 +77,7 @@ public class LoggedUserRecipeController {
         return "logged-user/recipe/add";
     }
 
-    @PostMapping("/add")
+    @PostMapping("/adding")
     public String addRecipe(@Valid Recipe recipe, BindingResult result, Model model) {
         if (result.hasErrors()) {
             model.addAttribute("setOfIngredients", setOfIngredientsWithQuantitiesService.findByIdWithSetOfIngredientsWithQuantity(recipe.getSetOfIngredientsWithQuantities().getId()));
@@ -98,7 +98,7 @@ public class LoggedUserRecipeController {
 
     @GetMapping("/mine/list")
     public String myRecipes(Model model, @RequestParam(required = false) Long setId) {
-        if (setId != null) {
+        if (setId != null && recipeService.findBySetOfIWQId(setId) == null) {
             setOfIngredientsWithQuantitiesService.deleteSetOfIngredientsWithQuantitiesById(setId);
         }
         model.addAttribute("recipeList", new TreeSet<>(userService.getCurrentUserWithRecipes().getRecipes()));
