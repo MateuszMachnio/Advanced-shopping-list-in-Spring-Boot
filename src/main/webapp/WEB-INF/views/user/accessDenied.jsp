@@ -22,12 +22,13 @@
                     <strong>${loggedinuser}</strong>, niestety nie masz uprawnień do odwiedzenia tej strony.
                 </p>
             </div>
-            <!-- koniec środka zawartości -->
-            <div id="bottomOfContent">
-            </div>
         </div>
-        <!--  koniec divContent  -->
-        <%@include file="../../constantParts/footer.jspf"%>
+            <!-- koniec środka zawartości -->
+        <div id="bottomOfContent">
+        </div>
+    </div>
+    <!--  koniec divContent  -->
+    <%@include file="../../constantParts/footer.jspf"%>
 </div>
 </body>
 </html>
