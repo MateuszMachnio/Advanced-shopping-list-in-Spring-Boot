@@ -26,4 +26,6 @@ public interface UserService {
 
     User getCurrentUser();
 
+    boolean currentUserHasPlan(long planId);
+
 }

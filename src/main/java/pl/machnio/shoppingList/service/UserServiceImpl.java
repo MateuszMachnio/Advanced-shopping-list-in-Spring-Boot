@@ -8,6 +8,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import pl.machnio.shoppingList.entity.User;
+import pl.machnio.shoppingList.repository.PlanRepository;
 import pl.machnio.shoppingList.repository.UserRepository;
 
 import javax.persistence.EntityNotFoundException;
@@ -18,12 +19,14 @@ import java.util.Optional;
 public class UserServiceImpl implements UserService{
 
     private final UserRepository userRepository;
+    private final PlanRepository planRepository;
 
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-    public UserServiceImpl(UserRepository userRepository) {
+    public UserServiceImpl(UserRepository userRepository, PlanRepository planRepository) {
         this.userRepository = userRepository;
+        this.planRepository = planRepository;
     }
 
     @Override
@@ -96,6 +99,11 @@ public class UserServiceImpl implements UserService{
     @Override
     public User getCurrentUser() {
         return userRepository.findByEmail(getPrincipal());
+    }
+
+    @Override
+    public boolean currentUserHasPlan(long planId) {
+        return getCurrentUser().getPlans().contains(planRepository.findById(planId).get());
     }
 
 }
