@@ -33,17 +33,12 @@
                             <td>${plan.name}</td>
                             <td>${plan.description}</td>
                             <td>
-                                <form action="<c:url value="/logged-user/plan/details"/>" method="post">
-                                    <input type="hidden" name="planId" value="${plan.id}" />
-                                    <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
-                                    <input type="submit" class="button" value="szczegóły" />
-                                </form>
+                                <a class="button" href="/logged-user/plan/details/${plan.id}">szczegóły</a>
                                 <form action="<c:url value="/logged-user/plan/delete"/>" method="post">
                                     <input type="hidden" name="planId" value="${plan.id}" />
                                     <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
                                     <input type="submit" class="button-danger" value="usuń" />
                                 </form>
-<%--                                <a class="button" href="/logged-user/plan/details/${plan.id}">szczegóły</a>--%>
 <%--                                <a class="button-danger" href="/logged-user/plan/delete/${plan.id}">usuń</a>--%>
                             </td>
                         </tr>
