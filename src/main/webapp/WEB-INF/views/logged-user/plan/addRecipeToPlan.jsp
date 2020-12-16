@@ -21,6 +21,7 @@
                 <h1 style="margin-bottom: 60px">Dodawanie przepisu do planu</h1>
 
                 <c:if test="${recipes.size() == 0}">
+                    <a class="return" style="margin-left: 1000px; margin-top: 10px" href="<c:url value="/logged-user/plan/details/${planId}"/>">Powrót</a>
                     <p style="font-size: 18px; text-align: center">Niestety nie masz jeszcze żadnego przepisu na swojej liście przepisów.<br />
                         Do planu można dodać tylko przepisy ze swojej listy przepisów.<br />
                         Proszę, dodaj do swojej listy przepis z listy wszystkich przepisów lub stwórz własny przepis.</p>
