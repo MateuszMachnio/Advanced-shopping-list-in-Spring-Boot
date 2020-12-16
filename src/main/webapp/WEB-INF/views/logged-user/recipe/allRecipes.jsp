@@ -24,7 +24,12 @@
                     <form method="post">
                         <label>
                             <h3 style="display: inline-block">Wyszukaj przepis:</h3>
-                            <input type="text" style="width: 350px" name="searchRecipes" placeholder="wpisz szukaną frazę">
+                            <input type="text" list="recipeList" style="width: 350px" name="searchRecipes" placeholder="wpisz szukaną frazę">
+                            <datalist id="recipeList">
+                                <c:forEach items="${allOriginalRecipes}" var="recipe">
+                                    <option value="${recipe.name}"></option>
+                                </c:forEach>
+                            </datalist>
                         </label>
                         <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
                         <input type="submit" class="submit" style="margin-left: 20px" value="wyszukaj">
