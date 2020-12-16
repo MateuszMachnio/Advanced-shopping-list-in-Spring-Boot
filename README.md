@@ -14,9 +14,12 @@ Application Features:
 - creating weekly nutritional plans;
 - based on a given weekly nutritional plan, a shopping list is created, which can be edited and then downloaded in pdf format.
 ## How it works? 
-I used the __Spring Boot__ and __Hibernate__ frameworks to build the application. \
-Thanks to __Spring Data__ and the JpaRepository interface, performing database operations is very easy. \
-BookController is responsible for all interaction with the user. \
-Data collection takes place via the JpaBookService service layer, which uses the BookRepository interface to retrieve the data. \
-The downloaded data is transferred to the corresponding .jsp files. \
-If the user adds or edits the book, the entered data is additionally validated.
+I would like to point out few curious functionality:
+- to secure url address forgery, almost all Controller action are handled by post method. PlanDetails action of the PlanController and myRecipes action of the RecipeController, which are handled by get method are additionally secured:
+    - planDetails shows plan details only if given planId belongs to current user (to prevent other users plans from changing);
+    - myRecipes delete setOfIngredientsWithQuantities by given id only when it isn't assign to any recipe.
+- myRecipes delete setOfIngredientsWithQuantities to prevent unnecessary data stored in the database. If the user withdraws from adding a new recipe, setOfIWQ is automatically removed from the database;
+- if user wants to add recipe to plan but his own recipe list is empty or if he wants to create shopping list based on empty plan, is informed about it;
+- if user adds recipe from all recipes list to his own list he copied it actually, so changes made by the user to a given recipe do not affect on the original recipe;
+- on all recipes list are shown only original recipes;
+- to create pdf file I used OpenPDF.
