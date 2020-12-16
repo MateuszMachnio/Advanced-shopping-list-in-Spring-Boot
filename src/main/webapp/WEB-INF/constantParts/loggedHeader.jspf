@@ -6,12 +6,9 @@
             <a href="<c:url value="/logged-user/dashboard"/>" id="logo" style="margin-top: 15px">Zaplanuj <span>Jedzonko</span></a>
         </div>
         <div id="contactBox">
-            <table>
+            <table style="margin-top: 25px">
                 <tr><th>Kontakt</th></tr>
                 <tr><td>Mateusz Machnio</td></tr>
-                <tr><td>Tetmajera 103</td></tr>
-                <tr><td>42-610 Miasteczko Śląskie</td></tr>
-                <tr><td>Tel.: 792 772 131</td></tr>
                 <tr><td>Mail: <a href="mailto:mateusz.machnio.9@gmial.com">mateusz.machnio.9@gmail.com</a></td></tr>
             </table>
         </div>

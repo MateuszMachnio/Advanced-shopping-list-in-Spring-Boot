@@ -9,16 +9,13 @@
             <ul id="topMenuList">
                 <li><a href="<c:url value="/user/login"/>"><span class="topMenuSpan">Logowanie</span></a></li>
                 <li><a href="<c:url value="/user/registration"/>"><span class="topMenuSpan">Rejestracja</span></a></li>
-                <li><a href="<c:url value="/user/shopping-list"/>"><span class="topMenuSpan">Przykładowa lista zakupów</span></a></li>
+                <li><a href="<c:url value="/user/shopping-list"/>"><span class="topMenuSpan">Widoki aplikacji</span></a></li>
             </ul>
         </div>
         <div id="contactBox">
-            <table>
+            <table style="margin-top: 25px">
                 <tr><th>Kontakt</th></tr>
                 <tr><td>Mateusz Machnio</td></tr>
-                <tr><td>Tetmajera 103</td></tr>
-                <tr><td>42-610 Miasteczko Śląskie</td></tr>
-                <tr><td>Tel.: 792 772 131</td></tr>
                 <tr><td>Mail: <a href="mailto:mateusz.machnio.9@gmial.com">mateusz.machnio.9@gmail.com</a></td></tr>
             </table>
         </div>
