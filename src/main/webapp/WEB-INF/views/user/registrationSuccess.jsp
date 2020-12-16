@@ -22,7 +22,7 @@
                     <div style="text-align: center">
                         <strong>${loggedinuser}</strong>, dziękujemy za dołączenie do naszego świata przepisów.
                         <br />
-                        Jeśli już teraz chcesz korzystać z aplikacji, proszę się <a href="<c:url value="/user/login" />">zalogować</a>.
+                        Jeśli już teraz chcesz skorzystać z aplikacji, proszę się <a href="<c:url value="/user/login" />">zalogować</a>.
                     </div>
 
             </div>
