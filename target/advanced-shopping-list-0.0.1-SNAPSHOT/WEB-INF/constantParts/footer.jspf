@@ -1,0 +1,28 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<div id="footer">
+    <img id="newsletterIcon" src="<c:url value="/static/css/images/newsletter_icon.gif"/>" alt="Newsletter icon"/>
+    <div id="newsletterText">
+        <div id="newsletterHeader">Zapisz się do Newslettera i bądź na bieżąco z najlepszymi przepisami!
+
+        </div>
+        <div id="newsletterForm">
+            <form action="#" method="post">
+                <div>
+                    <label for="email">Twój e-mail:
+                        <input type="text" id="email" class="inputText" name="email" />
+                    </label>
+                    <input class="submitButton" type="button" value="*Zapisuję się" />
+                </div>
+            </form>
+        </div>
+        <div id="newsletterInfo">
+            *Zapisując się akceptujesz nasze <a href="#">zasady prywatności</a>. W każdym momencie, możesz wypisać się z Newsletera wysyłając do nas maila.
+        </div>
+    </div>
+</div>
+<!--  koniec footer  -->
+<div id="copyright">
+    &copy; 2020, created by <strong><em>Mateusz Machnio</em></strong>
+</div>

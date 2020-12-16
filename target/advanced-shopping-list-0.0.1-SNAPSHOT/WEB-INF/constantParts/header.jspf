@@ -1,0 +1,25 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<header>
+    <div id="topOfContainer">
+        <div id="main-logo">
+            <a href="/" id="logo">Zaplanuj <span>Jedzonko</span></a>
+        </div>
+        <div id="topMenu">
+            <ul id="topMenuList">
+                <li><a href="<c:url value="/user/login"/>"><span class="topMenuSpan">Logowanie</span></a></li>
+                <li><a href="<c:url value="/user/registration"/>"><span class="topMenuSpan">Rejestracja</span></a></li>
+                <li><a href="<c:url value="/user/shopping-list"/>"><span class="topMenuSpan">Widoki aplikacji</span></a></li>
+            </ul>
+        </div>
+        <div id="contactBox">
+            <table style="margin-top: 25px">
+                <tr><th>Kontakt</th></tr>
+                <tr><td>Mateusz Machnio</td></tr>
+                <tr><td>Mail: <a href="mailto:mateusz.machnio.9@gmial.com">mateusz.machnio.9@gmail.com</a></td></tr>
+            </table>
+        </div>
+        <!-- koniec div topMenuList-->
+    </div>
+    <!-- koniec div "topOfContainer" -->
+</header>
