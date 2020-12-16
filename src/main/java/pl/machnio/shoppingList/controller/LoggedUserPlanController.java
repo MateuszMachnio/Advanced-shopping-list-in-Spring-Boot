@@ -188,7 +188,7 @@ public class LoggedUserPlanController {
     @GetMapping("/shopping-list/export/{shoppingListId}")
     public void exportToPDF(@PathVariable long shoppingListId, HttpServletResponse response) throws IOException {
         response.setContentType("application/pdf; charset=UTF-8");
-        DateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss");
+        DateFormat dateFormatter = new SimpleDateFormat("dd-MM-yyyy");
         String currentDateTime = dateFormatter.format(new Date());
 
         String headerKey = "Content-Disposition";
