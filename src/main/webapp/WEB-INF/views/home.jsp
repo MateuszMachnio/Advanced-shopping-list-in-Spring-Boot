@@ -18,7 +18,7 @@
             <div id="textNotLoggedIn">
                 <h3>Zapraszam do skorzystania z najlepszej aplikacji stworzonej w celu zarządzania i organizacji planu żywieniowego!</h3>
                 <div id="notLoggedUserContent">
-                    Po zalogowaniu plikacja pozwala na:
+                    Po zalogowaniu aplikacja pozwala na:
                     <ul>
                         <li>stworzenie własnego przepisu;</li>
                         <li>korzystanie z przepisów innych użytkowników;</li>
