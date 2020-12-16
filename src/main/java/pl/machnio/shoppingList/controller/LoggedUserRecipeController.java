@@ -9,6 +9,7 @@ import pl.machnio.shoppingList.service.*;
 
 import javax.validation.Valid;
 import java.util.List;
+import java.util.Set;
 import java.util.TreeSet;
 
 @Controller
@@ -32,6 +33,11 @@ public class LoggedUserRecipeController {
     @ModelAttribute("ingredients")
     public List<Ingredient> getIngredients() {
         return ingredientService.findAllIngredients();
+    }
+
+    @ModelAttribute("allOriginalRecipes")
+    public Set<Recipe> allRecipes() {
+        return new TreeSet<>(recipeService.findAllOriginal());
     }
 
     @GetMapping("/create-set-of-ingredients")
