@@ -1,3 +1,7 @@
+CREATE DATABASE shopping_list
+    CHARACTER SET utf8mb4
+    COLLATE utf8mb4_unicode_ci;
+
 create table day_of_the_week
 (
     id       bigint auto_increment
