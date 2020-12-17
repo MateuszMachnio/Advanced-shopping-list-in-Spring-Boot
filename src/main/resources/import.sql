@@ -1,389 +1,450 @@
-INSERT INTO shopping_list.ingredients (name) VALUES ('jajka');
-INSERT INTO shopping_list.ingredients (name) VALUES ('jogurt grecki');
-INSERT INTO shopping_list.ingredients (name) VALUES ('jogurt naturalny');
-INSERT INTO shopping_list.ingredients (name) VALUES ('jogurt smakowy');
-INSERT INTO shopping_list.ingredients (name) VALUES ('jogurt skyr');
-INSERT INTO shopping_list.ingredients (name) VALUES ('kefir');
-INSERT INTO shopping_list.ingredients (name) VALUES ('natka pietruszki');
-INSERT INTO shopping_list.ingredients (name) VALUES ('pietruszka');
-INSERT INTO shopping_list.ingredients (name) VALUES ('pietruszka suszona');
-INSERT INTO shopping_list.ingredients (name) VALUES ('kluski śląskie');
-INSERT INTO shopping_list.ingredients (name) VALUES ('margaryna');
-INSERT INTO shopping_list.ingredients (name) VALUES ('masło');
-INSERT INTO shopping_list.ingredients (name) VALUES ('maślanka');
-INSERT INTO shopping_list.ingredients (name) VALUES ('masło klarowane');
-INSERT INTO shopping_list.ingredients (name) VALUES ('mleko');
-INSERT INTO shopping_list.ingredients (name) VALUES ('mleko 2%');
-INSERT INTO shopping_list.ingredients (name) VALUES ('mleko 3,2%');
-INSERT INTO shopping_list.ingredients (name) VALUES ('mleko 1,5%');
-INSERT INTO shopping_list.ingredients (name) VALUES ('mleko kokosowe');
-INSERT INTO shopping_list.ingredients (name) VALUES ('mleko migdałowe');
-INSERT INTO shopping_list.ingredients (name) VALUES ('mleko owsiane');
-INSERT INTO shopping_list.ingredients (name) VALUES ('mleko ryżowe');
-INSERT INTO shopping_list.ingredients (name) VALUES ('mleko sojowe');
-INSERT INTO shopping_list.ingredients (name) VALUES ('śmietana');
-INSERT INTO shopping_list.ingredients (name) VALUES ('camembert');
-INSERT INTO shopping_list.ingredients (name) VALUES ('cheddar');
-INSERT INTO shopping_list.ingredients (name) VALUES ('edam');
-INSERT INTO shopping_list.ingredients (name) VALUES ('feta');
-INSERT INTO shopping_list.ingredients (name) VALUES ('gorgonzola');
-INSERT INTO shopping_list.ingredients (name) VALUES ('gouda');
-INSERT INTO shopping_list.ingredients (name) VALUES ('halumi');
-INSERT INTO shopping_list.ingredients (name) VALUES ('mascarpone');
-INSERT INTO shopping_list.ingredients (name) VALUES ('mozarella');
-INSERT INTO shopping_list.ingredients (name) VALUES ('parmezan');
-INSERT INTO shopping_list.ingredients (name) VALUES ('ricotta');
-INSERT INTO shopping_list.ingredients (name) VALUES ('ser kozi');
-INSERT INTO shopping_list.ingredients (name) VALUES ('ser feta');
-INSERT INTO shopping_list.ingredients (name) VALUES ('ser pleśniowy');
-INSERT INTO shopping_list.ingredients (name) VALUES ('ser Camembert');
-INSERT INTO shopping_list.ingredients (name) VALUES ('ser mozzarella');
-INSERT INTO shopping_list.ingredients (name) VALUES ('ser topiony');
-INSERT INTO shopping_list.ingredients (name) VALUES ('ser żółty');
-INSERT INTO shopping_list.ingredients (name) VALUES ('ser żółty tarty');
-INSERT INTO shopping_list.ingredients (name) VALUES ('serek kanapkowy');
-INSERT INTO shopping_list.ingredients (name) VALUES ('serek wiejski');
-INSERT INTO shopping_list.ingredients (name) VALUES ('twaróg chudy');
-INSERT INTO shopping_list.ingredients (name) VALUES ('twaróg półtłusty');
-INSERT INTO shopping_list.ingredients (name) VALUES ('twaróg tłusty');
-INSERT INTO shopping_list.ingredients (name) VALUES ('mąka biała');
-INSERT INTO shopping_list.ingredients (name) VALUES ('mąka gryczana');
-INSERT INTO shopping_list.ingredients (name) VALUES ('mąka kokosowa');
-INSERT INTO shopping_list.ingredients (name) VALUES ('mąka kukurydziana');
-INSERT INTO shopping_list.ingredients (name) VALUES ('mąka orkiszowa');
-INSERT INTO shopping_list.ingredients (name) VALUES ('mąka owsiana');
-INSERT INTO shopping_list.ingredients (name) VALUES ('mąka pszenna');
-INSERT INTO shopping_list.ingredients (name) VALUES ('mąka pszenna graham');
-INSERT INTO shopping_list.ingredients (name) VALUES ('mąka razowa');
-INSERT INTO shopping_list.ingredients (name) VALUES ('mąka ryżowa');
-INSERT INTO shopping_list.ingredients (name) VALUES ('mąka ziemniaczana');
-INSERT INTO shopping_list.ingredients (name) VALUES ('ziemniaki');
-INSERT INTO shopping_list.ingredients (name) VALUES ('mąka żytnia');
-INSERT INTO shopping_list.ingredients (name) VALUES ('amarantus');
-INSERT INTO shopping_list.ingredients (name) VALUES ('bulgur');
-INSERT INTO shopping_list.ingredients (name) VALUES ('kasza gryczana niepalona');
-INSERT INTO shopping_list.ingredients (name) VALUES ('kasza gryczana prażona');
-INSERT INTO shopping_list.ingredients (name) VALUES ('kasza jaglana');
-INSERT INTO shopping_list.ingredients (name) VALUES ('kasza jęczmienna pęczak');
-INSERT INTO shopping_list.ingredients (name) VALUES ('kasza jęczmienna');
-INSERT INTO shopping_list.ingredients (name) VALUES ('kasza jęczmienna wiejska');
-INSERT INTO shopping_list.ingredients (name) VALUES ('kasza jęczmienna perłowa');
-INSERT INTO shopping_list.ingredients (name) VALUES ('komosa ryżowa (quinoa)');
-INSERT INTO shopping_list.ingredients (name) VALUES ('kasza kuskus');
-INSERT INTO shopping_list.ingredients (name) VALUES ('kasza bulgur');
-INSERT INTO shopping_list.ingredients (name) VALUES ('kasza manna');
-INSERT INTO shopping_list.ingredients (name) VALUES ('kasza kukurydziana');
-INSERT INTO shopping_list.ingredients (name) VALUES ('kasza owsiana pęczak');
-INSERT INTO shopping_list.ingredients (name) VALUES ('kasza owsiana łamana');
-INSERT INTO shopping_list.ingredients (name) VALUES ('polenta');
-INSERT INTO shopping_list.ingredients (name) VALUES ('polędwiczka wieprzowa');
-INSERT INTO shopping_list.ingredients (name) VALUES ('ryż basmati');
-INSERT INTO shopping_list.ingredients (name) VALUES ('ryż biały');
-INSERT INTO shopping_list.ingredients (name) VALUES ('ryż brązowy');
-INSERT INTO shopping_list.ingredients (name) VALUES ('ryż dziki');
-INSERT INTO shopping_list.ingredients (name) VALUES ('ryż jaśminowy');
-INSERT INTO shopping_list.ingredients (name) VALUES ('soczewica');
-INSERT INTO shopping_list.ingredients (name) VALUES ('granola');
-INSERT INTO shopping_list.ingredients (name) VALUES ('musli');
-INSERT INTO shopping_list.ingredients (name) VALUES ('mintaj');
-INSERT INTO shopping_list.ingredients (name) VALUES ('musli z orzechami');
-INSERT INTO shopping_list.ingredients (name) VALUES ('otręby owiane');
-INSERT INTO shopping_list.ingredients (name) VALUES ('płatki drożdżowe');
-INSERT INTO shopping_list.ingredients (name) VALUES ('płatki gryczane');
-INSERT INTO shopping_list.ingredients (name) VALUES ('płatki jaglane');
-INSERT INTO shopping_list.ingredients (name) VALUES ('płatki orkiszowe');
-INSERT INTO shopping_list.ingredients (name) VALUES ('płatki owsiane');
-INSERT INTO shopping_list.ingredients (name) VALUES ('płatki quinoa');
-INSERT INTO shopping_list.ingredients (name) VALUES ('płatki ryżowe');
-INSERT INTO shopping_list.ingredients (name) VALUES ('płatki żytnie');
-INSERT INTO shopping_list.ingredients (name) VALUES ('herbata czarna');
-INSERT INTO shopping_list.ingredients (name) VALUES ('herbata ziołowa');
-INSERT INTO shopping_list.ingredients (name) VALUES ('hebata zielona');
-INSERT INTO shopping_list.ingredients (name) VALUES ('kakao (proszek)');
-INSERT INTO shopping_list.ingredients (name) VALUES ('kawa');
-INSERT INTO shopping_list.ingredients (name) VALUES ('zioła do drobiu');
-INSERT INTO shopping_list.ingredients (name) VALUES ('zioła do schabu');
-INSERT INTO shopping_list.ingredients (name) VALUES ('zioła prowansalskie');
-INSERT INTO shopping_list.ingredients (name) VALUES ('zioła do sałatek');
-INSERT INTO shopping_list.ingredients (name) VALUES ('wafle ryżowe');
-INSERT INTO shopping_list.ingredients (name) VALUES ('napój energetyczny');
-INSERT INTO shopping_list.ingredients (name) VALUES ('napój gazowany');
-INSERT INTO shopping_list.ingredients (name) VALUES ('sok owocowy');
-INSERT INTO shopping_list.ingredients (name) VALUES ('sok z cytryny');
-INSERT INTO shopping_list.ingredients (name) VALUES ('woda gazowana');
-INSERT INTO shopping_list.ingredients (name) VALUES ('woda niegazowana');
-INSERT INTO shopping_list.ingredients (name) VALUES ('woda kokosowa');
-INSERT INTO shopping_list.ingredients (name) VALUES ('woda mineralna');
-INSERT INTO shopping_list.ingredients (name) VALUES ('woda źródlana');
-INSERT INTO shopping_list.ingredients (name) VALUES ('cukier');
-INSERT INTO shopping_list.ingredients (name) VALUES ('cynamon (przyprawa)');
-INSERT INTO shopping_list.ingredients (name) VALUES ('grejpfrut');
-INSERT INTO shopping_list.ingredients (name) VALUES ('cukinia');
-INSERT INTO shopping_list.ingredients (name) VALUES ('cukier brązowy');
-INSERT INTO shopping_list.ingredients (name) VALUES ('cukier brzozowy (ksylitol)');
-INSERT INTO shopping_list.ingredients (name) VALUES ('cukier trzcinowy');
-INSERT INTO shopping_list.ingredients (name) VALUES ('cukier puder');
-INSERT INTO shopping_list.ingredients (name) VALUES ('miód');
-INSERT INTO shopping_list.ingredients (name) VALUES ('miód lipowy');
-INSERT INTO shopping_list.ingredients (name) VALUES ('miód gryczany');
-INSERT INTO shopping_list.ingredients (name) VALUES ('miód wielokwiatowy');
-INSERT INTO shopping_list.ingredients (name) VALUES ('miód rzepakowy');
-INSERT INTO shopping_list.ingredients (name) VALUES ('miód spadziowy');
-INSERT INTO shopping_list.ingredients (name) VALUES ('syrop klonowy');
-INSERT INTO shopping_list.ingredients (name) VALUES ('syrop z agawy');
-INSERT INTO shopping_list.ingredients (name) VALUES ('awokado');
-INSERT INTO shopping_list.ingredients (name) VALUES ('ciecierzyca');
-INSERT INTO shopping_list.ingredients (name) VALUES ('fasola biała');
-INSERT INTO shopping_list.ingredients (name) VALUES ('fasola czarna');
-INSERT INTO shopping_list.ingredients (name) VALUES ('fasola czerwona');
-INSERT INTO shopping_list.ingredients (name) VALUES ('fasola konserwowa');
-INSERT INTO shopping_list.ingredients (name) VALUES ('groszek w puszce');
-INSERT INTO shopping_list.ingredients (name) VALUES ('kapary');
-INSERT INTO shopping_list.ingredients (name) VALUES ('frankfurterka');
-INSERT INTO shopping_list.ingredients (name) VALUES ('pomarańcza');
-INSERT INTO shopping_list.ingredients (name) VALUES ('koncentrat pomidorowy');
-INSERT INTO shopping_list.ingredients (name) VALUES ('przecier pomidorowy');
-INSERT INTO shopping_list.ingredients (name) VALUES ('kukurydza');
-INSERT INTO shopping_list.ingredients (name) VALUES ('ogórek kiszony');
-INSERT INTO shopping_list.ingredients (name) VALUES ('ogórek konserwowy');
-INSERT INTO shopping_list.ingredients (name) VALUES ('ogórek małosolny');
-INSERT INTO shopping_list.ingredients (name) VALUES ('ogórek gruntowy');
-INSERT INTO shopping_list.ingredients (name) VALUES ('ogórek szklarniowy');
-INSERT INTO shopping_list.ingredients (name) VALUES ('rzodkiewka');
-INSERT INTO shopping_list.ingredients (name) VALUES ('oliwki zielone');
-INSERT INTO shopping_list.ingredients (name) VALUES ('oliwki zielone w puszce');
-INSERT INTO shopping_list.ingredients (name) VALUES ('oliwki zielone marynowane');
-INSERT INTO shopping_list.ingredients (name) VALUES ('oliwki czarne');
-INSERT INTO shopping_list.ingredients (name) VALUES ('oliwki czarne w puszce');
-INSERT INTO shopping_list.ingredients (name) VALUES ('oliwki czarne marynowane');
-INSERT INTO shopping_list.ingredients (name) VALUES ('poimdory suszone w oleju');
-INSERT INTO shopping_list.ingredients (name) VALUES ('pomidory krojone');
-INSERT INTO shopping_list.ingredients (name) VALUES ('pomidory suszone');
-INSERT INTO shopping_list.ingredients (name) VALUES ('pomidory suszone w zalewie');
-INSERT INTO shopping_list.ingredients (name) VALUES ('pomidory w całości');
-INSERT INTO shopping_list.ingredients (name) VALUES ('pomidory koktajlowe');
-INSERT INTO shopping_list.ingredients (name) VALUES ('pomidory daktylowe');
-INSERT INTO shopping_list.ingredients (name) VALUES ('pomidory rzymskie');
-INSERT INTO shopping_list.ingredients (name) VALUES ('pomidory paprykowe');
-INSERT INTO shopping_list.ingredients (name) VALUES ('pomidory zielone');
-INSERT INTO shopping_list.ingredients (name) VALUES ('pomidory malinowe');
-INSERT INTO shopping_list.ingredients (name) VALUES ('pomidory żółte');
-INSERT INTO shopping_list.ingredients (name) VALUES ('soczewica konserwowa');
-INSERT INTO shopping_list.ingredients (name) VALUES ('tuńczyk');
-INSERT INTO shopping_list.ingredients (name) VALUES ('tuńczyk w oleju');
-INSERT INTO shopping_list.ingredients (name) VALUES ('tuńczyk w sosie własnym');
-INSERT INTO shopping_list.ingredients (name) VALUES ('łosoś filet');
-INSERT INTO shopping_list.ingredients (name) VALUES ('łosoś wędzony');
-INSERT INTO shopping_list.ingredients (name) VALUES ('aromat');
-INSERT INTO shopping_list.ingredients (name) VALUES ('banan');
-INSERT INTO shopping_list.ingredients (name) VALUES ('bakalie');
-INSERT INTO shopping_list.ingredients (name) VALUES ('przyprawa włoska');
-INSERT INTO shopping_list.ingredients (name) VALUES ('przyprawa do ziemniaków');
-INSERT INTO shopping_list.ingredients (name) VALUES ('przyprawa do ryb');
-INSERT INTO shopping_list.ingredients (name) VALUES ('bazylia (przyprawa)');
-INSERT INTO shopping_list.ingredients (name) VALUES ('bazylia świeża');
-INSERT INTO shopping_list.ingredients (name) VALUES ('cukier wanilinowy');
-INSERT INTO shopping_list.ingredients (name) VALUES ('drożdże');
-INSERT INTO shopping_list.ingredients (name) VALUES ('ekstrakt migdałowy');
-INSERT INTO shopping_list.ingredients (name) VALUES ('ekstrakt waniliowy');
-INSERT INTO shopping_list.ingredients (name) VALUES ('gorzka czekolada');
-INSERT INTO shopping_list.ingredients (name) VALUES ('mleko kondensowane');
-INSERT INTO shopping_list.ingredients (name) VALUES ('proszek do pieczenia');
-INSERT INTO shopping_list.ingredients (name) VALUES ('skrobia kukurydziana');
-INSERT INTO shopping_list.ingredients (name) VALUES ('skrobia ziemniaczana');
-INSERT INTO shopping_list.ingredients (name) VALUES ('soda oczyszczona');
-INSERT INTO shopping_list.ingredients (name) VALUES ('makaron farfalle (koradki)');
-INSERT INTO shopping_list.ingredients (name) VALUES ('makaron fusili (świderki)');
-INSERT INTO shopping_list.ingredients (name) VALUES ('makaron gnocchi (muszelki)');
-INSERT INTO shopping_list.ingredients (name) VALUES ('makaron gryczany');
-INSERT INTO shopping_list.ingredients (name) VALUES ('makaron jajeczny');
-INSERT INTO shopping_list.ingredients (name) VALUES ('makaron pełnoziarnisty');
-INSERT INTO shopping_list.ingredients (name) VALUES ('makaron penne (rurka skośna)');
-INSERT INTO shopping_list.ingredients (name) VALUES ('makaron penne pełnoziarnisty (rurka skośna)');
-INSERT INTO shopping_list.ingredients (name) VALUES ('makaron ryżowy');
-INSERT INTO shopping_list.ingredients (name) VALUES ('makaron spaghetti');
-INSERT INTO shopping_list.ingredients (name) VALUES ('makaron spaghetti pełnoziarnisty');
-INSERT INTO shopping_list.ingredients (name) VALUES ('makaron tagliatelle (wstążki)');
-INSERT INTO shopping_list.ingredients (name) VALUES ('chrzan');
-INSERT INTO shopping_list.ingredients (name) VALUES ('papryka zielona');
-INSERT INTO shopping_list.ingredients (name) VALUES ('papryka czerwona');
-INSERT INTO shopping_list.ingredients (name) VALUES ('papryka żułta');
-INSERT INTO shopping_list.ingredients (name) VALUES ('papryka chili');
-INSERT INTO shopping_list.ingredients (name) VALUES ('papryka słodka (przyprawa)');
-INSERT INTO shopping_list.ingredients (name) VALUES ('papryka ostra (przyprawa)');
-INSERT INTO shopping_list.ingredients (name) VALUES ('dżem');
-INSERT INTO shopping_list.ingredients (name) VALUES ('dżem truskawkowy');
-INSERT INTO shopping_list.ingredients (name) VALUES ('dżem wiśniowy');
-INSERT INTO shopping_list.ingredients (name) VALUES ('dżem porzeczkowy');
-INSERT INTO shopping_list.ingredients (name) VALUES ('dżem malinowy');
-INSERT INTO shopping_list.ingredients (name) VALUES ('dżem jagodowy');
-INSERT INTO shopping_list.ingredients (name) VALUES ('dżem brzoskwiniowy');
-INSERT INTO shopping_list.ingredients (name) VALUES ('dżem morelowy');
-INSERT INTO shopping_list.ingredients (name) VALUES ('ketchup');
-INSERT INTO shopping_list.ingredients (name) VALUES ('kostka bulionowa');
-INSERT INTO shopping_list.ingredients (name) VALUES ('bulion warzywny');
-INSERT INTO shopping_list.ingredients (name) VALUES ('majonez');
-INSERT INTO shopping_list.ingredients (name) VALUES ('burak');
-INSERT INTO shopping_list.ingredients (name) VALUES ('masło orzechowe');
-INSERT INTO shopping_list.ingredients (name) VALUES ('musztarda');
-INSERT INTO shopping_list.ingredients (name) VALUES ('pasta curry');
-INSERT INTO shopping_list.ingredients (name) VALUES ('curry (przyprawa)');
-INSERT INTO shopping_list.ingredients (name) VALUES ('pesto');
-INSERT INTO shopping_list.ingredients (name) VALUES ('salsa');
-INSERT INTO shopping_list.ingredients (name) VALUES ('sok cytrynowy');
-INSERT INTO shopping_list.ingredients (name) VALUES ('sok limonkowy');
-INSERT INTO shopping_list.ingredients (name) VALUES ('sos BBQ');
-INSERT INTO shopping_list.ingredients (name) VALUES ('sos sojowy');
-INSERT INTO shopping_list.ingredients (name) VALUES ('sos Worcestshire');
-INSERT INTO shopping_list.ingredients (name) VALUES ('sriracha');
-INSERT INTO shopping_list.ingredients (name) VALUES ('tahini (pasta sezamowa)');
-INSERT INTO shopping_list.ingredients (name) VALUES ('migdały');
-INSERT INTO shopping_list.ingredients (name) VALUES ('laska wanili');
-INSERT INTO shopping_list.ingredients (name) VALUES ('migdały płatki');
-INSERT INTO shopping_list.ingredients (name) VALUES ('migdały słupki');
-INSERT INTO shopping_list.ingredients (name) VALUES ('nasiona Chia');
-INSERT INTO shopping_list.ingredients (name) VALUES ('orzechy nerkowca');
-INSERT INTO shopping_list.ingredients (name) VALUES ('orzechy arachidowe');
-INSERT INTO shopping_list.ingredients (name) VALUES ('orzechy brazylijskie');
-INSERT INTO shopping_list.ingredients (name) VALUES ('orzechy laskowe');
-INSERT INTO shopping_list.ingredients (name) VALUES ('orzechy włoskie');
-INSERT INTO shopping_list.ingredients (name) VALUES ('orzeszki piniowe');
-INSERT INTO shopping_list.ingredients (name) VALUES ('pestki dyni');
-INSERT INTO shopping_list.ingredients (name) VALUES ('pistacje');
-INSERT INTO shopping_list.ingredients (name) VALUES ('sezam (nasiona)');
-INSERT INTO shopping_list.ingredients (name) VALUES ('siemie lnianie');
-INSERT INTO shopping_list.ingredients (name) VALUES ('wiórki kokosowe');
-INSERT INTO shopping_list.ingredients (name) VALUES ('ziarna słonecznika');
-INSERT INTO shopping_list.ingredients (name) VALUES ('bób');
-INSERT INTO shopping_list.ingredients (name) VALUES ('brokuły');
-INSERT INTO shopping_list.ingredients (name) VALUES ('brukselka');
-INSERT INTO shopping_list.ingredients (name) VALUES ('dynia');
-INSERT INTO shopping_list.ingredients (name) VALUES ('fasolka szparagowa');
-INSERT INTO shopping_list.ingredients (name) VALUES ('groszek');
-INSERT INTO shopping_list.ingredients (name) VALUES ('jarmuż');
-INSERT INTO shopping_list.ingredients (name) VALUES ('kalafior');
-INSERT INTO shopping_list.ingredients (name) VALUES ('marchew');
-INSERT INTO shopping_list.ingredients (name) VALUES ('rukola');
-INSERT INTO shopping_list.ingredients (name) VALUES ('kolendra świeża');
-INSERT INTO shopping_list.ingredients (name) VALUES ('kolendra (przyprawa)');
-INSERT INTO shopping_list.ingredients (name) VALUES ('mieszanka warzyw');
-INSERT INTO shopping_list.ingredients (name) VALUES ('mieszanka sałat');
-INSERT INTO shopping_list.ingredients (name) VALUES ('warzywa mrożone wiosenne');
-INSERT INTO shopping_list.ingredients (name) VALUES ('szpinak');
-INSERT INTO shopping_list.ingredients (name) VALUES ('szpinak mrożony');
-INSERT INTO shopping_list.ingredients (name) VALUES ('czarna porzeczka');
-INSERT INTO shopping_list.ingredients (name) VALUES ('czarnuszka');
-INSERT INTO shopping_list.ingredients (name) VALUES ('jagody');
-INSERT INTO shopping_list.ingredients (name) VALUES ('jagody mrożone');
-INSERT INTO shopping_list.ingredients (name) VALUES ('jeżyny mrożone');
-INSERT INTO shopping_list.ingredients (name) VALUES ('maliny');
-INSERT INTO shopping_list.ingredients (name) VALUES ('maliny mrożone');
-INSERT INTO shopping_list.ingredients (name) VALUES ('śliwki');
-INSERT INTO shopping_list.ingredients (name) VALUES ('truskawki');
-INSERT INTO shopping_list.ingredients (name) VALUES ('truskawki mrożone');
-INSERT INTO shopping_list.ingredients (name) VALUES ('wiśnie');
-INSERT INTO shopping_list.ingredients (name) VALUES ('wiśnie mrożone');
-INSERT INTO shopping_list.ingredients (name) VALUES ('koper');
-INSERT INTO shopping_list.ingredients (name) VALUES ('sałata');
-INSERT INTO shopping_list.ingredients (name) VALUES ('sałata lodowa');
-INSERT INTO shopping_list.ingredients (name) VALUES ('sałata masłowa');
-INSERT INTO shopping_list.ingredients (name) VALUES ('ocet balsamiczny');
-INSERT INTO shopping_list.ingredients (name) VALUES ('ocet jabłkowy');
-INSERT INTO shopping_list.ingredients (name) VALUES ('ocet ryżowy');
-INSERT INTO shopping_list.ingredients (name) VALUES ('ocet spirytusowy');
-INSERT INTO shopping_list.ingredients (name) VALUES ('ocet winny');
-INSERT INTO shopping_list.ingredients (name) VALUES ('olej kokosowy');
-INSERT INTO shopping_list.ingredients (name) VALUES ('olej lniany');
-INSERT INTO shopping_list.ingredients (name) VALUES ('olej rzepakowy');
-INSERT INTO shopping_list.ingredients (name) VALUES ('olej sezamowy');
-INSERT INTO shopping_list.ingredients (name) VALUES ('olej słonecznikowy');
-INSERT INTO shopping_list.ingredients (name) VALUES ('olej z pestek winogron');
-INSERT INTO shopping_list.ingredients (name) VALUES ('winogrona');
-INSERT INTO shopping_list.ingredients (name) VALUES ('oliwa z oliwek');
-INSERT INTO shopping_list.ingredients (name) VALUES ('chleb graham');
-INSERT INTO shopping_list.ingredients (name) VALUES ('chleb pełnoziarnisty');
-INSERT INTO shopping_list.ingredients (name) VALUES ('chleb pszenny');
-INSERT INTO shopping_list.ingredients (name) VALUES ('chleb zwykły');
-INSERT INTO shopping_list.ingredients (name) VALUES ('chleb żytni');
-INSERT INTO shopping_list.ingredients (name) VALUES ('chleb żytni razowy');
-INSERT INTO shopping_list.ingredients (name) VALUES ('chleb żytni pełnoziarnisty');
-INSERT INTO shopping_list.ingredients (name) VALUES ('chleb żytni jasny');
-INSERT INTO shopping_list.ingredients (name) VALUES ('szczypiorek');
-INSERT INTO shopping_list.ingredients (name) VALUES ('pieprz czarny');
-INSERT INTO shopping_list.ingredients (name) VALUES ('pieprz biały');
-INSERT INTO shopping_list.ingredients (name) VALUES ('pieprz biały mielony');
-INSERT INTO shopping_list.ingredients (name) VALUES ('pieprz czarny mielony');
-INSERT INTO shopping_list.ingredients (name) VALUES ('pieprz kolorowy mielony');
-INSERT INTO shopping_list.ingredients (name) VALUES ('pieprz kolorowy');
-INSERT INTO shopping_list.ingredients (name) VALUES ('rozmaryn');
-INSERT INTO shopping_list.ingredients (name) VALUES ('tymianek');
-INSERT INTO shopping_list.ingredients (name) VALUES ('majeranek');
-INSERT INTO shopping_list.ingredients (name) VALUES ('sól');
-INSERT INTO shopping_list.ingredients (name) VALUES ('bułka grahamka');
-INSERT INTO shopping_list.ingredients (name) VALUES ('bułka pszenna');
-INSERT INTO shopping_list.ingredients (name) VALUES ('bułka maślana');
-INSERT INTO shopping_list.ingredients (name) VALUES ('kajzerka');
-INSERT INTO shopping_list.ingredients (name) VALUES ('brzoskwinia');
-INSERT INTO shopping_list.ingredients (name) VALUES ('len nasiona');
-INSERT INTO shopping_list.ingredients (name) VALUES ('len mielony');
-INSERT INTO shopping_list.ingredients (name) VALUES ('cebula żółta');
-INSERT INTO shopping_list.ingredients (name) VALUES ('cebula czerwona');
-INSERT INTO shopping_list.ingredients (name) VALUES ('cebula cukrowa');
-INSERT INTO shopping_list.ingredients (name) VALUES ('cebula szalotka');
-INSERT INTO shopping_list.ingredients (name) VALUES ('czosnek');
-INSERT INTO shopping_list.ingredients (name) VALUES ('mięso mielone z indyka');
-INSERT INTO shopping_list.ingredients (name) VALUES ('mięso mielone z kurczaka');
-INSERT INTO shopping_list.ingredients (name) VALUES ('indyk filet');
-INSERT INTO shopping_list.ingredients (name) VALUES ('kurczak filet');
-INSERT INTO shopping_list.ingredients (name) VALUES ('borówki');
-INSERT INTO shopping_list.ingredients (name) VALUES ('borówki mrożone');
-INSERT INTO shopping_list.ingredients (name) VALUES ('jabłko');
-INSERT INTO shopping_list.ingredients (name) VALUES ('gruszka');
-INSERT INTO shopping_list.ingredients (name) VALUES ('schab');
-INSERT INTO shopping_list.ingredients (name) VALUES ('daktyle');
-INSERT INTO shopping_list.ingredients (name) VALUES ('kiełki');
-INSERT INTO shopping_list.ingredients (name) VALUES ('kiwi');
-INSERT INTO shopping_list.ingredients (name) VALUES ('wanilia ekstrakt');
-INSERT INTO shopping_list.ingredients (name) VALUES ('wanilia laska');
-INSERT INTO shopping_list.ingredients (name) VALUES ('daktyle suszone');
-INSERT INTO shopping_list.ingredients (name) VALUES ('oregano (przyprawa)');
-INSERT INTO shopping_list.ingredients (name) VALUES ('szynka z indyka');
-INSERT INTO shopping_list.ingredients (name) VALUES ('szynka z kurczaka');
-INSERT INTO shopping_list.ingredients (name) VALUES ('kiełbasa żywiecka sucha');
-INSERT INTO shopping_list.ingredients (name) VALUES ('budyń waniliowy (proszek)');
-INSERT INTO shopping_list.ingredients (name) VALUES ('pieczarki');
-INSERT INTO shopping_list.ingredients (name) VALUES ('salami');
-INSERT INTO shopping_list.ingredients (name) VALUES ('ananas');
-INSERT INTO shopping_list.ingredients (name) VALUES ('herbatniki');
-INSERT INTO shopping_list.ingredients (name) VALUES ('kajmak');
-INSERT INTO shopping_list.ingredients (name) VALUES ('śmietana 12%');
-INSERT INTO shopping_list.ingredients (name) VALUES ('śmietana 18%');
-INSERT INTO shopping_list.ingredients (name) VALUES ('śmietana 30%');
-INSERT INTO shopping_list.ingredients (name) VALUES ('śmietana 36%');
-INSERT INTO shopping_list.ingredients (name) VALUES ('żelatyna');
-INSERT INTO shopping_list.ingredients (name) VALUES ('żółtko jajka');
-INSERT INTO shopping_list.ingredients (name) VALUES ('mąka tortowa');
+CREATE DATABASE shopping_list
+    CHARACTER SET utf8mb4
+    COLLATE utf8mb4_unicode_ci;
 
-INSERT INTO shopping_list.day_of_the_week (day_name) VALUES ('poniedziałek');
-INSERT INTO shopping_list.day_of_the_week (day_name) VALUES ('wtorek');
-INSERT INTO shopping_list.day_of_the_week (day_name) VALUES ('środa');
-INSERT INTO shopping_list.day_of_the_week (day_name) VALUES ('czwartek');
-INSERT INTO shopping_list.day_of_the_week (day_name) VALUES ('piątek');
-INSERT INTO shopping_list.day_of_the_week (day_name) VALUES ('sobota');
-INSERT INTO shopping_list.day_of_the_week (day_name) VALUES ('niedziela');
+create table day_of_the_week
+(
+    id       bigint auto_increment
+        primary key,
+    day_name varchar(15) not null,
+    constraint UK_4n2gri203vuks702qjhbxfail
+        unique (day_name)
+);
 
-INSERT INTO shopping_list.meal_names (meal_name) VALUES ('śniadanie');
-INSERT INTO shopping_list.meal_names (meal_name) VALUES ('II śniadanie');
-INSERT INTO shopping_list.meal_names (meal_name) VALUES ('obiad');
-INSERT INTO shopping_list.meal_names (meal_name) VALUES ('podwieczorek');
-INSERT INTO shopping_list.meal_names (meal_name) VALUES ('kolacja');
+INSERT INTO shopping_list.day_of_the_week (id, day_name) VALUES (4, 'czwartek');
+INSERT INTO shopping_list.day_of_the_week (id, day_name) VALUES (7, 'niedziela');
+INSERT INTO shopping_list.day_of_the_week (id, day_name) VALUES (5, 'piątek');
+INSERT INTO shopping_list.day_of_the_week (id, day_name) VALUES (1, 'poniedziałek');
+INSERT INTO shopping_list.day_of_the_week (id, day_name) VALUES (6, 'sobota');
+INSERT INTO shopping_list.day_of_the_week (id, day_name) VALUES (3, 'środa');
+INSERT INTO shopping_list.day_of_the_week (id, day_name) VALUES (2, 'wtorek');
 
-INSERT INTO shopping_list.users (id, created_on, email, first_name, last_name, password, role, updated_on) VALUES (1, '2020-12-03 10:31:32.113075', 'machniom93@gmail.com', 'Mateusz', 'Machnio', '$2a$10$hqTF64smXPXPX5mNEG2/o.9vv4tgk8Guce3HWO3BW0F194lSiTZ4a', 'USER', null);
+create table meal_names
+(
+    id        bigint auto_increment
+        primary key,
+    meal_name varchar(15) not null,
+    constraint UK_mqdubsgro0vff0rfu4sumx3dn
+        unique (meal_name)
+);
+
+INSERT INTO shopping_list.meal_names (id, meal_name) VALUES (2, 'II śniadanie');
+INSERT INTO shopping_list.meal_names (id, meal_name) VALUES (5, 'kolacja');
+INSERT INTO shopping_list.meal_names (id, meal_name) VALUES (3, 'obiad');
+INSERT INTO shopping_list.meal_names (id, meal_name) VALUES (4, 'podwieczorek');
+INSERT INTO shopping_list.meal_names (id, meal_name) VALUES (1, 'śniadanie');
+
+create table plan_schedules
+(
+    id        bigint auto_increment
+        primary key,
+    day_id    bigint not null,
+    meal_id   bigint not null,
+    plan_id   bigint not null,
+    recipe_id bigint not null,
+    constraint FK7lge8s4if8ro49kb4y3om6oi9
+        foreign key (meal_id) references meal_names (id),
+    constraint FK8ubml4m9h9x0e68qoda15nuft
+        foreign key (plan_id) references plans (id),
+    constraint FKbfpcs9mgggqe4u9o6mn6tv4jc
+        foreign key (day_id) references day_of_the_week (id),
+    constraint FKpt006ibj60vkni2qvds89jgch
+        foreign key (recipe_id) references recipes (id)
+);
 
 
+create table plans
+(
+    id          bigint auto_increment
+        primary key,
+    created_on  datetime(6)  null,
+    description varchar(700) not null,
+    name        varchar(50)  not null,
+    updated_on  datetime(6)  null,
+    user_id     bigint       null,
+    constraint FKbybv5po44ssyv6svnv062dwrf
+        foreign key (user_id) references users (id)
+);
+create table ingredients
+(
+    id   bigint auto_increment
+        primary key,
+    name varchar(255) not null,
+    constraint UK_j6tsl15xx76y4kv41yxr4uxab
+        unique (name)
+);
 
+INSERT INTO shopping_list.ingredients (id, name) VALUES (62, 'amarantus');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (356, 'ananas');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (177, 'aromat');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (134, 'awokado');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (179, 'bakalie');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (178, 'banan');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (183, 'bazylia (przyprawa)');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (184, 'bazylia świeża');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (257, 'bób');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (338, 'borówki');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (339, 'borówki mrożone');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (258, 'brokuły');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (259, 'brukselka');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (326, 'brzoskwinia');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (353, 'budyń waniliowy (proszek)');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (63, 'bulgur');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (224, 'bulion warzywny');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (322, 'bułka grahamka');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (324, 'bułka maślana');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (323, 'bułka pszenna');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (226, 'burak');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (25, 'camembert');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (331, 'cebula cukrowa');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (330, 'cebula czerwona');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (332, 'cebula szalotka');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (329, 'cebula żółta');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (26, 'cheddar');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (303, 'chleb graham');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (304, 'chleb pełnoziarnisty');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (305, 'chleb pszenny');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (306, 'chleb zwykły');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (307, 'chleb żytni');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (310, 'chleb żytni jasny');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (309, 'chleb żytni pełnoziarnisty');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (308, 'chleb żytni razowy');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (207, 'chrzan');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (135, 'ciecierzyca');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (118, 'cukier');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (122, 'cukier brązowy');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (123, 'cukier brzozowy (ksylitol)');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (125, 'cukier puder');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (124, 'cukier trzcinowy');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (185, 'cukier wanilinowy');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (121, 'cukinia');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (230, 'curry (przyprawa)');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (119, 'cynamon (przyprawa)');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (274, 'czarna porzeczka');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (275, 'czarnuszka');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (333, 'czosnek');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (343, 'daktyle');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (348, 'daktyle suszone');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (186, 'drożdże');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (260, 'dynia');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (214, 'dżem');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (220, 'dżem brzoskwiniowy');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (219, 'dżem jagodowy');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (218, 'dżem malinowy');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (221, 'dżem morelowy');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (217, 'dżem porzeczkowy');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (215, 'dżem truskawkowy');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (216, 'dżem wiśniowy');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (27, 'edam');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (187, 'ekstrakt migdałowy');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (188, 'ekstrakt waniliowy');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (136, 'fasola biała');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (137, 'fasola czarna');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (138, 'fasola czerwona');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (139, 'fasola konserwowa');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (261, 'fasolka szparagowa');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (28, 'feta');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (142, 'frankfurterka');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (29, 'gorgonzola');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (189, 'gorzka czekolada');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (30, 'gouda');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (86, 'granola');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (120, 'grejpfrut');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (262, 'groszek');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (140, 'groszek w puszce');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (341, 'gruszka');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (31, 'halumi');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (101, 'hebata zielona');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (99, 'herbata czarna');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (100, 'herbata ziołowa');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (357, 'herbatniki');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (336, 'indyk filet');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (340, 'jabłko');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (276, 'jagody');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (277, 'jagody mrożone');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (1, 'jajka');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (263, 'jarmuż');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (278, 'jeżyny mrożone');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (2, 'jogurt grecki');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (3, 'jogurt naturalny');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (5, 'jogurt skyr');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (4, 'jogurt smakowy');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (358, 'kajmak');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (325, 'kajzerka');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (102, 'kakao (proszek)');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (264, 'kalafior');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (141, 'kapary');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (73, 'kasza bulgur');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (64, 'kasza gryczana niepalona');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (65, 'kasza gryczana prażona');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (66, 'kasza jaglana');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (68, 'kasza jęczmienna');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (67, 'kasza jęczmienna pęczak');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (70, 'kasza jęczmienna perłowa');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (69, 'kasza jęczmienna wiejska');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (75, 'kasza kukurydziana');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (72, 'kasza kuskus');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (74, 'kasza manna');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (77, 'kasza owsiana łamana');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (76, 'kasza owsiana pęczak');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (103, 'kawa');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (6, 'kefir');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (222, 'ketchup');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (352, 'kiełbasa żywiecka sucha');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (344, 'kiełki');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (345, 'kiwi');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (10, 'kluski śląskie');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (268, 'kolendra (przyprawa)');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (267, 'kolendra świeża');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (71, 'komosa ryżowa (quinoa)');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (144, 'koncentrat pomidorowy');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (286, 'koper');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (223, 'kostka bulionowa');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (146, 'kukurydza');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (337, 'kurczak filet');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (241, 'laska wanili');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (328, 'len mielony');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (327, 'len nasiona');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (175, 'łosoś filet');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (176, 'łosoś wędzony');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (320, 'majeranek');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (225, 'majonez');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (49, 'mąka biała');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (50, 'mąka gryczana');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (51, 'mąka kokosowa');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (52, 'mąka kukurydziana');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (53, 'mąka orkiszowa');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (54, 'mąka owsiana');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (55, 'mąka pszenna');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (56, 'mąka pszenna graham');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (57, 'mąka razowa');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (58, 'mąka ryżowa');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (365, 'mąka tortowa');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (59, 'mąka ziemniaczana');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (61, 'mąka żytnia');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (195, 'makaron farfalle (koradki)');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (196, 'makaron fusili (świderki)');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (197, 'makaron gnocchi (muszelki)');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (198, 'makaron gryczany');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (199, 'makaron jajeczny');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (200, 'makaron pełnoziarnisty');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (201, 'makaron penne (rurka skośna)');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (202, 'makaron penne pełnoziarnisty (rurka skośna)');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (203, 'makaron ryżowy');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (204, 'makaron spaghetti');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (205, 'makaron spaghetti pełnoziarnisty');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (206, 'makaron tagliatelle (wstążki)');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (279, 'maliny');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (280, 'maliny mrożone');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (265, 'marchew');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (11, 'margaryna');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (32, 'mascarpone');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (13, 'maślanka');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (12, 'masło');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (14, 'masło klarowane');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (227, 'masło orzechowe');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (334, 'mięso mielone z indyka');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (335, 'mięso mielone z kurczaka');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (270, 'mieszanka sałat');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (269, 'mieszanka warzyw');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (240, 'migdały');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (242, 'migdały płatki');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (243, 'migdały słupki');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (88, 'mintaj');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (126, 'miód');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (128, 'miód gryczany');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (127, 'miód lipowy');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (130, 'miód rzepakowy');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (131, 'miód spadziowy');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (129, 'miód wielokwiatowy');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (15, 'mleko');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (18, 'mleko 1,5%');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (16, 'mleko 2%');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (17, 'mleko 3,2%');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (19, 'mleko kokosowe');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (190, 'mleko kondensowane');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (20, 'mleko migdałowe');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (21, 'mleko owsiane');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (22, 'mleko ryżowe');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (23, 'mleko sojowe');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (33, 'mozarella');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (87, 'musli');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (89, 'musli z orzechami');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (228, 'musztarda');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (109, 'napój energetyczny');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (110, 'napój gazowany');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (244, 'nasiona Chia');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (7, 'natka pietruszki');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (290, 'ocet balsamiczny');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (291, 'ocet jabłkowy');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (292, 'ocet ryżowy');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (293, 'ocet spirytusowy');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (294, 'ocet winny');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (150, 'ogórek gruntowy');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (147, 'ogórek kiszony');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (148, 'ogórek konserwowy');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (149, 'ogórek małosolny');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (151, 'ogórek szklarniowy');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (295, 'olej kokosowy');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (296, 'olej lniany');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (297, 'olej rzepakowy');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (298, 'olej sezamowy');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (299, 'olej słonecznikowy');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (300, 'olej z pestek winogron');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (302, 'oliwa z oliwek');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (156, 'oliwki czarne');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (158, 'oliwki czarne marynowane');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (157, 'oliwki czarne w puszce');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (153, 'oliwki zielone');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (155, 'oliwki zielone marynowane');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (154, 'oliwki zielone w puszce');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (349, 'oregano (przyprawa)');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (246, 'orzechy arachidowe');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (247, 'orzechy brazylijskie');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (248, 'orzechy laskowe');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (245, 'orzechy nerkowca');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (249, 'orzechy włoskie');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (250, 'orzeszki piniowe');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (90, 'otręby owiane');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (211, 'papryka chili');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (209, 'papryka czerwona');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (213, 'papryka ostra (przyprawa)');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (212, 'papryka słodka (przyprawa)');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (208, 'papryka zielona');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (210, 'papryka żułta');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (34, 'parmezan');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (229, 'pasta curry');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (251, 'pestki dyni');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (231, 'pesto');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (354, 'pieczarki');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (313, 'pieprz biały');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (314, 'pieprz biały mielony');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (312, 'pieprz czarny');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (315, 'pieprz czarny mielony');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (317, 'pieprz kolorowy');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (316, 'pieprz kolorowy mielony');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (8, 'pietruszka');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (9, 'pietruszka suszona');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (252, 'pistacje');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (91, 'płatki drożdżowe');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (92, 'płatki gryczane');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (93, 'płatki jaglane');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (94, 'płatki orkiszowe');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (95, 'płatki owsiane');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (96, 'płatki quinoa');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (97, 'płatki ryżowe');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (98, 'płatki żytnie');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (159, 'poimdory suszone w oleju');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (79, 'polędwiczka wieprzowa');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (78, 'polenta');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (143, 'pomarańcza');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (165, 'pomidory daktylowe');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (164, 'pomidory koktajlowe');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (160, 'pomidory krojone');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (169, 'pomidory malinowe');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (167, 'pomidory paprykowe');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (166, 'pomidory rzymskie');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (161, 'pomidory suszone');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (162, 'pomidory suszone w zalewie');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (163, 'pomidory w całości');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (168, 'pomidory zielone');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (170, 'pomidory żółte');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (191, 'proszek do pieczenia');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (145, 'przecier pomidorowy');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (182, 'przyprawa do ryb');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (181, 'przyprawa do ziemniaków');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (180, 'przyprawa włoska');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (35, 'ricotta');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (318, 'rozmaryn');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (266, 'rukola');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (80, 'ryż basmati');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (81, 'ryż biały');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (82, 'ryż brązowy');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (83, 'ryż dziki');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (84, 'ryż jaśminowy');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (152, 'rzodkiewka');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (355, 'salami');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (232, 'salsa');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (287, 'sałata');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (288, 'sałata lodowa');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (289, 'sałata masłowa');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (342, 'schab');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (39, 'ser Camembert');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (37, 'ser feta');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (36, 'ser kozi');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (40, 'ser mozzarella');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (38, 'ser pleśniowy');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (41, 'ser topiony');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (42, 'ser żółty');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (43, 'ser żółty tarty');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (44, 'serek kanapkowy');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (45, 'serek wiejski');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (253, 'sezam (nasiona)');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (254, 'siemie lnianie');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (192, 'skrobia kukurydziana');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (193, 'skrobia ziemniaczana');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (281, 'śliwki');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (24, 'śmietana');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (359, 'śmietana 12%');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (360, 'śmietana 18%');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (361, 'śmietana 30%');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (362, 'śmietana 36%');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (85, 'soczewica');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (171, 'soczewica konserwowa');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (194, 'soda oczyszczona');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (233, 'sok cytrynowy');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (234, 'sok limonkowy');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (111, 'sok owocowy');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (112, 'sok z cytryny');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (321, 'sól');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (235, 'sos BBQ');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (236, 'sos sojowy');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (237, 'sos Worcestshire');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (238, 'sriracha');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (132, 'syrop klonowy');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (133, 'syrop z agawy');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (311, 'szczypiorek');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (272, 'szpinak');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (273, 'szpinak mrożony');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (350, 'szynka z indyka');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (351, 'szynka z kurczaka');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (239, 'tahini (pasta sezamowa)');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (282, 'truskawki');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (283, 'truskawki mrożone');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (172, 'tuńczyk');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (173, 'tuńczyk w oleju');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (174, 'tuńczyk w sosie własnym');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (46, 'twaróg chudy');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (47, 'twaróg półtłusty');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (48, 'twaróg tłusty');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (319, 'tymianek');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (108, 'wafle ryżowe');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (346, 'wanilia ekstrakt');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (347, 'wanilia laska');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (271, 'warzywa mrożone wiosenne');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (301, 'winogrona');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (255, 'wiórki kokosowe');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (284, 'wiśnie');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (285, 'wiśnie mrożone');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (113, 'woda gazowana');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (115, 'woda kokosowa');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (116, 'woda mineralna');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (114, 'woda niegazowana');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (117, 'woda źródlana');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (363, 'żelatyna');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (256, 'ziarna słonecznika');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (60, 'ziemniaki');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (104, 'zioła do drobiu');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (107, 'zioła do sałatek');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (105, 'zioła do schabu');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (106, 'zioła prowansalskie');
+INSERT INTO shopping_list.ingredients (id, name) VALUES (364, 'żółtko jajka');
 
-
+create table set_of_ingredients_with_quantities
+(
+    id bigint auto_increment
+        primary key
+);
 INSERT INTO shopping_list.set_of_ingredients_with_quantities (id) VALUES (1);
 INSERT INTO shopping_list.set_of_ingredients_with_quantities (id) VALUES (2);
 INSERT INTO shopping_list.set_of_ingredients_with_quantities (id) VALUES (3);
@@ -454,7 +515,27 @@ INSERT INTO shopping_list.set_of_ingredients_with_quantities (id) VALUES (67);
 INSERT INTO shopping_list.set_of_ingredients_with_quantities (id) VALUES (68);
 INSERT INTO shopping_list.set_of_ingredients_with_quantities (id) VALUES (69);
 INSERT INTO shopping_list.set_of_ingredients_with_quantities (id) VALUES (70);
+create table shopping_lists
+(
+    id bigint auto_increment
+        primary key
+);
 
+create table ingredients_with_quantities
+(
+    id                        bigint auto_increment
+        primary key,
+    quantity                  int    not null,
+    ingredient_id             bigint not null,
+    shopping_list_id          bigint null,
+    set_of_ingr_with_quant_id bigint null,
+    constraint FK4msrngts67ix0au75psk2sq27
+        foreign key (shopping_list_id) references shopping_lists (id),
+    constraint FK6ced2vit5cq3cpyc543a0jc08
+        foreign key (set_of_ingr_with_quant_id) references set_of_ingredients_with_quantities (id),
+    constraint FKb2k3htuhfjbk9670amj5xpg72
+        foreign key (ingredient_id) references ingredients (id)
+);
 
 INSERT INTO shopping_list.ingredients_with_quantities (id, quantity, ingredient_id, shopping_list_id, set_of_ingr_with_quant_id) VALUES (1, 60, 303, null, 1);
 INSERT INTO shopping_list.ingredients_with_quantities (id, quantity, ingredient_id, shopping_list_id, set_of_ingr_with_quant_id) VALUES (2, 5, 12, null, 1);
@@ -939,6 +1020,27 @@ INSERT INTO shopping_list.ingredients_with_quantities (id, quantity, ingredient_
 INSERT INTO shopping_list.ingredients_with_quantities (id, quantity, ingredient_id, shopping_list_id, set_of_ingr_with_quant_id) VALUES (481, 10, 191, null, 70);
 
 
+
+
+create table recipes
+(
+    id                        bigint auto_increment
+        primary key,
+    created_on                datetime(6)   null,
+    description               varchar(255)  null,
+    name                      varchar(60)   not null,
+    number_of_servings        int           not null,
+    original                  bit           null,
+    preparation               varchar(1000) not null,
+    preparation_time          int           not null,
+    updated_on                datetime(6)   null,
+    set_of_ingr_with_quant_id bigint        not null,
+    constraint UK_f6uwt9846wblckm6dtdp8xjyu
+        unique (set_of_ingr_with_quant_id),
+    constraint FK87coij7vpoql2w6uohvism2bh
+        foreign key (set_of_ingr_with_quant_id) references set_of_ingredients_with_quantities (id)
+);
+
 INSERT INTO shopping_list.recipes (id, created_on, description, name, number_of_servings, original, preparation, preparation_time, updated_on, set_of_ingr_with_quant_id) VALUES (1, '2020-12-11 17:53:20.480916', 'pyszne dietetyczne śniadanie', 'Chleb graham z twarożkiem i rzodkiewką', 1, true, 'Twaróg wymieszać z jogurtem, olejem, i drobno pokrojoną rzodkiewką. Przyprawić solą i pieprzem. Ułożyć na kromkach posmarowanych masłem. Na wierzch ułożyć plastry ogórka i posypać pokrojonym szczypiorkiem.', 10, null, 1);
 INSERT INTO shopping_list.recipes (id, created_on, description, name, number_of_servings, original, preparation, preparation_time, updated_on, set_of_ingr_with_quant_id) VALUES (2, '2020-12-11 19:29:00.907531', '', 'Koktajl brzoskwiniowo-truskawkowy', 1, true, 'Owoce umyć. Brzoskwinię pokroić na kawałki. Wszystkie składniki przełożyć do wysokiego naczynia i zmiksować na gładką masę.', 5, null, 2);
 INSERT INTO shopping_list.recipes (id, created_on, description, name, number_of_servings, original, preparation, preparation_time, updated_on, set_of_ingr_with_quant_id) VALUES (3, '2020-12-11 19:31:32.027763', '', 'Spaghetti bolognese', 1, true, 'Cebulę posiekać i podsmażyć na oliwie z oliwek. Dodać mięso i przyprawić papryką słodką, solą i pieprzem. Smażyć około 5 minut. Następnie dodać pomidory, przeciśnięty przez praskę czosnek, bazylię i ocet balsamiczny. Dusić pod przykryciem przez około 15 minut. Ugotować makaron i połączyć z przygotowanym sosem.', 40, null, 3);
@@ -1010,6 +1112,37 @@ INSERT INTO shopping_list.recipes (id, created_on, description, name, number_of_
 INSERT INTO shopping_list.recipes (id, created_on, description, name, number_of_servings, original, preparation, preparation_time, updated_on, set_of_ingr_with_quant_id) VALUES (69, '2020-12-13 21:52:48.209330', '', 'Torcik 3 bit', 10, true, '1. Ugotować budyń: odlać pół szklanki mleka, wymieszać w nim żółtka, cukier i mąkę. Resztę mleka zagotować. Do gotującego się mleka powoli wlewać przygotowaną mieszankę. Mieszać cały czas aż masa zgęstnieje. Budyń wystudzić.\n2. Do blachy położyć warstwę herbatników. Na herbatniki położyć podgrzany kajmak, następnie warstwę herbatników.\n3. Wystudzony budyń utrzeć z masłem i wyłożyć na warstwę herbatników.\n4. Położyć kolejną warstwę herbatników i ubitą śmietanę. Oprószyć tartą czekoladą lub kakao.', 45, null, 69);
 INSERT INTO shopping_list.recipes (id, created_on, description, name, number_of_servings, original, preparation, preparation_time, updated_on, set_of_ingr_with_quant_id) VALUES (70, '2020-12-13 22:19:34.955785', '', 'Ciasto marchewkowe', 10, true, 'Jajka i cukier ubić. Marchew utrzeć na drobnych oczkach. Marchew razem z resztą składników wymieszać i dodać do ubitych jajek. Całość wymieszać, przełożyć do blachy i piec 30 minut w temperaturze 180 stopni. Można posypać cukrem pudrem.', 40, null, 70);
 
+create table users
+(
+    id               bigint auto_increment
+        primary key,
+    created_on       datetime(6)  null,
+    email            varchar(255) not null,
+    first_name       varchar(50)  not null,
+    last_name        varchar(50)  not null,
+    password         varchar(255) not null,
+    role             varchar(255) null,
+    updated_on       datetime(6)  null,
+    shopping_list_id bigint       null,
+    constraint UK_6dotkott2kjsp8vw4d0m25fb7
+        unique (email),
+    constraint FKbnls4ojdoob2qnxgefa6jxy9g
+        foreign key (shopping_list_id) references shopping_lists (id)
+);
+
+INSERT INTO shopping_list.users (id, created_on, email, first_name, last_name, password, role, updated_on, shopping_list_id) VALUES (1, '2020-12-03 10:31:32.113075', 'machniom93@gmail.com', 'Mateusz', 'Machnio', '$2a$10$hqTF64smXPXPX5mNEG2/o.9vv4tgk8Guce3HWO3BW0F194lSiTZ4a', 'USER', null, null);
+
+
+create table user_recipes
+(
+    user_id   bigint not null,
+    recipe_id bigint not null,
+    primary key (user_id, recipe_id),
+    constraint FKe3w33acv9hkobh8y449vep11c
+        foreign key (recipe_id) references recipes (id),
+    constraint FKs7028hxgb1vodinnh0odcyuor
+        foreign key (user_id) references users (id)
+);
 
 INSERT INTO shopping_list.user_recipes (user_id, recipe_id) VALUES (1, 1);
 INSERT INTO shopping_list.user_recipes (user_id, recipe_id) VALUES (1, 2);
