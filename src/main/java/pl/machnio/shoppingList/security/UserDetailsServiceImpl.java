@@ -8,7 +8,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import pl.machnio.shoppingList.entity.User;
-import pl.machnio.shoppingList.service.UserService;
+import pl.machnio.shoppingList.repository.UserRepository;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,16 +16,16 @@ import java.util.List;
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 
-    private UserService userService;
+    private final UserRepository userRepository;
 
-    public UserDetailsServiceImpl(UserService userService) {
-        this.userService = userService;
+    public UserDetailsServiceImpl(UserRepository userRepository) {
+        this.userRepository = userRepository;
     }
 
     @Override
     @Transactional(readOnly=true)
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-        User user = userService.findByEmail(email);
+        User user = userRepository.findByEmail(email);
         if(user==null){
             throw new UsernameNotFoundException("Username not found");
         }

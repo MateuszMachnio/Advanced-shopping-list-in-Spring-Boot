@@ -1,7 +1,6 @@
 package pl.machnio.shoppingList.service;
 
 import org.hibernate.Hibernate;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -21,19 +20,11 @@ public class UserServiceImpl implements UserService{
 
     private final UserRepository userRepository;
     private final PlanRepository planRepository;
-    private PasswordEncoder passwordEncoder;
+    private final PasswordEncoder passwordEncoder;
 
-    public UserServiceImpl(UserRepository userRepository, PlanRepository planRepository) {
+    public UserServiceImpl(UserRepository userRepository, PlanRepository planRepository, PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
         this.planRepository = planRepository;
-    }
-
-    public PasswordEncoder getPasswordEncoder() {
-        return passwordEncoder;
-    }
-
-    @Autowired
-    public void setPasswordEncoder(PasswordEncoder passwordEncoder) {
         this.passwordEncoder = passwordEncoder;
     }
 
