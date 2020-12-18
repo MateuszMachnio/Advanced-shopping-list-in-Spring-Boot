@@ -22,4 +22,5 @@ I would like to point out few curious functionality:
 - if user wants to add recipe to plan but his own recipe list is empty or if he wants to create shopping list based on empty plan, is informed about it;
 - if user adds recipe from all recipes list to his own list he copied it actually, so changes made by the user to a given recipe do not affect on the original recipe;
 - on all recipes list are shown only original recipes;
+- items on shopping list are unique. If some ingredient has multiple occurrences in a given plan, its quantity is added up;
 - to create pdf file I used OpenPDF.
