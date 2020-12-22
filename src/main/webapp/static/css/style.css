@@ -663,6 +663,12 @@ table#addIngredient {
 table#addIngredient td {
     padding: 10px;
 }
+table#editPassword {
+    margin-left: 380px;
+}
+table#editPassword td {
+    padding: 10px;
+}
 table#createSet {
     margin-left: 126px;
 }
