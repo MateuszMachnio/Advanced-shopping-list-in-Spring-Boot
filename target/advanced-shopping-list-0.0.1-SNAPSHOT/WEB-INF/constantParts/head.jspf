@@ -1,9 +1,0 @@
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<meta http-equiv="content-language" content="pl" />
-
-<meta name="author" content="Mateusz Machnio" />
-<meta name="description" content="Plany żywieniowe i łatwe tworzenie listy zakupów" />
-<meta name="keywords" content="lista zakupów, plan żywieniowy, tworzenie listy zakupów" />
-<link href="https://fonts.googleapis.com/css?family=Charmonman:400,700|Open+Sans:400,600,700&amp;subset=latin-ext"
-      rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="<c:url value="/static/css/style.css"/>"/>
