@@ -1,4 +1,4 @@
-package pl.machnio.shoppingList.service;
+package pl.machnio.shoppingList.service.interfaces;
 
 import pl.machnio.shoppingList.entity.Recipe;
 

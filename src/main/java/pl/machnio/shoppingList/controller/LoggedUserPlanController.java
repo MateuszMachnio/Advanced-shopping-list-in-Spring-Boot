@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import pl.machnio.shoppingList.entity.*;
 import pl.machnio.shoppingList.entity.shoppingListCreating.ShoppingList;
 import pl.machnio.shoppingList.pdf.IngredientsWithQuantitiesPDFExporter;
-import pl.machnio.shoppingList.service.*;
+import pl.machnio.shoppingList.service.interfaces.*;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;

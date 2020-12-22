@@ -1,8 +1,9 @@
-package pl.machnio.shoppingList.service;
+package pl.machnio.shoppingList.service.implementations;
 
 import org.springframework.stereotype.Service;
 import pl.machnio.shoppingList.entity.MealName;
 import pl.machnio.shoppingList.repository.MealNameRepository;
+import pl.machnio.shoppingList.service.interfaces.MealNameService;
 
 import javax.persistence.EntityNotFoundException;
 import java.util.List;

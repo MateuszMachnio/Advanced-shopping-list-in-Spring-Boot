@@ -1,10 +1,11 @@
-package pl.machnio.shoppingList.service;
+package pl.machnio.shoppingList.service.implementations;
 
 import org.hibernate.Hibernate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import pl.machnio.shoppingList.entity.SetOfIngredientsWithQuantities;
 import pl.machnio.shoppingList.repository.SetOfIngredientsWithQuantitiesRepository;
+import pl.machnio.shoppingList.service.interfaces.SetOfIngredientsWithQuantitiesService;
 
 import javax.persistence.EntityNotFoundException;
 import java.util.List;

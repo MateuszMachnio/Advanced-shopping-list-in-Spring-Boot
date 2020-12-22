@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import pl.machnio.shoppingList.entity.Ingredient;
-import pl.machnio.shoppingList.service.IngredientService;
+import pl.machnio.shoppingList.service.interfaces.IngredientService;
 
 import javax.validation.Valid;
 

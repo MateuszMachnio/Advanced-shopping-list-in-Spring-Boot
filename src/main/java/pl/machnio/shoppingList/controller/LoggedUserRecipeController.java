@@ -5,7 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import pl.machnio.shoppingList.entity.*;
-import pl.machnio.shoppingList.service.*;
+import pl.machnio.shoppingList.service.interfaces.*;
 
 import javax.validation.Valid;
 import java.util.List;

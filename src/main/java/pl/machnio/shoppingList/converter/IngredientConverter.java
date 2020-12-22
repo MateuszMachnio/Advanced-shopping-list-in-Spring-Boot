@@ -3,7 +3,7 @@ package pl.machnio.shoppingList.converter;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 import pl.machnio.shoppingList.entity.Ingredient;
-import pl.machnio.shoppingList.service.IngredientService;
+import pl.machnio.shoppingList.service.interfaces.IngredientService;
 
 @Component
 public class IngredientConverter implements Converter<String, Ingredient> {

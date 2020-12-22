@@ -1,16 +1,16 @@
-package pl.machnio.shoppingList.service;
+package pl.machnio.shoppingList.service.implementations;
 
 import org.springframework.stereotype.Service;
 import pl.machnio.shoppingList.entity.Plan;
-import pl.machnio.shoppingList.entity.PlanSchedule;
 import pl.machnio.shoppingList.repository.PlanRepository;
 import pl.machnio.shoppingList.repository.PlanScheduleRepository;
+import pl.machnio.shoppingList.service.interfaces.PlanService;
 
 import javax.persistence.EntityNotFoundException;
 import java.util.List;
 
 @Service
-public class PlanServiceImpl implements PlanService{
+public class PlanServiceImpl implements PlanService {
 
     private final PlanRepository planRepository;
     private final PlanScheduleRepository planScheduleRepository;

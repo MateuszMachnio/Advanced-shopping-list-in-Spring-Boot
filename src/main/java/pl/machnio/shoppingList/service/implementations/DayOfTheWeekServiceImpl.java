@@ -1,8 +1,9 @@
-package pl.machnio.shoppingList.service;
+package pl.machnio.shoppingList.service.implementations;
 
 import org.springframework.stereotype.Service;
 import pl.machnio.shoppingList.entity.DayOfTheWeek;
 import pl.machnio.shoppingList.repository.DayOfTheWeekRepository;
+import pl.machnio.shoppingList.service.interfaces.DayOfTheWeekService;
 
 import javax.persistence.EntityNotFoundException;
 import java.util.List;

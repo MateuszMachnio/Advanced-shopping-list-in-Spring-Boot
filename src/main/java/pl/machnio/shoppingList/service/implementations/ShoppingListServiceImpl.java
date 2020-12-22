@@ -1,14 +1,14 @@
-package pl.machnio.shoppingList.service;
+package pl.machnio.shoppingList.service.implementations;
 
 import org.hibernate.Hibernate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import pl.machnio.shoppingList.entity.Ingredient;
 import pl.machnio.shoppingList.entity.IngredientWithQuantity;
-import pl.machnio.shoppingList.entity.User;
 import pl.machnio.shoppingList.entity.shoppingListCreating.ShoppingList;
 import pl.machnio.shoppingList.repository.IngredientWithQuantityRepository;
 import pl.machnio.shoppingList.repository.ShoppingListRepository;
+import pl.machnio.shoppingList.service.interfaces.IngredientService;
+import pl.machnio.shoppingList.service.interfaces.ShoppingListService;
 
 import javax.persistence.EntityNotFoundException;
 import java.util.List;

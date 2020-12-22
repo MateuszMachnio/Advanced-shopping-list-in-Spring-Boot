@@ -1,4 +1,4 @@
-package pl.machnio.shoppingList.service;
+package pl.machnio.shoppingList.service.implementations;
 
 import org.springframework.stereotype.Service;
 import pl.machnio.shoppingList.entity.DayOfTheWeek;
@@ -8,11 +8,11 @@ import pl.machnio.shoppingList.entity.PlanSchedule;
 import pl.machnio.shoppingList.repository.DayOfTheWeekRepository;
 import pl.machnio.shoppingList.repository.MealNameRepository;
 import pl.machnio.shoppingList.repository.PlanScheduleRepository;
+import pl.machnio.shoppingList.service.interfaces.PlanScheduleService;
 
 import javax.persistence.EntityNotFoundException;
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 @Service
 public class PlanScheduleServiceImpl implements PlanScheduleService {
