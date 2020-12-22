@@ -41,13 +41,11 @@
                                 <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
                                 <input type="submit" class="button" value="edytuj">
                             </form>
-<%--                            <a class="button" href="/logged-user/recipe/edit/${recipe.id}">edytuj</a>--%>
                             <form method="post" action="<c:url value="/logged-user/recipe/delete"/>">
                                 <input type="hidden" name="recipeId" value="${recipe.id}" />
                                 <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
                                 <input type="submit" class="button-danger" value="usuń">
                             </form>
-<%--                            <a class="button-danger" href="/logged-user/recipe/delete/${recipe.id}">usuń</a>--%>
                         </td>
                     </tr>
                 </table>

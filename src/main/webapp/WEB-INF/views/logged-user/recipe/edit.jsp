@@ -75,7 +75,6 @@
                     <input type="submit" class="action" style="margin:0 0 0 210px; bottom: 234px; border: 0; padding: 2px 5px; position: absolute" value="Edytuj składniki">
                 </form>
             </div>
-                <%--                        <a class="action" style="margin-bottom: 100px; margin-left: 0; border: 0; padding: 2px 5px" href="<c:url value="/logged-user/recipe/edit-set-of-ingredients/${recipe.id}/${setOfIngredients.id}"/>">Edytuj składniki</a>--%>
 
 
             </div>

@@ -56,8 +56,6 @@
                                             <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
                                             <input type="submit" class="button-danger" value="usuń">
                                         </form>
-<%--                                        <a class="button" href="/logged-user/plan/shopping-list/edit/${planId}/${shoppingList.id}/${ingredientWithQuantity.id}">edytuj</a>--%>
-<%--                                        <a class="button-danger" href="/logged-user/plan/shopping-list/delete/${planId}/${shoppingList.id}/${ingredientWithQuantity.id}">usuń</a>--%>
                                     </td>
                                 </tr>
                             </c:forEach>

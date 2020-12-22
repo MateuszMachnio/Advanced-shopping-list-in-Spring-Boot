@@ -59,7 +59,6 @@
 
                         <input class="submit" type="submit" value="Zapisz">
                         <a class="return" href="<c:url value="/logged-user/plan/details/${planId}"/>">Powrót</a>
-                        <%--                    <form:button><a href="<c:url value="/logged_user/dashboard"/>">Gotowe</a></form:button>--%>
                     </form:form>
                 </div>
                 </c:if>

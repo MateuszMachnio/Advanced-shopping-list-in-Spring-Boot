@@ -54,7 +54,6 @@
                                 </tr>
                             </c:forEach>
                         </table>
-<%--                        <a class="action" style="margin-bottom: 100px; margin-left: 0; border: 0; padding: 2px 5px" href="<c:url value="/logged-user/recipe/edit-set-of-ingredients/${recipe.id}/${setOfIngredients.id}"/>">Edytuj składniki</a>--%>
                     </div>
 
 
@@ -64,7 +63,6 @@
                         <input type="submit" class="submit" value="Zapisz przepis">
                         <a class="return" href="<c:url value="/logged-user/recipe/mine/list?setId=${setOfIngredients.id}"/>">Anuluj</a>
                     </div>
-                    <%--                    <form:button><a href="<c:url value="/logged_user/dashboard"/>">Gotowe</a></form:button>--%>
                 </form:form>
             </div>
         </div>

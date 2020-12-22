@@ -22,11 +22,6 @@ public class ShoppingList {
     @JoinColumn(name = "shopping_list_id")
     private Set<IngredientWithQuantity> ingredientsWithQuantities = new HashSet<>();
 
-//    @NotNull
-//    @OneToOne(optional = false)
-//    @JoinColumn(name = "user_id")
-//    private User user;
-
     public void addIngredientWithQuantity(IngredientWithQuantity ingredientWithQuantity) {
         ingredientsWithQuantities.add(ingredientWithQuantity);
     }

@@ -59,7 +59,6 @@
                                     <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
                                     <input type="submit" class="button" value="dodaj do moich przepisów">
                                 </form>
-<%--                                <a class="button" href="/logged-user/recipe/add-to-my-list/${recipe.id}">dodaj do moich przepisów</a>--%>
                             </td>
                         </tr>
                     </table>

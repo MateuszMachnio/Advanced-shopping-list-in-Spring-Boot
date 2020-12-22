@@ -12,7 +12,6 @@ import java.util.*;
 
 @Entity
 @Table(name = "users")
-//public class User implements UserDetails {
 public class User {
 
     @Id
@@ -96,39 +95,12 @@ public class User {
         this.updated = LocalDateTime.now();
     }
 
-//    @Override
-//    public Collection<? extends GrantedAuthority> getAuthorities() {
-//        return Collections.singleton(new SimpleGrantedAuthority(role));
-//    }
-
-//    @Override
     public String getPassword() {
         return password;
     }
 
-//    @Override
     public String getFirstName() {
         return firstName;
-    }
-
-//    @Override
-    public boolean isAccountNonExpired() {
-        return true;
-    }
-
-//    @Override
-    public boolean isAccountNonLocked() {
-        return true;
-    }
-
-//    @Override
-    public boolean isCredentialsNonExpired() {
-        return true;
-    }
-
-//    @Override
-    public boolean isEnabled() {
-        return true;
     }
 
     public Long getId() {

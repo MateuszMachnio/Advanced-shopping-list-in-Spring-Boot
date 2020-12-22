@@ -77,7 +77,6 @@ public class LoggedUserRecipeController {
     public String joinSetOfIngredientsToRecipe(@ModelAttribute("setId") long setId, Model model) {
         SetOfIngredientsWithQuantities setOfIngredients = setOfIngredientsWithQuantitiesService.findByIdWithSetOfIngredientsWithQuantity(setId);
         Recipe recipe = new Recipe();
-//        recipe.setSetOfIngredientsWithQuantities(setOfIngredients);
         model.addAttribute("setOfIngredients", setOfIngredients);
         model.addAttribute("recipe", recipe);
         return "logged-user/recipe/add";

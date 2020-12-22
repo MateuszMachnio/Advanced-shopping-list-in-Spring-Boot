@@ -39,7 +39,6 @@
                                     <input type="submit" class="day" value="dodaj przepis do dnia">
                                 </form>
                             </c:if></th>
-<%--                                <a class="day" href="<c:url value="/logged-user/plan/add-recipe/${plan.id}/${day.id}"/>">dodaj przepis do dnia</a>--%>
                         </tr>
                         <c:forEach items="${planSchedule.get(day)}" var="schedule">
                             <tr>
@@ -53,7 +52,6 @@
                                         <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
                                         <input type="submit" class="button-danger" value="usuń">
                                     </form>
-<%--                                    <a class="button-danger" href="<c:url value="/logged-user/plan/remove-schedule/${plan.id}/${schedule.id}"/>">usuń</a>--%>
                                 </td>
                             </tr>
                         </c:forEach>

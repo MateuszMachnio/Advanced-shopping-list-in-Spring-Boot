@@ -17,19 +17,4 @@ public class ServletInitializer extends SpringBootServletInitializer {
         return application.sources(AdvancedShoppingListApplication.class);
     }
 
-//    @Override
-//    public void onStartup(ServletContext servletContext) {
-//        AnnotationConfigWebApplicationContext ctx = new AnnotationConfigWebApplicationContext();
-//        ctx.register(AdvancedShoppingListApplication.class);
-//        ctx.setServletContext(servletContext);
-//        ServletRegistration.Dynamic servlet = servletContext.addServlet("dispatcher", new DispatcherServlet(ctx));
-//        servlet.setLoadOnStartup(1);
-//        servlet.addMapping("/");
-//
-//        FilterRegistration.Dynamic fr = servletContext.addFilter("encodingFilter", new CharacterEncodingFilter());
-//        fr.setInitParameter("encoding", "UTF-8");
-//        fr.setInitParameter("forceEncoding", "true");
-//        fr.addMappingForUrlPatterns(null, true, "/*");
-//    }
-
 }

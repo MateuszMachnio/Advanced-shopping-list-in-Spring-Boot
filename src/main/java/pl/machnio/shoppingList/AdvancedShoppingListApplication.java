@@ -21,7 +21,6 @@ public class AdvancedShoppingListApplication {
     @Bean
     public MessageSource messageSource() {
         ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
-//        messageSource.addBasenames("messages");
         messageSource.setBasename("messages");
         return messageSource;
     }

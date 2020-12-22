@@ -47,12 +47,10 @@ public class IngredientsWithQuantitiesPDFExporter {
         Font font = new Font(bf,18);
 
         shoppingList.getIngredientsWithQuantities().forEach(ingredientWithQuantity -> {
-//            font.setSize(25);
             cell.setHorizontalAlignment(Element.ALIGN_LEFT);
             cell.setPhrase(new Phrase(ingredientWithQuantity.getIngredient().getName(), font));
             pdfPTable.addCell(cell);
 
-//            font.setSize(15);
             cell.setHorizontalAlignment(Element.ALIGN_CENTER);
             cell.setPhrase(new Phrase(ingredientWithQuantity.getQuantity() + " g", font));
             pdfPTable.addCell(cell);

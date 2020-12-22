@@ -24,7 +24,6 @@
                 <div id="form">
 
                     <form:form modelAttribute="user">
-<%--                        <form:input type="hidden" path="id" id="id"/>--%>
 
                         <table id="registration">
                             <tr>

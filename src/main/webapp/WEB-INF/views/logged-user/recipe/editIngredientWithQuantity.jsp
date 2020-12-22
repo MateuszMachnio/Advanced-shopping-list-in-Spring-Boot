@@ -26,7 +26,6 @@
                     <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
                     <input type="submit" class="return" style="margin-left: 1000px; margin-top: 10px" value="Powrót">
                 </form>
-<%--                <a class="return" style="margin-left: 1000px; margin-top: 10px" href="<c:url value="/logged-user/recipe/edit-set-of-ingredients/${recipeId}/${setId}"/>">Powrót</a>--%>
 
                 <div id="form">
                 <form:form modelAttribute="ingredientWithQuantity" action="/logged-user/recipe/editing-ingredient" method="post">
@@ -35,7 +34,6 @@
                         <tr>
                             <td><form:label path="ingredient">Nazwa: </form:label></td>
                             <td><form:input cssStyle="width: 220px" path="ingredient" value="${ingredientName}" readonly="true" /></td>
-<%--                            <td><input style="width: 220px" type="text" value="${ingredientName}" readonly></td>--%>
                             <td><form:errors path="ingredient" cssClass="error"/></td>
                         </tr>
                         <tr>
@@ -49,7 +47,6 @@
                     <input type="hidden" name="setId" value="${setId}">
                     <input type="hidden" name="recipeId" value="${recipeId}">
                     <input type="submit" class="submit" value="Zapisz">
-                    <%--                    <form:button><a href="<c:url value="/logged_user/dashboard"/>">Gotowe</a></form:button>--%>
                 </form:form>
                 </div>
 

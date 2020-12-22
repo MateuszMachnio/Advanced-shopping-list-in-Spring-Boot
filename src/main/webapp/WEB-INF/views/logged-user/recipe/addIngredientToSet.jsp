@@ -26,21 +26,10 @@
                     <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
                     <input type="submit" class="return" style="margin-left: 1000px; margin-top: 10px" value="Powrót">
                 </form>
-<%--                <a class="return" style="margin-left: 1000px; margin-top: 10px" href="<c:url value="/logged-user/recipe/edit-set-of-ingredients/${recipeId}/${setId}"/>">Powrót</a>--%>
 
                 <div id="form">
                 <form:form modelAttribute="ingredientWithQuantity" method="post" action="/logged-user/recipe/adding-ingredient">
                     <table id="addIngredient">
-<%--                        <tr>--%>
-<%--                            <td><form:label path="ingredient">Składnik: </form:label></td>--%>
-<%--                            <td>--%>
-<%--                                <form:select cssStyle="width: 220px" path="ingredient">--%>
-<%--                                    <form:option value="0" label="--wybierz składnik--"/>--%>
-<%--                                    <form:options items="${ingredients}" itemLabel="name" itemValue="id" />--%>
-<%--                                </form:select>--%>
-<%--                            </td>--%>
-<%--                            <td><form:errors path="ingredient" cssClass="error"/></td>--%>
-<%--                        </tr>--%>
 
                         <tr>
                             <td><form:label path="ingredient">Składnik: </form:label></td>
@@ -67,7 +56,6 @@
                     <input type="hidden" name="recipeId" value="${recipeId}">
 
                     <input type="submit" class="submit" value="Dodaj składnik">
-                    <%--                    <form:button><a href="<c:url value="/logged_user/dashboard"/>">Gotowe</a></form:button>--%>
                 </form:form>
                 </div>
 

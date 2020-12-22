@@ -45,8 +45,6 @@ public class ShoppingListServiceImpl implements ShoppingListService {
         ShoppingList properShoppingList = new ShoppingList();
         shoppingList.forEach((s, integer) -> {
             IngredientWithQuantity ingredientWithQuantity = new IngredientWithQuantity(ingredientService.findByName(s), integer);
-//            ingredientWithQuantity.setIngredient(ingredientService.findByName(s));
-//            ingredientWithQuantity.setQuantity(integer);
             IngredientWithQuantity savedIWQ = ingredientWithQuantityRepository.save(ingredientWithQuantity);
             properShoppingList.addIngredientWithQuantity(savedIWQ);
         });

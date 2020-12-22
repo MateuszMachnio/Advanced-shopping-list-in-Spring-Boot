@@ -73,16 +73,4 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return new AuthenticationTrustResolverImpl();
     }
 
-
-
-//    @Autowired
-//    @Qualifier("customUserDetailsService")
-//    UserDetailsService userDetailsService;
-
-//    @Autowired
-//    public void configureGlobalSecurity(AuthenticationManagerBuilder auth) throws Exception {
-//        auth.userDetailsService(userDetailsService);
-//        auth.authenticationProvider(authenticationProvider());
-//    }
-
 }

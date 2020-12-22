@@ -56,16 +56,6 @@
                 </c:if>
                 <form:form modelAttribute="ingredientsWithQuantity">
                     <table id="createSet">
-<%--                        <tr>--%>
-<%--                            <td><form:label path="ingredient">Składnik: </form:label></td>--%>
-<%--                            <td>--%>
-<%--                                <form:select cssStyle="width: 220px" path="ingredient">--%>
-<%--                                <form:option value="0" label="--wybierz składnik--" />--%>
-<%--                                <form:options items="${ingredients}" itemLabel="name" itemValue="id" />--%>
-<%--                                </form:select>--%>
-<%--                            </td>--%>
-<%--                            <td><form:errors path="ingredient" cssClass="error"/></td>--%>
-<%--                        </tr>--%>
 
                         <tr>
                             <td><form:label path="ingredient">Składnik: </form:label></td>
@@ -96,7 +86,6 @@
                     </c:if>
 
                     <input type="submit" class="submit" value="Dodaj składnik">
-<%--                    <form:button><a href="<c:url value="/logged_user/dashboard"/>">Gotowe</a></form:button>--%>
 
                 </form:form>
                 </div>
@@ -108,7 +97,6 @@
                             <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
                             <input type="submit" class="action" value="Zatwierdź">
                         </form>
-<%--                        <a class="action" style="margin-left: 0; margin-bottom: 40px" href="<c:url value="/logged-user/recipe/add/${setWithIngredients.id}"/>">Zatwierdź</a>--%>
                     </div>
                 </c:if>
 

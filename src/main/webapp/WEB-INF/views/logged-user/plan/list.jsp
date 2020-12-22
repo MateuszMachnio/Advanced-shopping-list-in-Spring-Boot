@@ -39,7 +39,6 @@
                                     <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
                                     <input type="submit" class="button-danger" value="usuń" />
                                 </form>
-<%--                                <a class="button-danger" href="/logged-user/plan/delete/${plan.id}">usuń</a>--%>
                             </td>
                         </tr>
                     </table>
