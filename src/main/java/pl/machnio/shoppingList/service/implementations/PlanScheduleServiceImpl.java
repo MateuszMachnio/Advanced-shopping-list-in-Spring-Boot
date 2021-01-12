@@ -90,10 +90,20 @@ public class PlanScheduleServiceImpl implements PlanScheduleService {
     public Map<String, Integer> shoppingListIngredients(long plan_id) {
         List<PlanSchedule> plans = planScheduleRepository.findAllByPlanId(plan_id);
 
-        List<Set<IngredientWithQuantity>> listOfIngredientsWithQuantitiesSets = plans.stream()
+        List<Set<IngredientWithQuantity>> listOfIngredientsWithQuantitiesSets = this.getListOfSetsWithIngredientsAndQuantities(plans);
+
+        Set<String> distinctIngredients = this.getDistinctIngredients(listOfIngredientsWithQuantitiesSets);
+
+        return this.createAMapWithTheSummedAmountsOfEachIngredient(listOfIngredientsWithQuantitiesSets, distinctIngredients);
+    }
+
+    private List<Set<IngredientWithQuantity>> getListOfSetsWithIngredientsAndQuantities(List<PlanSchedule> plans) {
+        return plans.stream()
                 .map(planSchedule -> planSchedule.getRecipe().getSetOfIngredientsWithQuantities().getIngredientsWithQuantities())
                 .collect(Collectors.toList());
+    }
 
+    private Set<String> getDistinctIngredients(List<Set<IngredientWithQuantity>> listOfIngredientsWithQuantitiesSets) {
         Set<Set<String>> setIngredientsNamesSets = listOfIngredientsWithQuantitiesSets.stream()
                 .map(ingredientWithQuantities -> ingredientWithQuantities.stream()
                         .map(ingredientWithQuantity -> ingredientWithQuantity.getIngredient().getName())
@@ -102,11 +112,13 @@ public class PlanScheduleServiceImpl implements PlanScheduleService {
                 .collect(Collectors.toSet());
 
         Set<String> distinctIngredients = new HashSet<>();
-
         for (Set<String> strings : setIngredientsNamesSets) {
             distinctIngredients.addAll(strings);
         }
+        return distinctIngredients;
+    }
 
+    private Map<String, Integer> createAMapWithTheSummedAmountsOfEachIngredient(List<Set<IngredientWithQuantity>> listOfIngredientsWithQuantitiesSets, Set<String> distinctIngredients) {
         Map<String, Integer> shoppingList = new TreeMap<>();
         for (String ingredient : distinctIngredients) {
             List<Optional<Integer>> collect2 = listOfIngredientsWithQuantitiesSets.stream()
@@ -125,7 +137,7 @@ public class PlanScheduleServiceImpl implements PlanScheduleService {
             }
             shoppingList.put(ingredient, sumOfProduct);
         }
-
         return shoppingList;
     }
+
 }
