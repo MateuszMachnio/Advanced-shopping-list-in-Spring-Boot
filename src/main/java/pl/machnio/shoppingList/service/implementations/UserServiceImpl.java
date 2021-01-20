@@ -41,14 +41,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void updateUser(User user) {
-        Optional<User> entity = userRepository.findById(user.getId());
-        if (entity.isPresent()) {
-            User updatedUser = entity.get();
-            if(!user.getPassword().equals(updatedUser.getPassword())){
-                user.setPassword(passwordEncoder.encode(user.getPassword()));
-            }
-            userRepository.save(user);
-        }
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        userRepository.save(user);
     }
 
     @Override
